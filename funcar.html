@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜂鸟互动 - Hummingbird</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 【新增】防翻译闪烁脚本 (必须放在 head 里) -->
+    <script>
+        // 页面渲染前尽早读取本地存储的语言
+        var savedLang = localStorage.getItem('preferredLang') || 'zh';
+        // 如果用户之前选了非中文，先给网页打上 loading 标记，让 CSS 隐藏文字
+        if (savedLang !== 'zh') {
+            document.documentElement.classList.add('lang-loading');
+        }
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.mobility">智能出行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                </div>
+            </div>
+
+            <!-- 关于我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+
+            <!-- 联系我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 黑夜模式区域：Hero & 配件 -->
+    <div class="dark-section-wrapper">
+        <!-- Hero 主视觉区 -->
+        <section class="fc-hero">
+            <!-- 【新增】标准的图片占位结构 -->
+            <img class="funcar-hero-img" src="./images/" alt="Funcar 背景">
+            <div class="fc-hero-content">
+                <h1>Funcar</h1>
+                <h2 data-i18n="funcar.hero.title">重塑你的每一段旅程</h2>
+                <h3 class="fc-price">¥ 2,999<span style="font-size: 16px;">起</span></h3>
+                <p data-i18n="funcar.hero.subtitle">全新智能出行体验</p>
+                <div class="fc-btn-group">
+                    <a href="#" class="btn-outline" data-i18n="funcar.hero.btn_video">观看视频</a>
+                    <a href="#" class="btn-outline" data-i18n="funcar.hero.btn_download">下载体验版</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 专业配件 完美体验 -->
+        <section class="fc-accessories section-padding">
+            <div class="fc-section-title">
+                <h2 data-i18n="funcar.acc.title">专业配件 完美体验</h2>
+            </div>
+            
+            <div class="acc-grid">
+                <!-- 套装一 -->
+                <div class="acc-card">
+                    <div class="acc-img-placeholder">
+                        <img src="./images/funcar-set1.png" alt="套装一">
+                    </div>
+                    <div class="acc-info">
+                        <h3 data-i18n="funcar.acc.set1_title">Funcar套装一</h3>
+                        <p class="acc-desc" data-i18n="funcar.acc.set_desc">包含所有配件的完整解决方案</p>
+                        <!-- 更新列表 -->
+                        <ul class="acc-list">
+                            <li data-i18n="funcar.acc.s1_list">游戏手柄 x1 | 麦克风 x1 | 平板 x1 | 平板支架 x1 | 转接线 x1</li>
+                        </ul>
+                        <h4 class="acc-price">¥ 2,999</h4>
+                        <a href="#" class="btn-solid" data-i18n="funcar.acc.btn_buy">立即购买</a>
+                    </div>
+                </div>
+
+                <!-- 套装二 -->
+                <div class="acc-card">
+                    <div class="acc-img-placeholder">
+                        <img src="./images/funcar-set2.png" alt="套装二">
+                    </div>
+                    <div class="acc-info">
+                        <h3 data-i18n="funcar.acc.set2_title">Funcar套装二</h3>
+                        <p class="acc-desc" data-i18n="funcar.acc.set_desc">包含所有配件的完整解决方案</p>
+                        <!-- 更新列表 -->
+                        <ul class="acc-list">
+                             <li data-i18n="funcar.acc.s2_list">游戏手柄 x1 | 车载麦克风 x1 | CarPlay x1 | 转接线 x1</li>
+                        </ul>
+                        <h4 class="acc-price">¥ 2,999</h4>
+                        <a href="#" class="btn-solid" data-i18n="funcar.acc.btn_buy">立即购买</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 硬件展示 (6个网格，无标题) -->
+            <div class="hardware-section">
+                <!-- 删除 h3 标题 -->
+                <div class="hardware-grid">
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-controller.png" alt="游戏手柄"></div>
+                        <h5 data-i18n="funcar.acc.hw_1">游戏手柄</h5>
+                        <p data-i18n="funcar.acc.hw_1_desc">人体工学设计，精准操控</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-mic.png" alt="车载麦克风"></div>
+                        <h5 data-i18n="funcar.acc.hw_2">车载麦克风</h5>
+                        <p data-i18n="funcar.acc.hw_2_desc">高保真收音，K歌神器</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-carplay.png" alt="CarPlay"></div>
+                        <h5 data-i18n="funcar.acc.hw_3">CarPlay</h5>
+                        <p data-i18n="funcar.acc.hw_3_desc">无缝连接，智能投屏</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-pad.png" alt="平板"></div>
+                        <h5 data-i18n="funcar.acc.hw_4">平板</h5>
+                        <p data-i18n="funcar.acc.hw_4_desc">高清大屏，娱乐中心</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-stand.png" alt="平板支架"></div>
+                        <h5 data-i18n="funcar.acc.hw_5">平板支架</h5>
+                        <p data-i18n="funcar.acc.hw_5_desc">稳固支撑，多角度调节</p>
+                    </div>
+                    <div class="hw-item">
+                        <div class="hw-icon"><img src="./images/hw-cable.png" alt="转接线"></div>
+                        <h5 data-i18n="funcar.acc.hw_6">转接线</h5>
+                        <p data-i18n="funcar.acc.hw_6_desc">高速传输，即插即用</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 白天模式区域：生态介绍等 -->
+    <div class="light-section-wrapper">
+        <!-- 过渡金句 -->
+        <section class="fc-quote section-padding">
+            <h2 data-i18n="funcar.quote.l1">不仅是交通工具</h2>
+            <h1 data-i18n="funcar.quote.l2">更是你的移动智慧空间</h1>
+            <p data-i18n="funcar.quote.l3">从突破性的社交互动到影院级的视听体验，Funcar 将前沿科技与人性化设计完美融合</p>
+            <p data-i18n="funcar.quote.l4">每一次出行，都充满无限乐趣与可能。</p>
+        </section>
+
+        <!-- 生态介绍 -->
+        <section class="fc-eco section-padding">
+            <div class="fc-light-title">
+                <h2 data-i18n="funcar.eco.main_title">生态介绍</h2>
+                <p data-i18n="funcar.eco.main_subtitle">八大核心生态，全方位娱乐体验。</p>
+            </div>
+
+            <!-- 1. 游戏 -->
+            <div class="eco-module">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.eco.game_title">游戏</h3>
+                    <p data-i18n="funcar.eco.game_desc">Funcar的游戏系统包含丰富的类型，满足用户不同的娱乐需求。无论是云游戏、经典模拟器游戏、H5、本地游戏，Funcar都能为用户提供无缝的沉浸式车内娱乐体验。</p>
+                </div>
+                <!-- 交互Tab -->
+                <div class="tab-pills">
+                    <span class="pill active" data-i18n="funcar.eco.game_t1">云游戏</span>
+                    <span class="pill" data-i18n="funcar.eco.game_t2">模拟器游戏</span>
+                    <span class="pill" data-i18n="funcar.eco.game_t3">H5游戏</span>
+                    <span class="pill" data-i18n="funcar.eco.game_t4">本地游戏</span>
+                </div>
+                <div class="card-grid-3">
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/game1.jpg" alt="黑神话"></div>
+                        <h4 data-i18n="funcar.eco.g1_name">黑神话：悟空</h4>
+                        <p data-i18n="funcar.eco.g1_brand">游戏科学</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/game2.jpg" alt="生化危机"></div>
+                        <h4 data-i18n="funcar.eco.g2_name">生化危机9</h4>
+                        <p>CAPCOM</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/game3.jpg" alt="神秘海域"></div>
+                        <h4 data-i18n="funcar.eco.g3_name">神秘海域</h4>
+                        <p>Naughty Dog</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. K歌 -->
+            <div class="eco-module">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.eco.ktv_title">车载K歌系统</h3>
+                    <p data-i18n="funcar.eco.ktv_desc">支持蓝牙麦克风连接，海量歌曲库。专业音效处理，让您在车内也能享受KTV级别的演唱体验，记录美好时光。</p>
+                </div>
+                <div class="card-grid-3">
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/ktv1.jpg" alt="Kill Bill"></div>
+                        <h4 data-i18n="funcar.eco.k1_name">Kill Bill 杀死比尔</h4>
+                        <p>HSHKGN</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/ktv2.jpg" alt="爱错"></div>
+                        <h4 data-i18n="funcar.eco.k2_name">爱错</h4>
+                        <p>王力宏</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/ktv3.jpg" alt="Radio"></div>
+                        <h4 data-i18n="funcar.eco.k3_name">Radio (Dum-Dum)</h4>
+                        <p>宋雨琦 (YUQI)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 影音 -->
+            <div class="eco-module">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.eco.film_title">影音</h3>
+                    <p data-i18n="funcar.eco.film_desc">丰富的在线影视资源，包含电影、电视剧、短剧、动漫等多种类型内容。支持高清播放，断点续播功能，让您随时随地追剧观影，打造移动影音娱乐中心。</p>
+                </div>
+                <div class="tab-pills">
+                    <span class="pill active" data-i18n="funcar.eco.film_t1">电影</span>
+                    <span class="pill" data-i18n="funcar.eco.film_t2">电视剧</span>
+                    <span class="pill" data-i18n="funcar.eco.film_t3">短剧</span>
+                    <span class="pill" data-i18n="funcar.eco.film_t4">动漫</span>
+                </div>
+                <div class="card-grid-3">
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/film1.jpg" alt="惊天魔盗团"></div>
+                        <h4 data-i18n="funcar.eco.f1_name">惊天魔盗团 (1-2)</h4>
+                        <p>2013.10.10</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/film2.jpg" alt="钢铁侠"></div>
+                        <h4 data-i18n="funcar.eco.f2_name">钢铁侠 (1-3)</h4>
+                        <p>2008.04.14</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/film3.jpg" alt="导火线"></div>
+                        <h4 data-i18n="funcar.eco.f3_name">导火线</h4>
+                        <p>2007.08.03</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. 漫画 -->
+            <div class="eco-module">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.eco.manga_title">漫画</h3>
+                    <p data-i18n="funcar.eco.manga_desc">海量正版高清漫画，涵盖国漫、日漫、韩漫等多个地区作品。支持在线阅读和离线下载，智能推荐系统帮您发现喜爱作品，让阅读体验更加便捷舒适。</p>
+                </div>
+                <div class="card-grid-3">
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/manga1.jpg" alt="一拳超人"></div>
+                        <h4 data-i18n="funcar.eco.m1_name">一拳超人 (One Punch Man)</h4>
+                        <p>ONE</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/manga2.jpg" alt="咒术回战"></div>
+                        <h4 data-i18n="funcar.eco.m2_name">咒术回战 (Jujutsu Kaisen)</h4>
+                        <p>芥见下下</p>
+                    </div>
+                    <div class="fc-card">
+                        <div class="fc-card-img"><img src="./images/manga3.jpg" alt="鬼灭之刃"></div>
+                        <h4 data-i18n="funcar.eco.m3_name">鬼灭之刃 (Demon Slayer)</h4>
+                        <p>吾峠呼世晴</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 处处用心，皆为不凡 -->
+        <section class="fc-features section-padding">
+            <div class="fc-light-title">
+                <h2 data-i18n="funcar.features.main_title" style="font-size: 28px; margin-bottom: 60px;">处处用心，皆为不凡。</h2>
+            </div>
+            
+            <div class="fc-feature-item">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.features.social_title">社交</h3>
+                    <p data-i18n="funcar.features.social_desc">好友系统、社区广场、动态分享，打造车主社交圈。与志同道合的车友互动交流，分享出行故事。</p>
+                </div>
+                <div class="fc-big-img"><img src="./images/feat-social.jpg" alt="社交"></div>
+            </div>
+
+            <div class="fc-feature-item">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.features.life_title">生活</h3>
+                    <p data-i18n="funcar.features.life_desc">卡包、预约、购物等生活服务功能。整合多种生活服务，让车载系统成为您的智能生活助手。</p>
+                </div>
+                <div class="fc-big-img"><img src="./images/feat-life.jpg" alt="生活"></div>
+            </div>
+
+            <div class="fc-feature-item">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.features.weather_title">天气</h3>
+                    <p data-i18n="funcar.features.weather_desc">实时天气预报、空气质量、出行建议。精准的天气信息帮助您规划行程，安心出行。</p>
+                </div>
+                <div class="fc-big-img"><img src="./images/feat-weather.jpg" alt="天气"></div>
+            </div>
+
+            <div class="fc-feature-item">
+                <div class="fc-light-title">
+                    <h3 data-i18n="funcar.features.nav_title">导航</h3>
+                    <p data-i18n="funcar.features.nav_desc">智能导航系统，实时路况、多种路线规划。精准定位，智能避堵，让每次出行都更加顺畅。</p>
+                </div>
+                <div class="fc-big-img"><img src="./images/feat-nav.jpg" alt="导航"></div>
+            </div>
+        </section>
+
+        <!-- 场景轮播 (真轮播结构) -->
+        <section class="fc-scenes section-padding">
+            <div class="fc-light-title" style="text-align: center; margin-bottom: 50px;">
+                <h3 data-i18n="funcar.scenes.title">多种场景，随时随地享受娱乐。</h3>
+            </div>
+            
+            <div class="scene-slider-container">
+                <div class="scene-slider-wrapper" id="scene-slider">
+                    
+                    <!-- Slide 1 -->
+                    <div class="scene-slide">
+                        <img src="./images/scene-family.jpg" alt="家庭出行">
+                        <div class="scene-overlay">
+                            <h4 data-i18n="funcar.scenes.st1">家庭出行</h4>
+                            <p data-i18n="funcar.scenes.sd1">全家出游时，孩子可以在后排玩游戏、看动漫，大人可以K歌放松。</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="scene-slide">
+                        <img src="./images/scene-couple.jpg" alt="情侣约会">
+                        <div class="scene-overlay">
+                            <h4 data-i18n="funcar.scenes.st2">情侣约会</h4>
+                            <p data-i18n="funcar.scenes.sd2">打造私密浪漫空间，一起看电影、听音乐，享受二人世界。</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="scene-slide">
+                        <img src="./images/scene-solo.jpg" alt="独自休憩">
+                        <div class="scene-overlay">
+                            <h4 data-i18n="funcar.scenes.st3">独自休憩</h4>
+                            <p data-i18n="funcar.scenes.sd3">午休或充电时，沉浸在游戏世界或阅读漫画，放松身心。</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 轮播点 -->
+                <div class="slider-dots" id="scene-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 购买/下载区域 -->
+        <section class="fc-cta section-padding">
+            <h2 data-i18n="funcar.cta.title">准备好体验Funcar了吗？</h2>
+            <p data-i18n="funcar.cta.subtitle">立即下载体验完整的智能Funcar平台</p>
+            <a href="#" class="btn-solid" style="margin-top: 30px;" data-i18n="funcar.cta.btn">下载体验</a>
+        </section>
+
+    </div> <!-- 白天模式结束 -->
+
+    <!-- 统一的底部导航栏 (Final Footer) -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- 左侧 Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/logo.png" alt="Logo">
+                </div>
+            </div>
+
+            <!-- 右侧 导航列 (6列结构) -->
+            <div class="footer-nav">
+                
+                <!-- 1. 首页 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.home">首页</h4>
+                    <div class="f-links">
+                        <a href="index.html#" data-i18n="header.nav.home">首页</a>
+                    </div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.mobility">智能出行</h4>
+                    <div class="f-links">
+                        <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                        <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                    </div>
+                </div>
+
+                <!-- 3. 低空飞行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+
+                <!-- 4. AI搜寻 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.ai_search">AI搜寻</h4>
+                    <div class="f-links">
+                        <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                        <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                    </div>
+                </div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.about">关于我们</h4>
+                    <div class="f-links">
+                        <a href="about.html" data-i18n="header.nav.about">关于我们</a>
+                    </div>
+                </div>
+
+                <!-- 6. 联系我们 -->
+                <div class="f-col contact-col">
+                    <h4 data-i18n="header.nav.contact">联系我们</h4>
+                    <div class="f-links-vertical">
+                        <a href="contact.html" data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</p>
+                        <a href="contact.html" data-i18n="footer.col5.l2">北商务咨询</p>
+                        <a href="contact.html" data-i18n="footer.col5.l3">business@hummingbird.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

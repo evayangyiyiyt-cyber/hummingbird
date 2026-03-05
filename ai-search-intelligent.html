@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能搜寻 - AI搜寻 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var savedLang = localStorage.getItem('preferredLang') || 'zh';
+        if (savedLang !== 'zh') {
+            document.documentElement.classList.add('lang-loading');
+        }
+    </script>
+</head>
+<body>
+   <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.mobility">智能出行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                </div>
+            </div>
+
+            <!-- 关于我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+
+            <!-- 联系我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero 主视觉区 -->
+    <div class="cases-hero-bg" style="background-color: #111;">
+        <section class="ais-hero">
+            <img class="ais-hero-img" src="./images/ais-hero-bg.jpg" alt="智能搜寻">
+            <div class="ais-hero-content">
+                <h1 data-i18n="ai_intel.hero.title_sm">AI搜寻</h1>
+                <h2 data-i18n="ai_intel.hero.title_lg">精准定位，智慧搜寻</h2>
+                <h3 data-i18n="ai_intel.hero.subtitle">24小时智能巡检</h3>
+                <p data-i18n="ai_intel.hero.desc">智能机器人·全天候巡检·安全可靠</p>
+                <div class="fc-btn-group">
+                    <a href="#" class="btn-outline" data-i18n="ai_intel.hero.btn_video">观看演示视频</a>
+                    <a href="#" class="btn-outline" data-i18n="ai_intel.hero.btn_download">下载软件</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 2. 白色介绍区 -->
+    <div class="light-section-wrapper" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="ais-light-title">
+            <h2 data-i18n="ai_intel.intro.title">全域智能搜寻<br>重构搜索边界</h2>
+            <p data-i18n="ai_intel.intro.desc">融合轮式机械狗的强悍地面机动、无人机的广阔空中视野与AI组网的实时协同决策<br>为您提供前所未有的全天候、全地形智能搜寻解决方案</p>
+        </div>
+    </div>
+
+    <!-- 3. 三大核心特性 (全宽背景图 + 悬停特效) -->
+    
+    <!-- 特性1: 机械狗 -->
+    <section class="ais-feature-full">
+        <img class="ais-feat-bg" src="./images/aisearch1.png" alt="轮式机械狗">
+        <div class="ais-feat-content">
+            <h2 data-i18n="ai_intel.feat1.title">轮式机械狗<br>全地形地面先锋</h2>
+            <p data-i18n="ai_intel.feat1.desc">具备极强的地形适应性与负载能力，可在复杂崎岖的室内外环境中稳定行进。作为地面移动基站与作业平台负责近距离侦查、细节确认、物资运输及长时间驻点监控，是搜寻任务中可靠的地面基石。</p>
+            <div class="ais-tags" data-i18n="ai_intel.feat1.tags">24小时智能巡检 | AI识别预警 | 全地形适应</div>
+        </div>
+    </section>
+
+    <!-- 特性2: 无人机 -->
+    <section class="ais-feature-full">
+        <img class="ais-feat-bg" src="./images/aisearch2.jpg" alt="无人机">
+        <div class="ais-feat-content">
+            <h2 data-i18n="ai_intel.feat2.title">无人机<br>上帝视角侦察兵</h2>
+            <p data-i18n="ai_intel.feat2.desc">提供无可比拟的空中俯瞰视角，能够快速覆盖大片区域，突破地形限制。搭载高清变焦相机与多种传感器实现大范围快速扫描、高空监测与路径规划，极大扩展了搜寻行动的视野与速度。</p>
+            <div class="ais-tags" data-i18n="ai_intel.feat2.tags">快速覆盖 | 高空视角 | 灵活机动</div>
+        </div>
+    </section>
+
+    <!-- 4. AI组网 & 智能协同 -->
+    <div class="full-width-white-bg">
+        <div class="light-section-wrapper" style="padding-top: 100px; padding-bottom: 100px;">
+            <div class="fc-light-title">
+                <h2 data-i18n="ai_intel.synergy.title" style="font-size: 36px; line-height: 1.4; margin-bottom: 15px;">AI组网<br>群体智能决策脑</h2>
+                <p data-i18n="ai_intel.synergy.sub_tags" style="font-size: 14px; font-weight: bold; color: var(--accent-color); margin-bottom: 30px; letter-spacing: 2px;">智能分析 | 自主协同 | 实时预警</p>
+                
+                <!-- 【重要修改】使用普通段落，并强制 normal 换行，绝对不会超出屏幕 -->
+                <p data-i18n="ai_intel.synergy.desc" style="font-size: 15px; color: #666; max-width: 1000px; margin: 0 auto; line-height: 1.8; text-align: center; white-space: normal !important;">
+                    不是简单的设备叠加，而是深度的能力融合。系统启动后，无人机率先升空广域扫描，AI 实时分析视频流并锁定可疑区域。AI 组网系统自动规划最优路径，指挥无人机为机械狗提供空中照明与导航。机械狗抵达目标后开展精细侦查与处置，全程信息实时回传至指挥中心。
+                </p>
+            </div>
+
+            <div class="ais-syn-cards section-padding" style="padding-top: 50px; max-width: 1200px;">
+                
+                <div class="syn-card">
+                    <div class="syn-img"><img src="./images/aisearch3.jpg" alt=""></div>
+                    <div class="syn-text">
+                        <h3 data-i18n="ai_intel.synergy.c1_t">效率倍增</h3>
+                        <h4 data-i18n="ai_intel.synergy.c1_sub">空中快速筛查与地面精准确认无缝衔接</h4>
+                        <p data-i18n="ai_intel.synergy.c_desc">“空中快速筛查”与“地面精准确认”无缝衔接，是现代空地一体化搜救体系的核心运行模式。这种模式利用不同维度的技术优势，将搜索的广度与确认的精度结合起来，实现高效闭环。</p>
+                    </div>
+                </div>
+
+                <div class="syn-card">
+                    <div class="syn-img"><img src="./images/aisearch4.jpg" alt=""></div>
+                    <div class="syn-text">
+                        <h3 data-i18n="ai_intel.synergy.c2_t">无死角覆盖</h3>
+                        <h4 data-i18n="ai_intel.synergy.c2_sub">结合空中视野与地面渗透，消除搜索盲区</h4>
+                        <p data-i18n="ai_intel.synergy.c_desc">“空中快速筛查”与“地面精准确认”无缝衔接，是现代空地一体化搜救体系的核心运行模式。这种模式利用不同维度的技术优势，将搜索的广度与确认的精度结合起来，实现高效闭环。</p>
+                    </div>
+                </div>
+
+                <div class="syn-card">
+                    <div class="syn-img"><img src="./images/aisearch5.jpg" alt=""></div>
+                    <div class="syn-text">
+                        <h3 data-i18n="ai_intel.synergy.c3_t">自主智能</h3>
+                        <h4 data-i18n="ai_intel.synergy.c3_sub">系统自主决策与协作，降低对人的依赖</h4>
+                        <p data-i18n="ai_intel.synergy.c_desc">“空中快速筛查”与“地面精准确认”无缝衔接，是现代空地一体化搜救体系的核心运行模式。这种模式利用不同维度的技术优势，将搜索的广度与确认的精度结合起来，实现高效闭环。</p>
+                    </div>
+                </div>
+
+                <div class="syn-card">
+                    <div class="syn-img"><img src="./images/syn4.jpg" alt=""></div>
+                    <div class="syn-text">
+                        <h3 data-i18n="ai_intel.synergy.c4_t">全天候作业</h3>
+                        <h4 data-i18n="ai_intel.synergy.c4_sub">适应日间、夜间及各种复杂环境</h4>
+                        <p data-i18n="ai_intel.synergy.c_desc">“空中快速筛查”与“地面精准确认”无缝衔接，是现代空地一体化搜救体系的核心运行模式。这种模式利用不同维度的技术优势，将搜索的广度与确认的精度结合起来，实现高效闭环。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. 产品商城 -->
+    <div class="light-section-wrapper" style="padding-bottom: 100px; background-color: #f0f0f0;">
+        <div class="fc-light-title">
+            <h2 data-i18n="ai_intel.store.title" style="font-size: 32px; margin-bottom: 10px;">产品商城</h2>
+            <p data-i18n="ai_intel.store.sub">专业装备，完整方案</p>
+        </div>
+        <div class="section-padding" style="padding-top: 0; max-width: 1200px;">
+            <div class="ais-store-card">
+                <div class="store-img"><img src="./images/store-set.jpg" alt="完整套装"></div>
+                <div class="store-info">
+                    <div class="store-title-wrap">
+                        <h3 data-i18n="ai_intel.store.c_t">AI搜寻完整套装</h3>
+                        <span class="store-tag" data-i18n="ai_intel.store.c_tag">推荐套装</span>
+                    </div>
+                    <p class="store-desc" data-i18n="ai_intel.store.c_d">包含所有配件的专业安防解决方案</p>
+                    <h4 class="store-price">¥ 49,999</h4>
+                    <a href="#" class="btn-solid" data-i18n="funcar.acc.btn_buy" style="margin-top: 20px;">立即购买</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. 底部 CTA -->
+    <div class="full-width-white-bg">
+        <section class="fc-cta section-padding">
+            <h2 data-i18n="ai_intel.cta.title" style="color: #111;">了解更多产品详情</h2>
+            <p data-i18n="ai_intel.cta.sub" style="color: #888;">联系我们获取专业的安防巡检解决方案</p>
+            <a href="#" class="btn-solid" style="margin-top: 30px;" data-i18n="ai_intel.cta.btn">下载软件</a>
+        </section>
+    </div>
+
+    <!-- 统一的底部导航栏 (Final Footer) -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- 左侧 Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/hummingbird-logo2.png" alt="Logo">
+                </div>
+            </div>
+
+            <!-- 右侧 导航列 (6列结构) -->
+            <div class="footer-nav">
+                
+                <!-- 1. 首页 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.home">首页</h4>
+                    <div class="f-links">
+                        <a href="index.html#" data-i18n="header.nav.home">首页</a>
+                    </div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.mobility">智能出行</h4>
+                    <div class="f-links">
+                        <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                        <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                    </div>
+                </div>
+
+                <!-- 3. 低空飞行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+
+                <!-- 4. AI搜寻 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.ai_search">AI搜寻</h4>
+                    <div class="f-links">
+                        <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                        <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                    </div>
+                </div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.about">关于我们</h4>
+                    <div class="f-links">
+                        <a href="about.html" data-i18n="header.nav.about">关于我们</a>
+                    </div>
+                </div>
+
+                <!-- 6. 联系我们 -->
+                <div class="f-col contact-col">
+                    <h4 data-i18n="header.nav.contact">联系我们</h4>
+                    <div class="f-links">
+
+                        <a href="contact.html" data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</p>
+                        <a href="contact.html" data-i18n="footer.col5.l2">北商务咨询</p>
+                        <a href="contact.html" data-i18n="footer.col5.l3">business@hummingbird.com</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

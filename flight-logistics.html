@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物流平台 - 低空飞行 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var savedLang = localStorage.getItem('preferredLang') || 'zh';
+        if (savedLang !== 'zh') {
+            document.documentElement.classList.add('lang-loading');
+        }
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.mobility">智能出行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                </div>
+            </div>
+
+            <!-- 关于我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+
+            <!-- 联系我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. 主视觉 Hero -->
+    <div class="cases-hero-bg">
+        <section class="cases-hero">
+            <img class="cases-hero-img" src="./images/fl-hero-bg.jpg" alt="无人机物流平台">
+            <div class="cases-hero-content">
+                <h1 data-i18n="flight_logistics.hero.title">无人机物流平台<br>一站式解决方案服务商</h1>
+                <p data-i18n="flight_logistics.hero.subtitle">人才培养+行业应用</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 2. 白色介绍区 (填补专业缺口) -->
+    <div class="light-section-wrapper" style="padding: 100px 0;">
+        <div class="fl-light-intro">
+            <h2 data-i18n="flight_logistics.intro.title">填补专业缺口<br>定义行业标准</h2>
+            <p data-i18n="flight_logistics.intro.desc">在国家政策的大力支持下，物流、巡检、应急领域需求爆发<br>我们致力于成为国内领先的无人机产业生态服务商</p>
+        </div>
+    </div>
+
+    <!-- 3. 双核驱动业务布局 -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2 data-i18n="flight_logistics.dual_core.title">双核驱动业务布局</h2>
+            <p data-i18n="flight_logistics.dual_core.sub">形成“培训认证-上岗就业-数据反馈-优化培训”闭环</p>
+        </div>
+        
+        <div class="fl-dual-core">
+            <div class="fl-core-card">
+                <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_a">核心业务A</span>
+                <h3 data-i18n="flight_logistics.dual_core.title_a">模拟培训系统</h3>
+                <p data-i18n="flight_logistics.dual_core.desc_a">无人机领域的“驾校”。为行业输送合格人才，奠定安全基础。</p>
+            </div>
+            <div class="fl-core-card">
+                <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_b">核心业务B</span>
+                <h3 data-i18n="flight_logistics.dual_core.title_b">物流调度平台</h3>
+                <p data-i18n="flight_logistics.dual_core.desc_b">无人机领域的“滴滴货运”。切入千亿级市场，将人才价值商业化。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 连接B端与C端的空中物流网络 (三大模式) -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="section-title">
+            <h2 data-i18n="flight_logistics.network.title">连接B端与C端的空中物流网络</h2>
+            <p data-i18n="flight_logistics.network.sub">生态模式:构建“飞手+自营+商家”三方共赢的物流生态</p>
+        </div>
+        
+        <div class="fl-network-grid">
+            <div class="fl-network-card">
+                <h3 data-i18n="flight_logistics.network.m1_t">签约飞手模式</h3>
+                <h4 data-i18n="flight_logistics.network.m1_tag">轻资产运营·类滴滴模式</h4>
+                <p data-i18n="flight_logistics.network.m1_d">整合社会持证飞手资源。平台负责调度与结算飞手按接单。</p>
+                <div class="fl-apply" data-i18n="flight_logistics.network.m1_apply">适用:个人寄递、应急订单</div>
+            </div>
+            
+            <div class="fl-network-card">
+                <h3 data-i18n="flight_logistics.network.m2_t">自营机队模式</h3>
+                <h4 data-i18n="flight_logistics.network.m2_tag">高标准·质量保证</h4>
+                <p data-i18n="flight_logistics.network.m2_d">自建机队+飞行中心，执行标准化航线，确保高效与安全。</p>
+                <div class="fl-apply" data-i18n="flight_logistics.network.m2_apply">适用:医疗标本、高价值物品</div>
+            </div>
+            
+            <div class="fl-network-card">
+                <h3 data-i18n="flight_logistics.network.m3_t">商家入驻模式</h3>
+                <h4 data-i18n="flight_logistics.network.m3_tag">做大生态·平台赋能</h4>
+                <p data-i18n="flight_logistics.network.m3_d">第三方物流接入系统，平台提供调度算法与分润机制。</p>
+                <div class="fl-apply" data-i18n="flight_logistics.network.m3_apply">适用:大型企业常态配送。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 四大核心系统架构 (深色系卡片布局) -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2 data-i18n="flight_logistics.systems.title">四大核心系统架构</h2>
+        </div>
+        
+        <div class="fl-sys-wrapper">
+            <!-- 第一行：左右两个App -->
+            <div class="fl-sys-row-2">
+                <div class="fl-sys-card-dark">
+                    <h3 data-i18n="flight_logistics.systems.s1_t">用户端 App</h3>
+                    <p data-i18n="flight_logistics.systems.s1_d">下单 · 轨迹 · 支付 · 售后</p>
+                </div>
+                <div class="fl-sys-card-dark">
+                    <h3 data-i18n="flight_logistics.systems.s2_t">飞手端 App</h3>
+                    <p data-i18n="flight_logistics.systems.s2_d">接单 · 认证 · 上传 · 收入</p>
+                </div>
+            </div>
+
+            <!-- 第二行：智能调度中台 (带有一点科技蓝发光强调) -->
+            <div class="fl-sys-card-dark blue-card-dark">
+                <h3 data-i18n="flight_logistics.systems.s3_t">智能调度中台</h3>
+                <p data-i18n="flight_logistics.systems.s3_d">智能航线规划 | 多任务实时监控 | 异常自动报警</p>
+            </div>
+
+            <!-- 第三行：后台管理系统 -->
+            <div class="fl-sys-card-dark">
+                <h3 data-i18n="flight_logistics.systems.s4_t">后台管理系统</h3>
+                <p data-i18n="flight_logistics.systems.s4_d">订单管理 · 飞手审核 · 数据分析 · 空域管控</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 标准化服务流程 -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2 data-i18n="flight_logistics.process.title">标准化服务流程</h2>
+            <p data-i18n="flight_logistics.process.sub">生态模式:构建“飞手+自营+商家”三方共赢的物流生态</p>
+        </div>
+        
+        <div class="fl-process-wrapper">
+            <div class="process-col">
+                <h3 class="p-title" data-i18n="flight_logistics.process.left_title">个人/散户订单</h3>
+                <ul class="p-list">
+                    <li><h4 data-i18n="flight_logistics.process.l1_t">1.提交需求</h4><p data-i18n="flight_logistics.process.l1_d">用户输入坐标、重量与时间</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.l2_t">2.智能匹配</h4><p data-i18n="flight_logistics.process.l2_d">系统寻找最近合规飞手推送任务</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.l3_t">3.飞行配送</h4><p data-i18n="flight_logistics.process.l3_d">飞手取货，用户端实时监控轨迹</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.l4_t">4.签收结算</h4><p data-i18n="flight_logistics.process.l4_d">收货确认，系统自动完成资金分账</p></li>
+                </ul>
+            </div>
+            <div class="process-divider"></div>
+            <div class="process-col">
+                <h3 class="p-title" data-i18n="flight_logistics.process.right_title">企业/大客户订单</h3>
+                <ul class="p-list">
+                    <li><h4 data-i18n="flight_logistics.process.r1_t">1.批量录入</h4><p data-i18n="flight_logistics.process.r1_d">企业ERP接入或批量导入配送计划</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.r2_t">2.运力调度</h4><p data-i18n="flight_logistics.process.r2_d">系统按载重和天气指派自营机队</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.r3_t">3.全程追踪</h4><p data-i18n="flight_logistics.process.r3_d">可视化大屏监控，异常情况自动预警</p></li>
+                    <li><h4 data-i18n="flight_logistics.process.r4_t">4.月度结算</h4><p data-i18n="flight_logistics.process.r4_d">生成数据报表，进行周期性财务结算</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 构建安全防火墙 -->
+    <section class="section-padding fl-firewall">
+        <div class="section-title">
+            <h2 data-i18n="flight_logistics.firewall.title">构建安全防火墙</h2>
+            <p data-i18n="flight_logistics.firewall.sub">安全·低成本·高还原·标准化</p>
+        </div>
+        
+        <div class="pillars-grid">
+            <div class="pillar-item">
+                <h4 class="pillar-num">01.TIME</h4>
+                <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p1_t">人员合规</h3>
+                <p class="pillar-desc" data-i18n="flight_logistics.firewall.p1_d">实名登记+CAAC执照验证+动态人脸识别，人证合一。</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">02.CONTENT</h4>
+                <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p2_t">空域合规</h3>
+                <p class="pillar-desc" data-i18n="flight_logistics.firewall.p2_d">对接CAAC低空协同接口，自动避开禁飞区，航线合法校验。</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">03.INTERACTIVE</h4>
+                <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p3_t">安全监控</h3>
+                <p class="pillar-desc" data-i18n="flight_logistics.firewall.p3_d">异常数据自动报警，支持自动返航/迫降，可视化中心把控。</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">04.MODULE</h4>
+                <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p4_t">双重保险</h3>
+                <p class="pillar-desc" data-i18n="flight_logistics.firewall.p4_d">单次订单险(货物/三责)+年度运营险(设备/人身)全面兜底。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. 多维资源赋能·商业闭环 -->
+    <section class="section-padding" style="text-align: center; padding-bottom: 120px;">
+        <h2 data-i18n="flight_logistics.loop.title" style="font-size: 32px; letter-spacing: 2px; margin-bottom: 10px;">多维资源赋能·商业闭环</h2>
+        <p data-i18n="flight_logistics.loop.sub" style="color: #888; margin-bottom: 60px;">安全·低成本·高还原·标准化</p>
+        
+        <div class="fl-loop-grid">
+            <div class="loop-item">
+                <h3 data-i18n="flight_logistics.loop.i1_t">培训</h3>
+                <p data-i18n="flight_logistics.loop.i1_d">模拟系统</p>
+            </div>
+            <div class="loop-item">
+                <h3 data-i18n="flight_logistics.loop.i2_t">认证</h3>
+                <p data-i18n="flight_logistics.loop.i2_d">CAAC执照</p>
+            </div>
+            <div class="loop-item">
+                <h3 data-i18n="flight_logistics.loop.i3_t">就业</h3>
+                <p data-i18n="flight_logistics.loop.i3_d">物流平台飞手</p>
+            </div>
+            <div class="loop-item">
+                <h3 data-i18n="flight_logistics.loop.i4_t">保障</h3>
+                <p data-i18n="flight_logistics.loop.i4_d">金融租赁+保险</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 80px; border-top: 1px solid #222; padding-top: 50px;">
+            <h3 data-i18n="flight_logistics.loop.bottom_title" style="font-size: 24px; margin-bottom: 15px;">多元化收益来源</h3>
+            <p data-i18n="flight_logistics.loop.bottom_sub" style="color: #aaa; margin-bottom: 30px;">平台交易抽成|自营服务收入|商家入驻费|系统服务费|飞手培训费</p>
+            <a href="#footer" class="btn-solid" data-i18n="industry.cta.btn">联系我们</a>
+        </div>
+    </section>
+
+    <!-- 统一的底部导航栏 (Final Footer) -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- 左侧 Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/logo.png" alt="Logo">
+                </div>
+            </div>
+
+            <!-- 右侧 导航列 (6列结构) -->
+            <div class="footer-nav">
+                
+                <!-- 1. 首页 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.home">首页</h4>
+                    <div class="f-links">
+                        <a href="index.html#" data-i18n="header.nav.home">首页</a>
+                    </div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.mobility">智能出行</h4>
+                    <div class="f-links">
+                        <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                        <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                    </div>
+                </div>
+
+                <!-- 3. 低空飞行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+
+                <!-- 4. AI搜寻 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.ai_search">AI搜寻</h4>
+                    <div class="f-links">
+                        <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                        <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                    </div>
+                </div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.about">关于我们</h4>
+                    <div class="f-links">
+                        <a href="about.htmldata-i18n="header.nav.about">关于我们</a>
+                    </div>
+                </div>
+
+                <!-- 6. 联系我们 -->
+                <div class="f-col contact-col">
+                    <h4 data-i18n="header.nav.contact">联系我们</h4>
+                    <div class="f-links-vertical">
+                        <a href="contact.html" data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</p>
+                        <a href="contact.html" data-i18n="footer.col5.l2">北商务咨询</p>
+                        <a href="contact.html" data-i18n="footer.col5.l3">business@hummingbird.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

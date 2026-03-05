@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行业案例 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var savedLang = localStorage.getItem('preferredLang') || 'zh';
+        if (savedLang !== 'zh') {
+            document.documentElement.classList.add('lang-loading');
+        }
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.mobility">智能出行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                </div>
+            </div>
+
+            <!-- 关于我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+
+            <!-- 联系我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉 -->
+    <div class="cases-hero-bg">
+        <section class="cases-hero">
+            <!-- 图片占位 -->
+            <img class="cases-hero-img" src="./images/cases-hero-bg.jpg" alt="行业案例大图">
+            <div class="cases-hero-content">
+                <h1 data-i18n="industry.hero.title">智能出行<br>每一程，都是美好的期待</h1>
+                <p data-i18n="industry.hero.subtitle">致力于通过智能出行技术，将“准时抵达”升级为“美好体验”<br>我们重新定义出行——不止于效率，更在乎你路上的每一刻心情。</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 公司简介 -->
+    <section class="cases-intro">
+        <p data-i18n="industry.intro.p1">蜂鸟互动是一家专注于车联网智能娱乐的创新科技公司</p>
+        <p data-i18n="industry.intro.p2">业务涵盖智能驾舱、驾驶娱乐、HMI系统及车联网互动软件开发，同时提供智能VPA、交互设计及营销内容制作等服务</p>
+        <p data-i18n="industry.intro.p3">凭借创新技术与优质服务，蜂鸟互动持续推动行业发展，为用户打造更加智能、便捷的出行体验。</p>
+    </section>
+
+    <!-- 四大支柱 -->
+    <section class="cases-pillars section-padding">
+        <div class="section-title" style="margin-bottom: 40px;">
+            <h2 data-i18n="industry.pillars.title" style="font-size: 32px; letter-spacing: 4px; line-height: 1.3;">BEYOND<br>REALITY</h2>
+            <p data-i18n="industry.pillars.sub">无缝出行·自由随心</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-item">
+                <h4 class="pillar-num">01.TIME</h4>
+                <h3 class="pillar-title" data-i18n="industry.pillars.p1_t">突破时空限制</h3>
+                <p class="pillar-desc" data-i18n="industry.pillars.p1_d">多物理设备互联通,消除端/云/车壁垒,带来新体验</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">02.CONTENT</h4>
+                <h3 class="pillar-title" data-i18n="industry.pillars.p2_t">体验内容丰富</h3>
+                <p class="pillar-desc" data-i18n="industry.pillars.p2_d">数字内容化/沉浸式体验</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">03.INTERACTIVE</h4>
+                <h3 class="pillar-title" data-i18n="industry.pillars.p3_t">互动性强</h3>
+                <p class="pillar-desc" data-i18n="industry.pillars.p3_d">以用户体验为核心的定制,开发及颠覆性业务逻辑的协作模式</p>
+            </div>
+            <div class="pillar-item">
+                <h4 class="pillar-num">04.MODULE</h4>
+                <h3 class="pillar-title" data-i18n="industry.pillars.p4_t">沉浸式体验</h3>
+                <p class="pillar-desc" data-i18n="industry.pillars.p4_d">多感官协同（视觉、听觉、触觉）与空间计算</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类吸顶导航栏 -->
+    <div class="cases-tab-nav" id="cases-tabs">
+        <button class="tab-btn active" data-target="tab-cockpit" data-i18n="industry.tabs.t1">智能驾舱</button>
+        <button class="tab-btn" data-target="tab-hmi" data-i18n="industry.tabs.t2">HMI</button>
+        <button class="tab-btn" data-target="tab-vpa" data-i18n="industry.tabs.t3">VPA</button>
+        <button class="tab-btn" data-target="tab-ent" data-i18n="industry.tabs.t4">驾舱娱乐</button>
+        <button class="tab-btn" data-target="tab-vrar" data-i18n="industry.tabs.t5">VR/AR</button>
+        <button class="tab-btn" data-target="tab-other" data-i18n="industry.tabs.t6">其它</button>
+    </div>
+
+    <!-- 分类内容区 (长滚动) -->
+    <section class="cases-content section-padding" style="padding-top: 0;">
+        
+        <!-- 1. 智能驾舱 -->
+        <div class="case-section" id="tab-cockpit">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_cockpit.title">智能驾舱</h2>
+                <p data-i18n="industry.sec_cockpit.sub">将传统的交通工具转变为集办公、娱乐、休息于一体的“智能移动空间”。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c1_t">奇瑞-智慧小巴</h3>
+                    <p data-i18n="industry.sec_cockpit.c1_d">涵盖HMI软件系统开发、虚拟人物形象设计、三维视觉动效等全流程。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases27-Chery - Smart Minibus.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c2_t">极氪-研发测试驾舱</h3>
+                    <p data-i18n="industry.sec_cockpit.c2_d">涵盖中控屏、副驾屏、后排屏、HUD及透明A柱等软硬件内容。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases28-zeekr - R&D Test Cockpit.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c3_t">奇瑞-24年车展智能驾舱</h3>
+                    <p data-i18n="industry.sec_cockpit.c3_d">进入奇瑞元宇宙空间，体验四种不同风格场景及智能语音交互。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases29-Chery - 2024 Auto Show Intelligent Cockpit.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c4_t">博世-23年车展智能娱乐座舱</h3>
+                    <p data-i18n="industry.sec_cockpit.c4_d">支持方向盘、蓝牙手柄等多种交互模式的车机竞速游戏。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases30-Bosch - 2023 Auto Show Intelligent Entertainment Rig.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c5_t">奥迪-23年车展智能娱乐座舱</h3>
+                    <p data-i18n="industry.sec_cockpit.c5_d">车内游戏与座椅、方向盘、氛围灯等硬件结合的沉浸式世界。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases31-Audi - 2023 Auto Show Intelligent Entertainment Rig.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c6_t">奥迪-E-Torn辅助VR设计</h3>
+                    <p data-i18n="industry.sec_cockpit.c6_d">辅助设计团队进行车辆外观、交互、体验的开发及虚拟试驾。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases32-Audi - E-Tron VR Assisted Design.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c7_t">清华大学-模拟驾驶</h3>
+                    <p data-i18n="industry.sec_cockpit.c7_d">基于VR技术的驾驶培训环境，研究驾驶员认知、情绪对行为的影响。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases33-Tsinghua University - Driving Simulation.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. HMI -->
+        <div class="case-section" id="tab-hmi">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_hmi.title">HMI</h2>
+                <p data-i18n="industry.sec_hmi.sub">它是人与车辆之间沟通的桥梁和交互窗口。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c1_t">东风-HMI车机界面</h3>
+                    <p data-i18n="industry.sec_hmi.c1_d">为中高端车型打造，提升了视觉冲击力与交互效率。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases21-Dongfeng HMI vehicle machine interface.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c2_t">奇瑞-3D HMI界面</h3>
+                    <p data-i18n="industry.sec_hmi.c2_d">充满科技魅力，提升了智能化和视觉美感的使用体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c3_t">北汽-VR-HMI车机界面</h3>
+                    <p data-i18n="industry.sec_hmi.c3_d">VR设备与车机3D座舱深度融合，查看三维实景与虚拟元素的叠加。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases23-Baic-vr-hmi.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. VPA -->
+        <div class="case-section" id="tab-vpa">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_vpa.title">VPA</h2>
+                <p data-i18n="industry.sec_vpa.sub">VPA是智能座舱的“大脑”和“灵魂中枢”。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_vpa.c1_t">长城-四维数字人+车载助手</h3>
+                    <p data-i18n="industry.sec_vpa.c1_d">数字人形象伴随车主在行驶过程中进行自然的情感化对话。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases34-great Wall - olacat digital human driving assistant.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_vpa.c2_t">坦克300-坦克男女数字人助手</h3>
+                    <p data-i18n="industry.sec_vpa.c2_d">不同车型搭配专属数字人，支持自然语音交流与操作。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases35-Tank 300 - Tank Male and Female Digital Human Driving Assistant.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 驾舱娱乐 (完整版) -->
+        <div class="case-section" id="tab-ent">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_ent.title">驾舱娱乐</h2>
+                <p data-i18n="industry.sec_ent.sub">车载娱乐系统已成为用户出行中不可或缺的智能伴侣。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c1_t">广汽-Aion ADiGO World</h3>
+                    <p data-i18n="industry.sec_ent.c1_d">结合行驶数据，通过自然语音控制实现星球生长的生态系统。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-guangqi ADiGO World.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c2_t">Smart-赛车游戏</h3>
+                    <p data-i18n="industry.sec_ent.c2_d">驾驶员通过油门、刹车和方向盘控制赛车，身临其境。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases2-Smart Race Car Game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c3_t">现代-赛车游戏</h3>
+                    <p data-i18n="industry.sec_ent.c3_d">先进物理引擎打造，提供激动人心的赛车玩法。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases3-Hyundai Racing Games.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c4_t">梅赛德斯奔驰-车载赛车</h3>
+                    <p data-i18n="industry.sec_ent.c4_d">支持手柄、手机、触摸屏及氛围灯多人交互。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-Mercedes Benz Racing Games.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c5_t">奇瑞星途-追风车云游戏</h3>
+                    <p data-i18n="industry.sec_ent.c5_d">云游戏技术，无需本地高性能硬件即可享受高质量游戏。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases5-Chery Cloud Game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c6_t">安通林-车载音乐游戏</h3>
+                    <p data-i18n="industry.sec_ent.c6_d">与车内灯光、音响、座椅震动同步的节奏游戏。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-Antolin - In-Car Music Game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c7_t">一汽红旗-佛吉亚娱乐系统</h3>
+                    <p data-i18n="industry.sec_ent.c7_d">红旗H9后排轻度娱乐系统，支持碎片化时间交互。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases7-Faurecia in car entertainment.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c8_t">Kart Party-赛车游戏</h3>
+                    <p data-i18n="industry.sec_ent.c8_d">基于区块链技术的去中心化赛车经济系统。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases8-Kart Party - Racing Game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c9_t">吉利-宠物养成游戏</h3>
+                    <p data-i18n="industry.sec_ent.c9_d">通过培养虚拟宠物增加用户粘性与社交互动。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases9-Geely - Pet Raising Game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c10_t">体感卡啦OK跳舞游戏</h3>
+                    <p data-i18n="industry.sec_ent.c10_d">通过麦克风和前置摄像头实现全身动作共舞互动。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases11-ktv - in car + for exhibitions.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c11_t">体感网球游戏</h3>
+                    <p data-i18n="industry.sec_ent.c11_d">通过身体动作控制虚拟网球运动，享受科技乐趣。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases10-Tennis game - in car + for exhibitions.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. VR/AR -->
+        <div class="case-section" id="tab-vrar">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_vrar.title">VR/AR</h2>
+                <p data-i18n="industry.sec_vrar.sub">虚拟现实与增强现实应用展示。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_vrar.c1_t">戴姆勒奔驰-AR娱乐游戏</h3>
+                    <p data-i18n="industry.sec_vrar.c1_d">车内隐藏线索、AR互动谜题，通过图像识别、陀螺仪实现解谜体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases14-Mercedes Benz - in car AR entertainment game.webp" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_vrar.c2_t">现代-手势游戏</h3>
+                    <p data-i18n="industry.sec_vrar.c2_d">利用先进手势识别技术，在车内轻松操控游戏。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases15-Hyundai - Cockpit Gesture Game.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 其它 -->
+        <div class="case-section" id="tab-other">
+            <div class="pane-header">
+                <h2 data-i18n="industry.sec_other.title">其它</h2>
+                <p data-i18n="industry.sec_other.sub">其它相关前沿技术展示与合作。</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_other.c1_t">汽车博物馆-动捕赛车游戏</h3>
+                    <p data-i18n="industry.sec_other.c1_d">采用Kinect动作捕捉，玩家亲身动作控制赛车。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_other.c2_t">哪吒汽车-AR直播虚拟发布会</h3>
+                    <p data-i18n="industry.sec_other.c2_d">虚幻引擎与摄像机追踪技术打造的AR直播。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases39-nezha automobile ar live virtual online conference.webp" alt="案例大图"></div></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 合作成果 (加上 ID 以便监听) -->
+    <section class="cases-results section-padding" id="results-section">
+        <div class="section-title">
+            <h2 data-i18n="industry.stats.title" style="margin-bottom: 40px;">合作成果</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-num">30+</div>
+                <div class="stat-label" data-i18n="industry.stats.l1">合作主机厂</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">100+</div>
+                <div class="stat-label" data-i18n="industry.stats.l2">服务车型</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">500万+</div>
+                <div class="stat-label" data-i18n="industry.stats.l3">活跃用户</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">95%</div>
+                <div class="stat-label" data-i18n="industry.stats.l4">客户满意度</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开启合作之旅 -->
+    <section class="cases-cta section-padding" style="text-align: center; padding-bottom: 120px;">
+        <h2 data-i18n="industry.cta.title" style="font-size: 36px; margin-bottom: 15px;">开启合作之旅</h2>
+        <p data-i18n="industry.cta.sub" style="color: #888; margin-bottom: 30px;">与我们一起打造下一代智能体验</p>
+        <a href="#footer" class="btn-solid" data-i18n="industry.cta.btn">联系我们</a>
+    </section>
+
+    <!-- 统一的底部导航栏 (Final Footer) -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- 左侧 Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/hummingbird-logo2.png" alt="Logo">
+                </div>
+            </div>
+
+            <!-- 右侧 导航列 (6列结构) -->
+            <div class="footer-nav">
+                
+                <!-- 1. 首页 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.home">首页</h4>
+                    <div class="f-links">
+                        <a href="index.html#" data-i18n="header.nav.home">首页</a>
+                    </div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.mobility">智能出行</h4>
+                    <div class="f-links">
+                        <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                        <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                    </div>
+                </div>
+
+                <!-- 3. 低空飞行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+
+                <!-- 4. AI搜寻 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.ai_search">AI搜寻</h4>
+                    <div class="f-links">
+                        <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                        <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                    </div>
+                </div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.about">关于我们</h4>
+                    <div class="f-links">
+                        <a href="about.html" data-i18n="header.nav.about">关于我们</a>
+                    </div>
+                </div>
+
+                <!-- 6. 联系我们 -->
+                <div class="f-col contact-col">
+                    <h4 data-i18n="header.nav.contact">联系我们</h4>
+                    <div class="f-links">
+
+                        <a href="contact.html" data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</p>
+                        <a href="contact.html" data-i18n="footer.col5.l2">北商务咨询</p>
+                        <a href="contact.html" data-i18n="footer.col5.l3">business@hummingbird.com</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

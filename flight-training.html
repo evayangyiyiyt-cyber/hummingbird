@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟培训 - 低空飞行 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // 防闪烁脚本
+        var savedLang = localStorage.getItem('preferredLang') || 'zh';
+        if (savedLang !== 'zh') {
+            document.documentElement.classList.add('lang-loading');
+        }
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.mobility">智能出行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="index.html#cases" class="nav-link">
+                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                </div>
+            </div>
+
+            <!-- 关于我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+
+            <!-- 联系我们 (独立页面) -->
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. 主视觉 -->
+    <div class="cases-hero-bg" style="background-color: #141414;">
+        <section class="cases-hero">
+            <img class="cases-hero-img" src="./images/ft-hero-bg.jpg" alt="模拟培训">
+            <div class="cases-hero-content">
+                <h1 data-i18n="flight_training.hero.title">模拟培训系统<br>CAAC考试模拟培训</h1>
+                <p data-i18n="flight_training.hero.subtitle">专项应用场景培训</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 2. 二级吸顶分类导航 -->
+    <div class="cases-tab-nav" id="cases-tabs">
+        <button class="tab-btn active" data-target="sec-caac" data-i18n="flight_training.subnav.t1">CAAC考试模拟培训</button>
+        <button class="tab-btn" data-target="sec-special" data-i18n="flight_training.subnav.t2">专项应用培训</button>
+    </div>
+
+    <!-- 3. 内容区容器 (长滚动) -->
+    <section class="cases-content section-padding" style="padding-top: 0;">
+        
+        <!-- SECTION 1: CAAC考试模拟培训 -->
+        <div class="case-section" id="sec-caac">
+            
+            <!-- 四大支柱 -->
+            <div class="section-title" style="margin-bottom: 60px;">
+                <h2 data-i18n="flight_training.intro.title">CAAC考试模拟培训</h2>
+                <p data-i18n="flight_training.intro.subtitle">安全 · 低成本 · 高还原 · 标准化</p>
+            </div>
+            <div class="pillars-grid" style="margin-bottom: 100px;">
+                <div class="pillar-item">
+                    <h4 class="pillar-num">01.TIME</h4>
+                    <h3 class="pillar-title" data-i18n="flight_training.pillars.p1_t">政策驱动</h3>
+                    <p class="pillar-desc" data-i18n="flight_training.pillars.p1_d">中国民航局(CAAC)推动培训数字化、模拟化，为模拟训练打开政策红利窗口。</p>
+                </div>
+                <div class="pillar-item">
+                    <h4 class="pillar-num">02.CONTENT</h4>
+                    <h3 class="pillar-title" data-i18n="flight_training.pillars.p2_t">市场规模</h3>
+                    <p class="pillar-desc" data-i18n="flight_training.pillars.p2_d">飞手缺口超700万人，低空经济放开后，年新增需求100万人。</p>
+                </div>
+                <div class="pillar-item">
+                    <h4 class="pillar-num">03.INTERACTIVE</h4>
+                    <h3 class="pillar-title" data-i18n="flight_training.pillars.p3_t">核心首选客户</h3>
+                    <p class="pillar-desc" data-i18n="flight_training.pillars.p3_d">无人机驾校、航空学院等直接接入系统，提升教学效率与认证通过率。</p>
+                </div>
+                <div class="pillar-item">
+                    <h4 class="pillar-num">04.MODULE</h4>
+                    <h3 class="pillar-title" data-i18n="flight_training.pillars.p4_t">延伸扩展客户</h3>
+                    <p class="pillar-desc" data-i18n="flight_training.pillars.p4_d">覆盖植保、物流、测绘、巡检、救援等，提供定制化课程。</p>
+                </div>
+            </div>
+
+            <!-- 科目一 -->
+            <div class="section-title">
+                <h2 data-i18n="flight_training.subject1.title">科目一：理论与组装</h2>
+                <p data-i18n="flight_training.subject1.subtitle">主要考察对法律法规、飞行原理、航空气象等基础知识的掌握程度。</p>
+            </div>
+            <div class="ft-theory-stack" style="margin-bottom: 100px;">
+                <div class="ft-theory-card">
+                    <img class="ft-theory-bg" src="./images/ft-theory-1.jpg" alt="理论知识">
+                    <div class="ft-theory-content">
+                        <h3 data-i18n="flight_training.subject1.row1_t">理论知识</h3>
+                        <p data-i18n="flight_training.subject1.row1_d">提供“练习”与“考试”两种模式。系统化知识体系涵盖航空法规、气象知识、飞行原理等。严格按照CAAC标准设计，提交后立即生成成绩报告。</p>
+                    </div>
+                </div>
+                <div class="ft-theory-card">
+                    <img class="ft-theory-bg" src="./images/ft-theory-2.jpg" alt="无人机组装">
+                    <div class="ft-theory-content">
+                        <h3 data-i18n="flight_training.subject1.row2_t">无人机组装</h3>
+                        <p data-i18n="flight_training.subject1.row2_d">学员首先选择机型，预览飞机或认知零件。随后进入组装环节，实时显示进度，完成后系统自动结算成绩，支持查看历史记录。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 科目二 (包含自旋和八字) -->
+            <div class="section-title">
+                <h2 data-i18n="flight_training.subject2.title">科目二：实操飞行</h2>
+                <p data-i18n="flight_training.subject2.subtitle">考察对无人机的“控制力”。考验双手协调能力、空间方向感和心理素质。</p>
+            </div>
+            
+            <!-- 科目二：自旋 -->
+            <div class="ft-practice-card">
+                <div class="ft-card-header">
+                    <h3 data-i18n="flight_training.subject2.card1_t">悬停360°自旋</h3>
+                    <p data-i18n="flight_training.subject2.card1_sub">指定空域保持悬停，完成360°定轴自旋。满足“高度偏差≤0.5m，水平位移≤1m，自旋角速度均匀”标准。</p>
+                </div>
+                <div class="ft-steps-box">
+                    <div class="ft-steps-grid">
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:01</div>
+                            <h4 data-i18n="flight_training.subject2.c1_s1_t">悬停校准</h4>
+                            <p data-i18n="flight_training.subject2.c1_s1_d">点击“悬停校准”，将无人机稳定在指定初抬位置。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:02</div>
+                            <h4 data-i18n="flight_training.subject2.c1_s2_t">360°自旋</h4>
+                            <p data-i18n="flight_training.subject2.c1_s2_d">保持油门稳定，缓慢推拉方向舵，以均匀角速度完成自旋。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:03</div>
+                            <h4 data-i18n="flight_training.subject2.c1_s3_t">精准降落</h4>
+                            <p data-i18n="flight_training.subject2.c1_s3_d">精准停回初始点，系统自动生成评分及复盘。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部大图 -->
+                <div class="ft-card-img"><img src="./images/ph-case.jpg" alt="悬停360°自旋"></div>
+            </div>
+
+            <!-- 科目二：八字飞行 -->
+            <div class="ft-practice-card">
+                <div class="ft-card-header">
+                    <h3 data-i18n="flight_training.subject2.card2_t">八字飞行模拟训练</h3>
+                    <p data-i18n="flight_training.subject2.card2_sub">考核飞行员综合操控能力的关键科目，要求飞手在规定空域内操控无人机沿标准8字形航线飞行。</p>
+                </div>
+                <div class="ft-steps-box">
+                    <div class="ft-steps-grid">
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:01</div>
+                            <h4 data-i18n="flight_training.subject2.c2_s1_t">基础悬停</h4>
+                            <p data-i18n="flight_training.subject2.c2_s1_d">1分钟内精准悬停中心圈上方，重点训练微操能力。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:02</div>
+                            <h4 data-i18n="flight_training.subject2.c2_s2_t">八字航线</h4>
+                            <p data-i18n="flight_training.subject2.c2_s2_d">对称、圆滑的8字形航线，保持匀速与固定高度。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:03</div>
+                            <h4 data-i18n="flight_training.subject2.c2_s3_t">精准降落</h4>
+                            <p data-i18n="flight_training.subject2.c2_s3_d">完成飞行后准确返回并悬停起始点，考核降落精准度。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-card-img"><img src="./images/flightkemuer2.webp" alt="八字飞行模拟训练"></div>
+            </div>
+
+            <!-- 超视距 -->
+            <div class="section-title" style="margin-top: 100px;">
+                <h2 data-i18n="flight_training.bvlos.title">超视距—地面站操作</h2>
+                <p data-i18n="flight_training.bvlos.subtitle">预定航线起飞、巡航、转弯、定点降落。满足“航线偏差≤50m，高度偏差≤5m，指令响应延迟≤2s”</p>
+            </div>
+            <div class="ft-practice-card">
+                <div class="ft-steps-box">
+                    <div class="ft-steps-grid">
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:01</div>
+                            <h4 data-i18n="flight_training.bvlos.s1_t">超视距场景全还原</h4>
+                            <p data-i18n="flight_training.bvlos.s1_d">构建符合CAAC要求的空域，支持城市、山区等场景模拟真实电磁干扰环境。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:02</div>
+                            <h4 data-i18n="flight_training.bvlos.s2_t">仪表与链路模拟</h4>
+                            <p data-i18n="flight_training.bvlos.s2_d">显示姿态、航迹、电池等数据，模拟链路中断、信号延迟等故障。</p>
+                        </div>
+                        <div class="ft-step">
+                            <div class="ft-step-num">Step:03</div>
+                            <h4 data-i18n="flight_training.bvlos.s3_t">评分与复盘</h4>
+                            <p data-i18n="flight_training.bvlos.s3_d">CAAC官方评分规则，标注违规操作及扣分原因，提供改进建议。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-card-img"><img src="./images/ph-case.jpg" alt="超视距—地面站操作"></div>
+            </div>
+
+            <!-- 训练模式 -->
+            <div class="section-title" style="margin-top: 100px;">
+                <h2 data-i18n="flight_training.modes.title">训练模式</h2>
+                <p data-i18n="flight_training.modes.subtitle">科学的肌肉记忆建立 + 空间方向感培养的流程。</p>
+            </div>
+            <div class="ft-mode-cards">
+                <div class="ft-mode-card-lr">
+                    <div class="ft-mode-img-lr">
+                        
+                        <img src="images/flightmoshi1.webp" alt="自由飞行">
+                    </div>
+                    <div class="ft-mode-text-lr">
+                        <h3 data-i18n="flight_training.modes.m1_t">自由飞行模式</h3>
+                        <h4 data-i18n="flight_training.modes.m1_sub">空中快速筛查与地面精准确认无缝衔接</h4>
+                        <p data-i18n="flight_training.modes.m1_d">开放、无约束的练习环境。随意操控无人机，无任务限制。适合新手熟悉基础操作或高手测试飞行参数。支持自由调整设置，探索飞行技巧。</p>
+                    </div>
+                </div>
+                <div class="ft-mode-card-lr">
+                    <div class="ft-mode-img-lr">
+                         
+                         <img src="images/flightmoshi2.webp" alt="竞速赛道">
+                    </div>
+                    <div class="ft-mode-text-lr">
+                        <h3 data-i18n="flight_training.modes.m2_t">竞速赛道模式</h3>
+                        <h4 data-i18n="flight_training.modes.m2_sub">空中快速筛查与地面精准确认无缝衔接</h4>
+                        <p data-i18n="flight_training.modes.m2_d">竞速挑战玩法，设有固定赛道及检查点。按规定顺序穿越并抵达终点。赛道设置障碍物，系统自动记录用时，考验航线规划与高速操控能力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: 专项应用培训 -->
+        <div class="case-section" id="sec-special" style="margin-top: 120px;">
+            <div class="section-title">
+                <h2 data-i18n="flight_training.special.title">专项应用培训</h2>
+                <p data-i18n="flight_training.special.sub">为加速学员从培训到岗位的无缝对接，针对低空经济细分领域的应用类培训模块。</p>
+            </div>
+
+            
+
+            <!-- 案例卡片列表 (7个) -->
+            <div class="special-project-list">
+                
+                <!-- 1. 光伏清洗 -->
+                <div class="special-card" id="sp-c1">
+                    <h3 data-i18n="flight_training.special.c1_t">光伏清洗</h3>
+                    <p data-i18n="flight_training.special.c1_d">通过模拟培训，帮助操作人员熟练掌握光伏板专用清洗无人机的作业技能，实现光伏电站高效、安全、低成本的运维管理。</p>
+                    
+                    <!-- 【核心修复】分离的标签 + 独立的圆点 -->
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c1_t1">地面集中式光伏电站</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c1_t2">屋顶分布式光伏板</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c1_t3">山地光伏电站</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c1_t4">沿海高盐雾地区组件</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 2. 农林牧渔 -->
+                <div class="special-card" id="sp-c2">
+                    <h3 data-i18n="flight_training.special.c2_t">农林牧渔</h3>
+                    <p data-i18n="flight_training.special.c2_d">重点针对大面积耕地、林地、牧场及山地丘陵等场景，帮助学员熟练掌握航线规划、自主作业技能。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c2_t1">农田农药喷洒</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c2_t2">林地火情巡查</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c2_t3">牧场牲畜计数</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c2_t4">果园长势监测</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c2_t5">偏远地块播撒施肥</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 3. 测绘/监测 -->
+                <div class="special-card" id="sp-c3">
+                    <h3 data-i18n="flight_training.special.c3_t">测绘/监测</h3>
+                    <p data-i18n="flight_training.special.c3_d">模拟城市密集区、山区水域等复杂地形环境，助力操作人员熟练掌握低空飞行、多角度拍摄、狭小空间作业等技能。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c3_t1">国土空间测绘</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c3_t2">公路/铁路工程测绘</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c3_t3">水域面积监测</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c3_t4">生态环境监测</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c3_t5">矿产资源勘探</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 4. 物流运输 -->
+                <div class="special-card" id="sp-c4">
+                    <h3 data-i18n="flight_training.special.c4_t">物流运输</h3>
+                    <p data-i18n="flight_training.special.c4_d">针对传统交通不便区域的物流需求，重点模拟大山、岛屿、沙漠、偏远乡村等复杂场景，帮助学员熟练掌握复杂地形起降。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c4_t1">偏远乡村物资配送</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c4_t2">山区急救物资运输</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c4_t3">海岛生活物资补给</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c4_t4">沙漠勘探物资投放</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c4_t5">灾后临时物流转运</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 5. 安防巡检 -->
+                <div class="special-card" id="sp-c5">
+                    <h3 data-i18n="flight_training.special.c5_t">安防巡检</h3>
+                    <p data-i18n="flight_training.special.c5_d">面向城市运行与安全管控需求，重点模拟道路、桥梁、管网等设施巡检场景，帮助操作人员熟练掌握隐患排查、数据记录。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c5_t1">城市交通拥堵监测</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c5_t2">电力/通信线路巡检</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c5_t3">城市管网隐患排查</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c5_t4">边境线巡逻</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c5_t5">园区/商圈安防监控</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 6. 应急救援 -->
+                <div class="special-card" id="sp-c6">
+                    <h3 data-i18n="flight_training.special.c6_t">应急救援</h3>
+                    <p data-i18n="flight_training.special.c6_d">聚焦应急救援与自然灾害处置场景，重点模拟地震、洪水、火灾等灾害现场，帮助操作人员熟练掌握快速起飞、低空突防。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c6_t1">自然灾害现场侦察</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c6_t2">被困人员搜索定位</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c6_t3">应急救援物资投放</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c6_t4">火灾现场火势监测</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c6_t5">灾后灾情评估</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+                <!-- 7. 竞速特技 -->
+                <div class="special-card" id="sp-c7">
+                    <h3 data-i18n="flight_training.special.c7_t">竞速特技</h3>
+                    <p data-i18n="flight_training.special.c7_d">通过高仿真模拟训练，帮助学员快速掌握竞速无人机操控技巧与特技动作要领，降低真机训练的设备损耗与安全风险。</p>
+                    
+                    <div class="special-tags-line">
+                        <span class="sp-tag" data-i18n="flight_training.special.c7_t1">专业赛道选手培养</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c7_t2">商业演出特技培训</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c7_t3">竞速FPV航拍教学</span><span class="sp-dot">·</span>
+                        <span class="sp-tag" data-i18n="flight_training.special.c7_t4">青少年兴趣培养</span>
+                    </div>
+
+                    <div class="sp-images-3">
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                        <div class="sp-img-box"><div class="img-placeholder-gray"></div><img src="" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <!-- 底部 CTA (加上 ID 以便监听隐藏导航) -->
+    <section class="cases-cta section-padding" id="results-section" style="text-align: center; padding-bottom: 120px; background-color: #111;">
+        <h2 data-i18n="flight_training.cta.title" style="font-size: 36px; margin-bottom: 15px;">了解更多产品详情</h2>
+        <p data-i18n="flight_training.cta.sub" style="color: #888; margin-bottom: 30px;">为您的行业定制专业的模拟培训解决方案</p>
+        <a href="#footer" class="btn-solid" data-i18n="flight_training.cta.btn">联系我们</a>
+    </section>
+
+    <!-- 统一的底部导航栏 (Final Footer) -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <!-- 左侧 Logo -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/logo.png" alt="Logo">
+                </div>
+            </div>
+
+            <!-- 右侧 导航列 (6列结构) -->
+            <div class="footer-nav">
+                
+                <!-- 1. 首页 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.home">首页</h4>
+                    <div class="f-links">
+                        <a href="index.html#" data-i18n="header.nav.home">首页</a>
+                    </div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.mobility">智能出行</h4>
+                    <div class="f-links">
+                        <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
+                        <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
+                    </div>
+                </div>
+
+                <!-- 3. 低空飞行 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+
+                <!-- 4. AI搜寻 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.ai_search">AI搜寻</h4>
+                    <div class="f-links">
+                        <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
+                        <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
+                    </div>
+                </div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.about">关于我们</h4>
+                    <div class="f-links">
+                        <a href="about.html" data-i18n="header.nav.about">关于我们</a>
+                    </div>
+                </div>
+
+                <!-- 6. 联系我们 -->
+                <div class="f-col contact-col">
+                    <h4 data-i18n="header.nav.contact">联系我们</h4>
+                    <div class="f-links-vertical">
+                        <a href="contact.html" data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</p>
+                        <a href="contact.html" data-i18n="footer.col5.l2">北商务咨询</p>
+                        <a href="contact.html" data-i18n="footer.col5.l3">business@hummingbird.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

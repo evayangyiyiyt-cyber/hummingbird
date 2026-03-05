@@ -1,0 +1,554 @@
+{
+  "header": {
+    "logo": "Hummingbird",
+    "nav": {
+      "home": "Home",
+      "mobility": "Smart Mobility",
+      "industry_cases": "Industry Cases",
+      "funcar": "Funcar",
+      "flight": "Low-alt Flight",
+      "ai_search": "AI Search",
+      "about": "About Us",
+      "contact": "Contact",
+      "flight_sub1": "Sim Training",
+      "flight_sub2": "Logistics Platform",
+      "ai_sub1": "Smart Search",
+      "ai_sub2": "App Scenarios"
+    }
+  },
+  "hero": {
+    "top_title": "MASTERING <i>the TECHNIQUES</i>",
+    "we_are": "WE ARE",
+    "main_title": "HUMMINGBIRD",
+    "sub_title": "Interactive",
+    "desc_zh": "Committed to creating quality, creating happiness",
+    "desc_en": "We are committed to creating quality and happiness"
+  },
+  "intro": {
+    "p1": "Founded in 2013, Hummingbird Interactive focuses on future mobility experiences.",
+    "p2": "We revolutionize driving with smart entertainment, expand 3D traffic with low-altitude flight tech, and safeguard safety with AI patrols.",
+    "p3": "We are committed to every mobile space—whether in-car, outdoors, or in the air,",
+    "p4": "Creating smarter, more enjoyable, and safer future experiences for users."
+  },
+  "business": {
+    "title": "Business Overview",
+    "desc": "Four Core Areas"
+  },
+  "cases": {
+    "learn_more": "Learn More",
+    "c1": {
+      "title": "Smart Mobility",
+      "desc": "Deeply engaged in IoV technology, providing full-stack solutions like smart entertainment, HMI, and smart cabin VPA for dozens of OEMs.",
+      "l1": "Comprehensive product development system covering from requirements to delivery.",
+      "l2": "Deeply adapted to various mainstream automotive chips and operating systems.",
+      "l3": "Rich in-car content ecosystem to meet users' diverse needs.",
+      "l4": "AI voice assistant and digital human interaction for an immersive cabin experience."
+    },
+    "c2": {
+      "title": "FunCar",
+      "desc": "A complete in-car entertainment platform equipped with multiple premium games, redefining the travel entertainment experience.",
+      "l1": "Play multiple premium games anytime, making the journey no longer monotonous.",
+      "l2": "Complete social and personal center functions to create an exclusive space.",
+      "l3": "Supports multi-hardware platform adaptation, compatible with mainstream head units.",
+      "l4": "Rich audio-visual entertainment content to meet visual and auditory needs."
+    },
+    "c3": {
+      "title": "Low-altitude Flight",
+      "desc": "Creating a closed-loop ecosystem of B-end professional training + C-end flight experience to boost the low-altitude economy.",
+      "l1": "Provide standard and compliant flight training to ensure teaching safety and quality.",
+      "l2": "Build an efficient and smart low-altitude logistics network to empower industry applications.",
+      "l3": "Output professional flight technology and qualification certification.",
+      "l4": "Efficient and smart drone logistics and distribution experience."
+    },
+    "c4": {
+      "title": "AI Search",
+      "desc": "Smart robot security patrol solution, achieving 24/7 continuous smart patrol and real-time monitoring and early warning.",
+      "l1": "All-terrain adaptability, stable operation in complex environments.",
+      "l2": "AI smart visual recognition for precise anomaly detection.",
+      "l3": "Autonomous navigation and path planning to improve patrol efficiency.",
+      "l4": "Cloud management platform for visual data control."
+    }
+  },
+  "corp": {
+    "title": "About Hummingbird",
+    "desc": "Team and Culture"
+  },
+  "scope": {
+    "title": "Scope of Business",
+    "desc": "Projects",
+    "k1": "Smart Cabin",
+    "k2": "HMI",
+    "k3": "VPA",
+    "k4": "Cabin Ent.",
+    "k5": "Funcar",
+    "k6": "VR/AR",
+    "k7": "Low-alt Flight",
+    "k8": "Drone Training",
+    "k9": "Drone Logistics",
+    "k10": "AI Search",
+    "k11": "MORE"
+  },
+  "partners": {
+    "title": "Partners",
+    "desc": "Establishing long-term strategic partnerships with famous enterprises",
+    "cat1": "Smart Mobility Partners",
+    "cat2": "Low-alt Flight Partners",
+    "cat3": "Other Partners"
+  },
+  "footer": {
+    "col1": { "title": "Smart Mobility", "l1": "Business Overview", "l2": "Funcar" },
+    "col2": { "title": "Low-alt Flight", "l1": "Drone Racing", "l2": "App Scenarios", "l3": "Drone E-Proctoring" },
+    "col3": { "title": "AI Search", "l1": "AI Search", "l2": "App Scenarios" },
+    "col4": { "title": "About Us", "l1": "Home", "l2": "About Us" },
+    "col5": { "title": "Contact Us", "l1": "Beijing | Shenyang | Osaka | SG", "l2": "Business Consulting" }
+  },
+  "funcar": {
+    "hero": {
+      "title": "Reshape Every Journey",
+      "subtitle": "A New Smart Mobility Experience",
+      "btn_video": "Watch Video",
+      "btn_download": "Download Demo"
+    },
+    "acc": {
+      "title": "Pro Accessories, Perfect Experience",
+      "set1_title": "Funcar Set 1",
+      "set2_title": "Funcar Set 2",
+      "set_desc": "Complete solution including all accessories",
+      "s1_list": "Game Controller x1 | Microphone x1 | Tablet x1 | Stand x1 | Cable x1",
+      "s2_list": "Game Controller x1 | Car Mic x1 | CarPlay x1 | Cable x1",
+      "btn_buy": "Buy Now",
+      "hw_1": "Game Controller", "hw_1_desc": "Ergonomic design, precise control",
+      "hw_2": "Car Microphone", "hw_2_desc": "Hi-Fi sound, essential for KTV",
+      "hw_3": "CarPlay", "hw_3_desc": "Seamless connection, smart mirroring",
+      "hw_4": "Tablet", "hw_4_desc": "HD screen, entertainment center",
+      "hw_5": "Tablet Stand", "hw_5_desc": "Stable support, adjustable angle",
+      "hw_6": "Adapter Cable", "hw_6_desc": "High-speed transmission, plug & play"
+    },
+    "quote": {
+      "l1": "Not just a vehicle",
+      "l2": "But your mobile smart space",
+      "l3": "From breakthrough social interactions to cinematic audio-visuals, Funcar blends cutting-edge tech with humanized design.",
+      "l4": "Every journey is full of infinite fun and possibilities."
+    },
+    "eco": {
+      "main_title": "Ecosystem",
+      "main_subtitle": "Eight core ecosystems for comprehensive entertainment.",
+      "game_title": "Gaming",
+      "game_desc": "Funcar's gaming system includes rich genres to meet diverse needs. Whether cloud games, emulators, H5, or local games, Funcar provides a seamless immersive experience.",
+      "game_t1": "Cloud Games", "game_t2": "Emulators", "game_t3": "H5 Games", "game_t4": "Local Games",
+      "g1_name": "Black Myth: Wukong", "g1_brand": "Game Science",
+      "g2_name": "Resident Evil 9",
+      "g3_name": "Uncharted",
+      "ktv_title": "In-Car KTV",
+      "ktv_desc": "Supports Bluetooth mics with a massive song library. Pro audio processing lets you enjoy KTV-level singing in your car.",
+      "k1_name": "Kill Bill",
+      "k2_name": "Wrong Love",
+      "k3_name": "Radio (Dum-Dum)",
+      "film_title": "Movies & TV",
+      "film_desc": "Rich online video resources including movies, TV series, shorts, and anime. Supports HD playback and resume function.",
+      "film_t1": "Movies", "film_t2": "TV Series", "film_t3": "Shorts", "film_t4": "Anime",
+      "f1_name": "Now You See Me (1-2)",
+      "f2_name": "Iron Man (1-3)",
+      "f3_name": "Flash Point",
+      "manga_title": "Comics",
+      "manga_desc": "Massive genuine HD comics covering works from multiple regions. Supports online reading and offline downloads.",
+      "m1_name": "One Punch Man",
+      "m2_name": "Jujutsu Kaisen",
+      "m3_name": "Demon Slayer"
+    },
+    "features": {
+      "main_title": "Extraordinary in every detail.",
+      "social_title": "Social",
+      "social_desc": "Friend system, community plaza, dynamic sharing—building a social circle for car owners.",
+      "life_title": "Lifestyle",
+      "life_desc": "Cards, reservations, shopping, and other lifestyle services integrated to be your smart assistant.",
+      "weather_title": "Weather",
+      "weather_desc": "Real-time forecasts, air quality, travel advice. Precise info helps you plan trips safely.",
+      "nav_title": "Navigation",
+      "nav_desc": "Smart navigation with real-time traffic and multiple route planning. Avoid congestion easily."
+    },
+    "scenes": {
+      "title": "Enjoy entertainment anywhere, anytime.",
+      "st1": "Family Trip",
+      "sd1": "Kids can play games or watch anime in the back, while adults relax with KTV.",
+      "st2": "Couple Date",
+      "sd2": "Create a private romantic space to watch movies and listen to music together.",
+      "st3": "Solo Relax",
+      "sd3": "Immerse yourself in games or comics during lunch breaks or charging."
+    },
+    "cta": {
+      "title": "Ready to experience Funcar?",
+      "subtitle": "Download now to experience the complete smart Funcar platform.",
+      "btn": "Download Demo"
+    }
+  },
+  "industry": {
+    "hero": {
+      "title": "Smart Mobility<br>Every journey is a beautiful expectation",
+      "subtitle": "Committed to upgrading 'on-time arrival' to 'beautiful experiences' through smart mobility tech.<br>Redefining travel—not just about efficiency, but caring for your every mood on the road."
+    },
+    "intro": {
+      "p1": "Hummingbird Interactive is an innovative tech company focusing on in-car smart entertainment.",
+      "p2": "Our business covers smart cockpits, driving entertainment, HMI systems, and IoV software development, along with smart VPA, interactive design, and marketing content production.",
+      "p3": "With innovative technology and quality services, we continuously drive industry development to create a smarter and more convenient travel experience for users."
+    },
+    "pillars": {
+      "title": "BEYOND<br>REALITY",
+      "sub": "Seamless Travel · Free Your Mind",
+      "p1_t": "Break Space-Time Limits",
+      "p1_d": "Multi-device connectivity, eliminating cloud/car barriers.",
+      "p2_t": "Rich Content Experience",
+      "p2_d": "Digital content / Immersive experiences",
+      "p3_t": "Strong Interactivity",
+      "p3_d": "Customization centered on user experience and collaborative models.",
+      "p4_t": "Immersive Experience",
+      "p4_d": "Multi-sensory synergy (visual, auditory, tactile) and spatial computing."
+    },
+    "tabs": {
+      "t1": "Smart Cockpit", "t2": "HMI", "t3": "VPA", "t4": "Entertainment", "t5": "VR/AR", "t6": "Others"
+    },
+    "sec_cockpit": {
+      "title": "Smart Cockpit",
+      "c1_t": "Chery - Smart Minibus", "c1_d": "Covers HMI software development, virtual character design, and 3D visual effects.",
+      "c2_t": "Zeekr - R&D Test Cockpit", "c2_d": "Includes central screen, passenger screen, rear screen, HUD, and transparent A-pillar hardware and software.",
+      "c3_t": "Chery - 2024 Auto Show Smart Cockpit", "c3_d": "Enter Chery's Metaverse, experience four different styled scenarios and smart voice interaction.",
+      "c4_t": "Bosch - 2023 Auto Show Entertainment Cockpit", "c4_d": "In-car racing game supporting multiple interaction modes like steering wheels and Bluetooth controllers.",
+      "c5_t": "Audi - 2023 Auto Show Entertainment Cockpit", "c5_d": "Immersive world combining in-car games with seats, steering wheel, and ambient lighting hardware.",
+      "c6_t": "Audi E-Torn Assisted VR Design", "c6_d": "Assists the design team in developing vehicle exterior, interaction, experience, and virtual test drives.",
+      "c7_t": "Tsinghua University - Driving Simulation", "c7_d": "VR-based driving training environment to study the impact of driver cognition and emotion on behavior."
+    },
+    "sec_hmi": {
+      "title": "HMI",
+      "c1_t": "Dongfeng - HMI Interface", "c1_d": "Built for mid-to-high-end models, enhancing visual impact and interaction efficiency.",
+      "c2_t": "Chery - 3D HMI Interface", "c2_d": "Full of tech charm, enhancing the user experience with intelligence and visual aesthetics.",
+      "c3_t": "BAIC - VR HMI Interface", "c3_d": "Deep integration of VR devices and 3D cabins, viewing the overlay of 3D real scenes and virtual elements."
+    },
+    "sec_vpa": {
+      "title": "VPA",
+      "c1_t": "Great Wall - 4D Digital Human + Assistant", "c1_d": "Digital avatar accompanies the owner for natural emotional dialogues during the drive.",
+      "c2_t": "Tank 300 - Male/Female Avatar Assistant", "c2_d": "Exclusive avatars matched for different models, supporting natural voice communication and operation."
+    },
+    "sec_ent": {
+      "title": "Cabin Entertainment",
+      "c1_t": "GAC Aion - ADiGO World", "c1_d": "Combined with driving data, an ecosystem of planetary growth realized through natural voice control.",
+      "c2_t": "Smart - Racing Game", "c2_d": "Drivers control the racing car via accelerator, brake, and steering wheel for an immersive experience.",
+      "c3_t": "Hyundai - Racing Game", "c3_d": "Built with an advanced physics engine, providing exciting racing gameplay.",
+      "c4_t": "Mercedes-Benz - In-Car Racing", "c4_d": "Supports multiplayer interaction via controllers, phones, touch screens, and ambient lighting.",
+      "c5_t": "Exeed - Cloud Gaming", "c5_d": "Cloud gaming tech allows high-quality gaming without needing high-performance local hardware.",
+      "c6_t": "Antolin - In-Car Music Game", "c6_d": "Rhythm games synchronized with in-car lighting, audio, and seat vibration.",
+      "c7_t": "Hongqi - Faurecia Entertainment System", "c7_d": "Light entertainment system for the rear seats of Hongqi H9, supporting fragmented time interaction.",
+      "c8_t": "Kart Party - Racing Game", "c8_d": "A decentralized racing economy system based on blockchain technology.",
+      "c9_t": "Geely - Pet Raising Game", "c9_d": "Increases user stickiness and social interaction by cultivating virtual pets.",
+      "c10_t": "Motion Karaoke & Dance Game", "c10_d": "Full-body motion dance interaction via microphone and front camera.",
+      "c11_t": "Motion Tennis Game", "c11_d": "Control virtual tennis movement through body motions, enjoying the fun of technology."
+    },
+    "sec_vrar": {
+      "title": "VR/AR",
+      "c1_t": "Daimler Benz - AR Entertainment Game", "c1_d": "Hidden in-car clues and AR interactive puzzles, solving experiences via image recognition and gyroscope.",
+      "c2_t": "Hyundai - Gesture Game", "c2_d": "Easily control games in the car using advanced gesture recognition technology."
+    },
+    "sec_other": {
+      "title": "Others",
+      "c1_t": "Auto Museum - MoCap Racing Game", "c1_d": "Using Kinect motion capture, players control the race car with their own body movements.",
+      "c2_t": "NETA Auto - AR Live Virtual Launch", "c2_d": "AR live broadcasting created with Unreal Engine and camera tracking technology."
+    },
+    "stats": {
+      "title": "Cooperation Results",
+      "l1": "OEM Partners", "l2": "Vehicle Models", "l3": "Active Users", "l4": "Customer Satisfaction"
+    },
+    "cta": {
+      "title": "Start Cooperation", "sub": "Build the next generation of smart experiences with us", "btn": "Contact Us"
+    }
+  },
+  "ai_scenarios": {
+    "hero": {
+      "title": "Application Scenarios<br>Smart Security Patrol Robot Applications",
+      "subtitle": "Multi-scenario application · Professional solutions · Safe and reliable"
+    },
+    "tabs": {
+      "t1": "Industrial Energy", "t2": "Field Rescue", "t3": "Emergency Safety", "t4": "Special Ops", "t5": "Medical Rescue", "t6": "Urban Firefighting"
+    },
+    "sec1": {
+      "title": "Industrial Energy", "sub": "Mining groups, chemical mines, energy companies, safety supervision units",
+      "i1_t": "Substation Patrol", "i1_d": "24/7 smart patrol for substations. Robots autonomously check equipment status, monitor temperature, and recognize abnormal sounds.",
+      "i2_t": "Mine/Pipeline Inspection", "i2_d": "Robotic dogs enter narrow spaces equipped with AI cameras to detect cracks and leaks.",
+      "i3_t": "Smart Patrol", "i3_d": "Drones perform blind-spot-free aerial patrols while robotic dogs cover the ground. AI compares data to identify equipment anomalies or intrusions.",
+      "i4_t": "Hazardous Gas Detection", "i4_d": "AI reads meters and detects abnormal gas concentrations, automatically reporting to the control center."
+    },
+    "sec2": {
+      "title": "Field Rescue", "sub": "Forest fire brigades, mountaineering rescue associations, outdoor emergency centers",
+      "i1_t": "Mountain/Snow Rescue", "i1_d": "Drones use infrared vision to lock onto heat sources, while robotic dogs traverse complex terrains to approach targets.",
+      "i2_t": "Wireless Relay & Positioning", "i2_d": "Drones deploy relay nodes to provide communication support for rescues in remote areas.",
+      "i3_t": "Wildfire Monitoring", "i3_d": "AI identifies smoke, fire points, and wind direction, automatically triggering warnings.",
+      "i4_t": "Material Transport & Towing", "i4_d": "Automated material transport and lifeline towing for trapped personnel in complex landscapes."
+    },
+    "sec3": {
+      "title": "Emergency Safety", "sub": "Emergency Management Department, Fire Rescue Corps, Armed Police Forces",
+      "i1_t": "Disaster Site Search", "i1_d": "During earthquakes or floods, AI locates trapped people via image recognition; drones scan heat sources, and robotic dogs search near the ground in ruins.",
+      "i2_t": "Emergency Command Linkage", "i2_d": "The AI system aggregates real-time video, location, and environmental data from drones and robotic dogs to the command center.",
+      "i3_t": "Material Delivery & Transport", "i3_d": "Combining infrared thermal imaging and LiDAR low-light visual recognition to complete night rescues.",
+      "i4_t": "Night & Complex Environment Ops", "i4_d": "Combining infrared thermal imaging and LiDAR low-light visual recognition to complete night rescues."
+    },
+    "sec4": {
+      "title": "Special Operations", "sub": "Forest fire brigades, mountaineering rescue associations, outdoor emergency centers",
+      "i1_t": "Reconnaissance & Target ID", "i1_d": "Drones transmit real-time footage of targets while robotic dogs observe closely under cover.",
+      "i2_t": "Urban Combat/Counter-terrorism", "i2_d": "Air-ground coordination for battlefield material resupply.",
+      "i3_t": "Rapid Material Delivery", "i3_d": "AI identifies smoke, fire points, and wind direction, automatically triggering warnings.",
+      "i4_t": "Environment Modeling", "i4_d": "Drones complete area scanning, and AI reconstructs 3D scenes for tactical planning."
+    },
+    "sec5": {
+      "title": "Medical Rescue", "sub": "Red Cross, medical emergency centers, mountain hospitals",
+      "i1_t": "Emergency Drug/Blood Transport", "i1_d": "AI dispatches a mixed fleet of drones and robotic dogs for automated delivery.",
+      "i2_t": "Remote Medical Assistance", "i2_d": "AI assesses injuries and matches medical staff to guide on-site first aid.",
+      "i3_t": "Post-disaster Vital Signs Detection", "i3_d": "AI identifies body postures, temperature, and heart rate data to determine survival probability."
+    },
+    "sec6": {
+      "title": "Urban Firefighting", "sub": "Fire brigades, urban security centers, industrial park safety offices",
+      "i1_t": "High Temp/Toxic Area Probing", "i1_d": "Robotic dogs equipped with gas and temperature sensors enter danger zones instead of humans.",
+      "i2_t": "Fire Recon & Escape Route ID", "i2_d": "AI reconstructs the 3D structure of the scene to assist in predicting the possible locations of trapped victims.",
+      "i3_t": "Post-collapse Quick Assessment", "i3_d": "AI identifies smoke, fire points, and wind direction, automatically triggering warnings.",
+      "i4_t": "Urban Underground Space Inspection", "i4_d": "Conducting structural deformation detection and hazard patrols in subways and underground utility tunnels."
+    },
+    "cta": {
+      "title": "Learn More About Solutions", "sub": "Customize professional security patrol solutions for your industry", "btn": "Contact Us"
+    }
+  },
+  "ai_intel": {
+    "hero": {
+      "title_sm": "AI Search",
+      "title_lg": "Precise Positioning, Smart Search",
+      "subtitle": "24/7 Smart Patrol",
+      "desc": "Smart Robot · All-weather Patrol · Safe and Reliable",
+      "btn_video": "Watch Demo",
+      "btn_download": "Download Software"
+    },
+    "intro": {
+      "title": "Global Smart Search<br>Reconstructing Search Boundaries",
+      "desc": "Integrating the strong ground mobility of robotic dogs, the broad aerial view of drones, and the real-time decision-making of AI networks.<br>Providing you with unprecedented all-weather, all-terrain smart search solutions."
+    },
+    "feat1": {
+      "title": "Wheeled Robotic Dog<br>All-terrain Ground Pioneer",
+      "desc": "Possesses extremely strong terrain adaptability and load capacity. Acts as a ground mobile base station for close-range reconnaissance, detail confirmation, material transport, and long-term monitoring.",
+      "tags": "24/7 Smart Patrol | AI Recognition | All-terrain"
+    },
+    "feat2": {
+      "title": "Drone<br>God's-eye Scout",
+      "desc": "Provides an unparalleled aerial view, quickly covering large areas and breaking terrain limits. Equipped with HD zoom cameras and sensors for rapid scanning and path planning.",
+      "tags": "Rapid Coverage | High-altitude View | Agile"
+    },
+    "feat3": {
+      "title": "AI Network<br>Swarm Intelligence Brain",
+      "desc": "The smart hub of the system. Achieves real-time, lossless communication between ground and air units. Built-in AI algorithms intelligently analyze data, assign tasks, and track targets.",
+      "tags": "Smart Analysis | Autonomous Synergy | Real-time Warning"
+    },
+    "synergy": {
+      "title": "AI Network<br>Swarm Intelligence Brain",
+      "sub_tags": "Smart Analysis | Autonomous Synergy | Real-time Warning",
+      "desc": "Not a simple stacking of devices, but a deep integration of capabilities. Upon system start, drones launch for wide-area scanning; AI analyzes video streams in real-time to lock suspicious areas. The AI network automatically plans optimal paths, directing drones to provide aerial lighting and navigation for robotic dogs. Robotic dogs arrive at targets for detailed reconnaissance and disposal, transmitting real-time info to the command center.",
+      "c1_t": "Efficiency Multiplied:", "c1_sub": "Seamless connection between aerial screening and ground confirmation",
+      "c2_t": "Zero Blind Spots:", "c2_sub": "Combining aerial views and ground penetration",
+      "c3_t": "Autonomous Intelligence:", "c3_sub": "System autonomous decision-making reduces human dependence",
+      "c4_t": "All-weather Ops:", "c4_sub": "Adapts to day, night, and complex environments",
+      "c_desc": "Seamless connection between 'rapid aerial screening' and 'precise ground confirmation' is the core mode of modern air-ground rescue systems, achieving an efficient closed loop."
+    },
+    "store": {
+      "title": "Product Store",
+      "sub": "Professional equipment, complete solutions",
+      "c_t": "AI Search Complete Set",
+      "c_tag": "Recommended",
+      "c_d": "Professional security solutions including all accessories"
+    },
+    "cta": {
+      "title": "Learn More Product Details",
+      "sub": "Contact us for professional security patrol solutions",
+      "btn": "Download Software"
+    }
+  },
+  "flight_training": {
+    "hero": {
+      "title": "Simulation Training System<br>CAAC Exam Simulation",
+      "subtitle": "Specialized Application Scenario Training"
+    },
+    "subnav": {
+      "t1": "CAAC Exam Simulation",
+      "t2": "Specialized App Training"
+    },
+    "intro": {
+      "title": "CAAC Exam Simulation Training",
+      "subtitle": "Safe · Low Cost · High Fidelity · Standardized"
+    },
+    "pillars": {
+      "p1_t": "Policy Driven", "p1_d": "CAAC promotes digital and simulated training, opening policy dividends.",
+      "p2_t": "Market Size", "p2_d": "Pilot shortage exceeds 7M. With low-altitude economy opening, annual demand increases by 1M.",
+      "p3_t": "Core Customers", "p3_d": "Drone schools and aviation colleges connect directly to improve teaching efficiency and pass rates.",
+      "p4_t": "Extended Customers", "p4_d": "Covering plant protection, logistics, mapping, patrol, and rescue with customized courses."
+    },
+    "subject1": {
+      "title": "Subject 1: Theory & Assembly",
+      "subtitle": "Mainly tests the mastery of basic knowledge such as laws, flight principles, and aviation meteorology.",
+      "row1_t": "Theoretical Knowledge",
+      "row1_d": "Provides 'Practice' and 'Exam' modes. Systematic knowledge covers aviation regulations, meteorology, flight principles, etc. Strictly follows CAAC standards, generating a report immediately upon submission.",
+      "row2_t": "Drone Assembly",
+      "row2_d": "Students first select a model to preview the aircraft or recognize parts. Then enter the assembly stage with real-time progress. The system automatically calculates scores upon completion and supports viewing history."
+    },
+    "subject2": {
+      "title": "Subject 2: Practical Flight",
+      "subtitle": "Tests the 'control' over the drone. Challenges hand coordination, spatial orientation, and psychological quality.",
+      "card1_t": "Hover 360° Spin",
+      "card1_sub": "Maintain hover in designated airspace and complete 360° fixed-axis spin. Meets standards of 'height deviation ≤0.5m, horizontal displacement ≤1m, uniform spin velocity'.",
+      "c1_s1_t": "Hover Calibration", "c1_s1_d": "Click 'Hover Calibration' to stabilize the drone at the designated initial altitude.",
+      "c1_s2_t": "360° Spin", "c1_s2_d": "Maintain stable throttle, slowly push/pull rudder to complete spin at uniform angular velocity.",
+      "c1_s3_t": "Precise Landing", "c1_s3_d": "Stop accurately at the initial point. System automatically generates score and review.",
+      "card2_t": "Figure-8 Flight Simulation",
+      "card2_sub": "A key subject testing comprehensive handling, requiring the pilot to fly a standard figure-8 route within designated airspace.",
+      "c2_s1_t": "Basic Hover", "c2_s1_d": "Accurately hover above the center circle within 1 minute, focusing on micro-control training.",
+      "c2_s2_t": "Figure-8 Route", "c2_s2_d": "Symmetrical and smooth figure-8 route, maintaining uniform speed and fixed altitude.",
+      "c2_s3_t": "Precise Landing", "c2_s3_d": "Return accurately and hover at the starting point after flight, testing landing precision."
+    },
+    "bvlos": {
+      "title": "BVLOS — Ground Station Ops",
+      "subtitle": "Scheduled route takeoff, cruise, turning, point landing. Meets 'route deviation ≤50m, altitude deviation ≤5m, command delay ≤2s'.",
+      "card_t": "Hover 360° Spin",
+      "card_sub": "Maintain hover in designated airspace and complete 360° fixed-axis spin. Meets standards.",
+      "s1_t": "Full BVLOS Scene Restore", "s1_d": "Build airspace meeting CAAC requirements. Support simulating real electromagnetic interference in urban and mountainous scenes.",
+      "s2_t": "Instrument & Link Sim", "s2_d": "Display attitude, track, battery data. Simulate faults like link interruption and signal delay.",
+      "s3_t": "Scoring & Review", "s3_d": "CAAC official scoring rules. Highlight violations and deduction reasons, providing improvement advice."
+    },
+    "modes": {
+      "title": "Training Modes",
+      "subtitle": "Process for building scientific muscle memory + spatial orientation.",
+      "m1_t": "Free Flight Mode",
+      "m1_sub": "Seamless connection between rapid aerial screening and precise ground confirmation",
+      "m1_d": "Open, unconstrained practice environment. Control the drone freely with no task limits. Suitable for novices to familiarize with basics or experts to test parameters. Supports free setting adjustments to explore techniques.",
+      "m2_t": "Racing Track Mode",
+      "m2_sub": "Seamless connection between rapid aerial screening and precise ground confirmation",
+      "m2_d": "Racing challenge gameplay with fixed tracks and checkpoints. Cross and reach the finish line in specified order. Tracks feature obstacles. System auto-records time, testing route planning and high-speed handling."
+    },
+    "special": {
+      "title": "Specialized Application Training",
+      "sub": "Training modules for specific economic segments. Simulate real work environments for specific industry skills.",
+      "c1_t": "Photovoltaic Cleaning",
+      "c1_d": "Master the skills of specialized cleaning drones for PV panels to achieve efficient and safe O&M management.",
+      "c1_t1": "Ground PV Station", "c1_t2": "Roof Distributed PV", "c1_t3": "Mountain PV", "c1_t4": "Coastal High Salt Fog",
+      "c2_t": "Agriculture & Forestry",
+      "c2_d": "Focusing on large areas of farmland, forests, pastures, etc., helping students master route planning and autonomous operation.",
+      "c2_t1": "Pesticide Spraying", "c2_t2": "Forest Fire Patrol", "c2_t3": "Livestock Counting", "c2_t4": "Orchard Monitoring", "c2_t5": "Remote Fertilizing",
+      "c3_t": "Mapping & Monitoring",
+      "c3_d": "Simulate complex terrains like urban dense areas and mountains to master low-altitude flight and multi-angle shooting.",
+      "c3_t1": "Land Mapping", "c3_t2": "Engineering Mapping", "c3_t3": "Water Area Monitoring", "c3_t4": "Ecological Monitoring", "c3_t5": "Mineral Exploration",
+      "c4_t": "Logistics Transport",
+      "c4_d": "Simulate complex scenes like mountains and islands to master takeoff and landing in difficult terrains.",
+      "c4_t1": "Remote Delivery", "c4_t2": "Emergency Transport", "c4_t3": "Island Supply", "c4_t4": "Desert Airdrop", "c4_t5": "Post-disaster Transfer",
+      "c5_t": "Security Patrol",
+      "c5_d": "Focus on facility inspection scenes like roads, bridges, and pipe networks to master hazard troubleshooting.",
+      "c5_t1": "Traffic Monitoring", "c5_t2": "Power Line Inspection", "c5_t3": "Pipe Network Check", "c5_t4": "Border Patrol", "c5_t5": "Park Security",
+      "c6_t": "Emergency Rescue",
+      "c6_d": "Simulate disaster scenes like earthquakes and floods to master rapid takeoff and low-altitude penetration.",
+      "c6_t1": "Disaster Reconnaissance", "c6_t2": "Trapped Search", "c6_t3": "Emergency Airdrop", "c6_t4": "Fire Monitoring", "c6_t5": "Disaster Assessment",
+      "c7_t": "Racing & Stunts",
+      "c7_d": "High-simulation training to master racing drone control skills and stunt actions, reducing equipment loss risks.",
+      "c7_t1": "Pro Racer Training", "c7_t2": "Commercial Stunts", "c7_t3": "FPV Filming", "c7_t4": "Youth Interest"
+    },
+    "cta": {
+      "title": "Learn More Product Details",
+      "sub": "Customize professional security patrol solutions for your industry",
+      "btn": "Contact Us"
+    }
+  },
+  "flight_logistics": {
+    "hero": {
+      "title": "UAV Logistics Platform<br>One-stop Solution Provider",
+      "subtitle": "Talent Training + Industry Application"
+    },
+    "intro": {
+      "title": "Fill the Professional Gap<br>Define Industry Standards",
+      "desc": "With strong national policy support, demand in logistics, inspection, and emergency fields is booming.<br>We are committed to becoming a leading UAV industry ecosystem service provider in China."
+    },
+    "dual_core": {
+      "title": "Dual-core Driven Business Strategy",
+      "sub": "Forming a closed loop of 'Training & Certification - Employment - Data Feedback - Training Optimization'",
+      "tag_a": "Core Business A",
+      "title_a": "Simulation Training System",
+      "desc_a": "The 'Driving School' in the UAV field. Delivering qualified talents to the industry and laying a solid safety foundation.",
+      "tag_b": "Core Business B",
+      "title_b": "Logistics Dispatch Platform",
+      "desc_b": "The 'Uber Freight' in the UAV field. Tapping into a 100-billion-level market and commercializing talent value."
+    },
+    "network": {
+      "title": "Air Logistics Network Connecting B2B and B2C",
+      "sub": "Ecosystem model: Building a win-win logistics ecosystem of 'Pilots + Self-operated + Merchants'",
+      "m1_t": "Contracted Pilot Model",
+      "m1_tag": "Asset-light operation · Uber-like model",
+      "m1_d": "Integrating certified pilot resources in society. The platform is responsible for dispatching and settling pilots per order.",
+      "m1_apply": "Applicable: Personal delivery, emergency orders",
+      "m2_t": "Self-operated Fleet Model",
+      "m2_tag": "High standards · Quality assurance",
+      "m2_d": "Self-built fleet + flight center, executing standardized routes to ensure efficiency and safety.",
+      "m2_apply": "Applicable: Medical specimens, high-value goods",
+      "m3_t": "Merchant Settlement Model",
+      "m3_tag": "Enlarging the ecosystem · Platform empowerment",
+      "m3_d": "Third-party logistics access system, platform provides dispatching algorithms and profit-sharing mechanisms.",
+      "m3_apply": "Applicable: Large enterprise routine delivery"
+    },
+    "systems": {
+      "title": "Four Core System Architectures",
+      "s1_t": "User App", "s1_d": "Order · Track · Payment · After-sales",
+      "s2_t": "Pilot App", "s2_d": "Order taking · Certification · Upload · Income",
+      "s3_t": "Smart Dispatch Center", "s3_d": "Smart route planning | Multi-task real-time monitoring | Abnormal auto-alarm",
+      "s4_t": "Backend Management System", "s4_d": "Order management · Pilot review · Data analysis · Airspace control"
+    },
+    "process": {
+      "title": "Standardized Service Process",
+      "sub": "Ecosystem model: Building a win-win logistics ecosystem of 'Pilots + Self-operated + Merchants'",
+      "left_title": "Personal/Retail Orders",
+      "l1_t": "1. Submit Request", "l1_d": "User inputs coordinates, weight, and time",
+      "l2_t": "2. Smart Matching", "l2_d": "System finds nearest compliant pilot to push task",
+      "l3_t": "3. Flight Delivery", "l3_d": "Pilot picks up goods, user tracks in real-time",
+      "l4_t": "4. Receipt & Settlement", "l4_d": "Receipt confirmed, system auto-splits funds",
+      "right_title": "Enterprise/Key Account Orders",
+      "r1_t": "1. Batch Input", "r1_d": "Enterprise ERP access or batch import delivery plan",
+      "r2_t": "2. Capacity Dispatch", "r2_d": "System assigns self-operated fleet based on payload and weather",
+      "r3_t": "3. Full Tracking", "r3_d": "Visual dashboard monitoring, automatic warning for anomalies",
+      "r4_t": "4. Monthly Settlement", "r4_d": "Generate data reports for periodic financial settlement"
+    },
+    "firewall": {
+      "title": "Building a Security Firewall",
+      "sub": "Safe · Low Cost · High Fidelity · Standardized",
+      "p1_t": "Personnel Compliance", "p1_d": "Real-name registration + CAAC license verification + dynamic face recognition, matching person and ID.",
+      "p2_t": "Airspace Compliance", "p2_d": "Connecting to CAAC low-altitude coordination interface, auto-avoiding no-fly zones, legal route verification.",
+      "p3_t": "Security Monitoring", "p3_d": "Automatic alarm for abnormal data, supporting auto-return/landing, visual center control.",
+      "p4_t": "Double Insurance", "p4_d": "Single order insurance (cargo/third-party) + annual operation insurance (equipment/personal) for full coverage."
+    },
+    "loop": {
+      "title": "Multi-dimensional Resource Empowerment · Commercial Closed-loop",
+      "sub": "Safe · Low Cost · High Fidelity · Standardized",
+      "i1_t": "Training", "i1_d": "Simulation System",
+      "i2_t": "Certification", "i2_d": "CAAC License",
+      "i3_t": "Employment", "i3_d": "Logistics Platform Pilot",
+      "i4_t": "Guarantee", "i4_d": "Financial Leasing + Insurance",
+      "bottom_title": "Diversified Revenue Sources",
+      "bottom_sub": "Platform transaction commission | Self-operated service income | Merchant entry fee | System service fee | Pilot training fee"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Expect the possibilities, Welcome to inquire"
+    },
+    "global": {
+      "title": "Global Presence",
+      "bj_city": "China · Beijing (HQ)", "bj_dept": "Core R&D & Business Center", "bj_addr": "Zone A, No.1 Banbidian, Gaobeidian Rd, Chaoyang Dist, Beijing",
+      "jp_city": "Japan · Osaka", "jp_dept": "APAC Innovation Design Center", "jp_addr": "2-2-2 Umeda, Kita-ku, Osaka",
+      "sg_city": "Singapore", "sg_dept": "Overseas Business Expansion Center", "sg_addr": "1 Raffles Place, #04-61, One Raffles Place"
+    },
+    "biz": {
+      "title": "Business Consulting",
+      "label_contact": "Contact Person", "name": "Manager Wang",
+      "label_email": "Business Email",
+      "scan_tip": "Scan for WeChat"
+    },
+    "social": {
+      "title": "Social Media"
+    }
+  }
+}
