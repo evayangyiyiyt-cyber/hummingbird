@@ -344,11 +344,11 @@
     "synergy": {
       "title": "AI Network<br>Swarm Intelligence Brain",
       "sub_tags": "Smart Analysis | Autonomous Synergy | Real-time Warning",
-      "desc": "Not a simple stacking of devices, but a deep integration of capabilities. Upon system start, drones launch for wide-area scanning; AI analyzes video streams in real-time to lock suspicious areas. The AI network automatically plans optimal paths, directing drones to provide aerial lighting and navigation for robotic dogs. Robotic dogs arrive at targets for detailed reconnaissance and disposal, transmitting real-time info to the command center.",
-      "c1_t": "Efficiency Multiplied:", "c1_sub": "Seamless connection between aerial screening and ground confirmation",
-      "c2_t": "Zero Blind Spots:", "c2_sub": "Combining aerial views and ground penetration",
-      "c3_t": "Autonomous Intelligence:", "c3_sub": "System autonomous decision-making reduces human dependence",
-      "c4_t": "All-weather Ops:", "c4_sub": "Adapts to day, night, and complex environments",
+      
+      "c1_t": "Efficiency Multiplied", "c1_sub": "Seamless connection between aerial screening and ground confirmation",
+      "c2_t": "Zero Blind Spots", "c2_sub": "Combining aerial views and ground penetration",
+      "c3_t": "Autonomous Intelligence", "c3_sub": "System autonomous decision-making reduces human dependence",
+      "c4_t": "All-weather Ops", "c4_sub": "Adapts to day, night, and complex environments",
       "c_desc": "Seamless connection between 'rapid aerial screening' and 'precise ground confirmation' is the core mode of modern air-ground rescue systems, achieving an efficient closed loop."
     },
     "store": {
