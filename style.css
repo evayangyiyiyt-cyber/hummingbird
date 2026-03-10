@@ -1071,3 +1071,45 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     /* 手机端社交媒体稍微宽一点 */
     .social-item { max-width: 100%; }
 }
+
+
+/* ========================================= */
+/* 14. 关于我们页面专属样式 (About Page)     */
+/* ========================================= */
+
+/* 图片无缝平铺相接区域 */
+.corp-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+}
+
+.corp-img-row {
+    width: 100%;
+    /* 高度可以根据您的图片实际比例调整，这里给一个占位高度 */
+    height: auto; 
+    overflow: hidden;
+    position: relative;
+    /* 去除浏览器默认的 img 底部间隙 */
+    line-height: 0; 
+}
+
+.corp-img-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保证图片铺满不拉伸 */
+    display: block;    /* 去除 img 默认的 inline-block 空白 */
+}
+
+/* 如果是没有本地图片的占位符，显示深灰色块 */
+.corp-img-row img:not([src]), .corp-img-row img[src=""] {
+    background-color: #111 !important;
+    border-bottom: 1px solid #222 !important; /* 加一条极细的分割线，防止全是灰块时连在一起看不清 */
+}
+
+/* 手机端适配：降低图片高度 */
+@media (max-width: 768px) {
+    .corp-img-row {
+        height: auto;
+    }
+}

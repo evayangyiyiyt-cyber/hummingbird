@@ -25,45 +25,46 @@
                 <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
             </div>
             
+            <!-- 【修改】智能出行 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="mobility-btn">
                     <span data-i18n="header.nav.mobility">智能出行</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="mobility-dropdown">
                     <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
                     <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
                 </div>
             </div>
 
+            <!-- 【修改】低空飞行 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="flight-btn">
                     <span data-i18n="header.nav.flight">低空飞行</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="flight-dropdown">
                     <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
                     <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
                 </div>
             </div>
 
+            <!-- 【修改】AI搜寻 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="ai-btn">
                     <span data-i18n="header.nav.ai_search">AI搜寻</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="ai-dropdown">
                     <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
                     <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
                 </div>
             </div>
 
-            <!-- 关于我们 (独立页面) -->
             <div class="nav-item single-link">
                 <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
             </div>
 
-            <!-- 联系我们 (独立页面) -->
             <div class="nav-item single-link">
                 <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
             </div>
@@ -89,7 +90,7 @@
     <!-- 主视觉 (复用之前优化的深灰背景) -->
     <div class="cases-hero-bg">
         <section class="cases-hero">
-            <img class="cases-hero-img" src="./images/ai-hero-bg.jpg" alt="AI搜寻大图">
+            <img class="cases-hero-img" src="./images/ai-search-cases-hero.webp" alt="AI搜寻大图">
             <div class="cases-hero-content">
                 <h1 data-i18n="ai_scenarios.hero.title">应用场景<br>智能安防巡检机器人应用</h1>
                 <p data-i18n="ai_scenarios.hero.subtitle">多场景应用 · 专业解决方案 · 安全可靠</p>
@@ -120,22 +121,22 @@
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec1.i1_t">变电站巡检</h3>
                     <p data-i18n="ai_scenarios.sec1.i1_d">针对变电站的24小时智能巡检服务，机器人可自主巡检设备状态、温度监测、异常声音识别。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases1-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec1.i2_t">矿井/管道检测</h3>
                     <p data-i18n="ai_scenarios.sec1.i2_d">机械狗进入狭窄空间，携带AI识别摄像头检测裂缝、渗漏。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases1-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec1.i3_t">智能巡检</h3>
                     <p data-i18n="ai_scenarios.sec1.i3_d">AI无死角巡检矿区上空，机械狗低底地面，AI比对识别异常设备或人员闯入。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases1-3.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec1.i4_t">危险气体检测与反馈</h3>
                     <p data-i18n="ai_scenarios.sec1.i4_d">AI识别仪表读数，气体浓度异常，自动上报控制中心。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases1-4.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>
@@ -150,22 +151,22 @@
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec2.i1_t">山地/雪地搜救</h3>
                     <p data-i18n="ai_scenarios.sec2.i1_d">无人机利用红外视觉锁定热源，机械狗穿越复杂地形靠近目标。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/aiseachcases5.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases2-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec2.i2_t">无线中继与定位网络</h3>
                     <p data-i18n="ai_scenarios.sec2.i2_d">无人机部署中继节点，为偏远地区搜救提供通信支持。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases2-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec2.i3_t">野火监测</h3>
                     <p data-i18n="ai_scenarios.sec2.i3_d">AI识别烟雾、火点、风向趋势，自动触发预警。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/aiseachcases7.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases2-3.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec2.i4_t">物资输送与牵引</h3>
                     <p data-i18n="ai_scenarios.sec2.i4_d">复杂地貌下的自动化物资输送与遇险人员生命线牵引。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/aiseachcases8.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases2-4.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>
@@ -180,22 +181,22 @@
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec3.i1_t">灾害现场搜救</h3>
                     <p data-i18n="ai_scenarios.sec3.i1_d">地震、山体滑坡、洪水、雪崩等情况下，AI通过图像识别定位被困人员;无人机在空中扫描热源、机械狗在废墟中近地搜寻。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/aiseachcases9.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases3-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec3.i2_t">应急指挥联动</h3>
                     <p data-i18n="ai_scenarios.sec3.i2_d">AI系统将无人机与机械狗的实时视讯流、位置数据、环境数据汇总到指挥中心，实现“空地一体”态势可视化。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases3-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec3.i3_t">物资投放与运输</h3>
                     <p data-i18n="ai_scenarios.sec3.i3_d">结合红外热成像、激光雷达低照度视觉识别完成夜间搜救。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases3-3.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec3.i4_t">夜间和复杂环境作业</h3>
                     <p data-i18n="ai_scenarios.sec3.i4_d">结合红外热成像、激光雷达低照度视觉识别完成夜间搜救。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases3-4.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>
@@ -240,17 +241,17 @@
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec5.i1_t">紧急药品/血液运输</h3>
                     <p data-i18n="ai_scenarios.sec5.i1_d">AI调度无人机+机械狗混合队伍进行自动化运送。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases5-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec5.i2_t">远程医疗协助</h3>
                     <p data-i18n="ai_scenarios.sec5.i2_d">AI识别伤情，匹配医务人员指导现场急救。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases5-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec5.i3_t">灾后生命体征检测</h3>
                     <p data-i18n="ai_scenarios.sec5.i3_d">AI识别人员形态、体温、心率等感器数据，判断存活可能。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases5-3.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>
@@ -280,7 +281,7 @@
                 <div class="project-item">
                     <h3 data-i18n="ai_scenarios.sec6.i4_t">城市地下空间检测</h3>
                     <p data-i18n="ai_scenarios.sec6.i4_d">在地铁、地下管廊中进行结构形变检测和隐患巡检。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ai-search-cases6-4.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>

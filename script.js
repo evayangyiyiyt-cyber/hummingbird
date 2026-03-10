@@ -33,20 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (link && dropdown) {
             link.addEventListener('click', (e) => {
-                // 【修改】适配 1200px 断点
-                if (window.innerWidth <= 1200) { 
-                    return; 
-                } 
-                e.preventDefault();
-                e.stopPropagation();
-                navItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        const otherDropdown = otherItem.querySelector('.nav-dropdown-menu');
-                        if (otherDropdown) otherDropdown.classList.remove('show');
-                    }
-                });
-                if (langDropdown) langDropdown.classList.remove('show');
-                dropdown.classList.toggle('show');
+                // 电脑端 (宽度 > 1200px) 才执行点击展开下拉的逻辑
+                if (window.innerWidth > 1200) {
+                    e.preventDefault(); // 阻止任何默认跳转
+                    e.stopPropagation(); // 阻止事件冒泡导致立马关闭
+                    
+                    // 关闭其他的下拉菜单
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherDropdown = otherItem.querySelector('.nav-dropdown-menu');
+                            if (otherDropdown) otherDropdown.classList.remove('show');
+                        }
+                    });
+                    
+                    if (langDropdown) langDropdown.classList.remove('show');
+                    
+                    // 切换当前下拉菜单的显示状态
+                    dropdown.classList.toggle('show');
+                }
             });
         }
     });
@@ -110,37 +114,25 @@ document.addEventListener('DOMContentLoaded', () => {
     loadLanguage(currentLang);
 
     // 4. 智能导航高亮逻辑 (修复版)
+    // 4. 智能导航高亮 (精准匹配版，彻底解决名字包含的Bug)
     function updateActiveNav() {
         const currentPath = window.location.pathname;
         const currentHash = window.location.hash;
+        
+        // 获取当前准确的文件名，比如 "ai-search-cases.html" 或 "cases.html"
+        let fileName = currentPath.split('/').pop(); 
+        if (fileName === '') fileName = 'index.html'; // 如果是根目录，默认为首页
 
+        // 清除所有高亮
         allNavLinks.forEach(link => {
             link.classList.remove('active');
             const parent = link.closest('.nav-item');
             if (parent) parent.querySelector('.nav-link').classList.remove('active');
         });
 
-        // 优先匹配独立页面
-        if (currentPath.includes('funcar.html')) {
-            highlightLinkByHref('funcar.html');
-        } else if (currentPath.includes('cases.html')) {
-            highlightLinkByHref('cases.html');
-        } else if (currentPath.includes('ai-search-intelligent.html')) {
-            highlightLinkByHref('ai-search-intelligent.html');
-        } else if (currentPath.includes('ai-search-cases.html')) {
-            highlightLinkByHref('ai-search-cases.html');
-        } else if (currentPath.includes('flight-training.html')) {
-            highlightLinkByHref('flight-training.html');
-        } else if (currentPath.includes('flight-logistics.html')) {
-            highlightLinkByHref('flight-logistics.html');
-        } else if (currentPath.includes('about.html')) {
-            // 【新增】关于我们高亮
-            highlightLinkByHref('about.html');
-        } else if (currentPath.includes('contact.html')) {
-            // 【新增】联系我们高亮
-            highlightLinkByHref('contact.html');
-        } else {
-            // 首页逻辑
+        // 逻辑分配
+        if (fileName === 'index.html') {
+            // 首页逻辑：检测锚点
             if (currentHash && currentHash !== '#' && currentHash !== '#footer') {
                 const targetLink = Array.from(allNavLinks).find(l => {
                     const href = l.getAttribute('href');
@@ -148,12 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 if (targetLink) activateLink(targetLink);
             } else {
-                // 默认点亮首页 (如果没有锚点)
+                // 无锚点时默认亮“首页”
                 if (allNavLinks.length > 0) allNavLinks[0].classList.add('active'); 
             }
+        } else {
+            // 其他所有子页面逻辑：直接精准寻找和当前文件名一模一样的链接！
+            highlightLinkByHref(fileName);
         }
     }
-
     function highlightLinkByHref(hrefVal) {
         // 先找下拉菜单里的
         let link = document.querySelector(`.nav-dropdown-menu a[href="${hrefVal}"]`);

@@ -209,27 +209,36 @@
     },
     "sec_cockpit": {
       "title": "Smart Cockpit",
+      "sub": "Transforming traditional vehicles into smart mobile spaces.",
       "c1_t": "Chery - Smart Minibus", "c1_d": "Covers HMI software development, virtual character design, and 3D visual effects.",
       "c2_t": "Zeekr - R&D Test Cockpit", "c2_d": "Includes central screen, passenger screen, rear screen, HUD, and transparent A-pillar hardware and software.",
       "c3_t": "Chery - 2024 Auto Show Smart Cockpit", "c3_d": "Enter Chery's Metaverse, experience four different styled scenarios and smart voice interaction.",
       "c4_t": "Bosch - 2023 Auto Show Entertainment Cockpit", "c4_d": "In-car racing game supporting multiple interaction modes like steering wheels and Bluetooth controllers.",
       "c5_t": "Audi - 2023 Auto Show Entertainment Cockpit", "c5_d": "Immersive world combining in-car games with seats, steering wheel, and ambient lighting hardware.",
       "c6_t": "Audi E-Torn Assisted VR Design", "c6_d": "Assists the design team in developing vehicle exterior, interaction, experience, and virtual test drives.",
-      "c7_t": "Tsinghua University - Driving Simulation", "c7_d": "VR-based driving training environment to study the impact of driver cognition and emotion on behavior."
+      "c7_t": "Tsinghua University - Driving Simulation", "c7_d": "VR-based driving training environment to study the impact of driver cognition and emotion on behavior.",
+      "c8_t": "Scene Design Experiment Platform", "c8_d": "Builds an HMI design review simulation system covering driving scene restoration, MR interaction, dynamic lighting, and environmental audio. Equipped with HD displays, high-performance rendering, and MR devices to support full-sensory design presentation.",
+      "c9_t": "Vehicle-to-Infrastructure Coordination Modeling", "c9_d": "Provides 3D modeling and data support for V2X systems, including 3D Tiles of roads, roadside facilities, and buildings, along with GLB, Geojson, and Shp data, supporting smart traffic and autonomous driving applications."
     },
     "sec_hmi": {
       "title": "HMI",
+      "sub": "The communication bridge and interaction window between humans and vehicles.",
       "c1_t": "Dongfeng - HMI Interface", "c1_d": "Built for mid-to-high-end models, enhancing visual impact and interaction efficiency.",
       "c2_t": "Chery - 3D HMI Interface", "c2_d": "Full of tech charm, enhancing the user experience with intelligence and visual aesthetics.",
-      "c3_t": "BAIC - VR HMI Interface", "c3_d": "Deep integration of VR devices and 3D cabins, viewing the overlay of 3D real scenes and virtual elements."
+      "c3_t": "BAIC - VR HMI Interface", "c3_d": "Deep integration of VR devices and 3D cabins, viewing the overlay of 3D real scenes and virtual elements.",
+      "c4_t": "ZEEKER - Live Wallpaper", "c4_d": "High-quality live wallpapers created for ZEEKR, providing delicate and realistic visual effects that change dynamically with the environment and time, greatly enhancing cabin immersion.",
+      "c5_t": "3D HMI", "c5_d": "carrying navigation, entertainment, and vehicle control through 3D scenes + 3D cards, enhancing usability and immersion through depth parallax and dynamic feedback.",
+      "c6_t": "Motorcycle Helmet HUD", "c6_d": "A smart helmet with MR display capabilities, supporting navigation HUD, eye tracking, and environmental perception. Integrates AR and voice control to enhance rider safety and convenience."
     },
     "sec_vpa": {
       "title": "VPA",
+      "sub": "The 'brain' and 'soul' of the smart cabin.",
       "c1_t": "Great Wall - 4D Digital Human + Assistant", "c1_d": "Digital avatar accompanies the owner for natural emotional dialogues during the drive.",
       "c2_t": "Tank 300 - Male/Female Avatar Assistant", "c2_d": "Exclusive avatars matched for different models, supporting natural voice communication and operation."
     },
     "sec_ent": {
       "title": "Cabin Entertainment",
+      "sub": "In-car entertainment systems have become indispensable smart companions for users.",
       "c1_t": "GAC Aion - ADiGO World", "c1_d": "Combined with driving data, an ecosystem of planetary growth realized through natural voice control.",
       "c2_t": "Smart - Racing Game", "c2_d": "Drivers control the racing car via accelerator, brake, and steering wheel for an immersive experience.",
       "c3_t": "Hyundai - Racing Game", "c3_d": "Built with an advanced physics engine, providing exciting racing gameplay.",
@@ -240,17 +249,23 @@
       "c8_t": "Kart Party - Racing Game", "c8_d": "A decentralized racing economy system based on blockchain technology.",
       "c9_t": "Geely - Pet Raising Game", "c9_d": "Increases user stickiness and social interaction by cultivating virtual pets.",
       "c10_t": "Motion Karaoke & Dance Game", "c10_d": "Full-body motion dance interaction via microphone and front camera.",
-      "c11_t": "Motion Tennis Game", "c11_d": "Control virtual tennis movement through body motions, enjoying the fun of technology."
+      "c11_t": "Motion Tennis Game", "c11_d": "Control virtual tennis movement through body motions, enjoying the fun of technology.",
+      "c12_t": "Growable Intelligent Agent", "c12_d": "Based on generative AI, through personification and growth mechanisms, it builds sustainable content supply and relationship chains around agent cultivation and multiplayer interactive plazas."
     },
     "sec_vrar": {
       "title": "VR/AR",
+      "sub": "Virtual and Augmented Reality Applications",
       "c1_t": "Daimler Benz - AR Entertainment Game", "c1_d": "Hidden in-car clues and AR interactive puzzles, solving experiences via image recognition and gyroscope.",
-      "c2_t": "Hyundai - Gesture Game", "c2_d": "Easily control games in the car using advanced gesture recognition technology."
+      "c2_t": "Hyundai - Gesture Game", "c2_d": "Easily control games in the car using advanced gesture recognition technology.",
+      "c3_t": "VisionPro Digital Prototype", "c3_d": "Rapidly provides a 1:1 'digital prototype' of the vehicle, enabling demonstration and interaction of color, texture, and environment through virtual-real integration. Supports multi-user collaborative interaction."
     },
     "sec_other": {
       "title": "Others",
-      "c1_t": "Auto Museum - MoCap Racing Game", "c1_d": "Using Kinect motion capture, players control the race car with their own body movements.",
-      "c2_t": "NETA Auto - AR Live Virtual Launch", "c2_d": "AR live broadcasting created with Unreal Engine and camera tracking technology."
+      "sub": "Other cutting-edge technology showcases and partnerships.",
+      "c1_t": "NETA Auto - AR Live Virtual Launch", "c1_d": "AR live broadcasting created with Unreal Engine, camera tracking technology, and professional green screen matting.",
+      "c2_t": "Lenovo - Automotive Modeling", "c2_d": "Provided high-precision 3D car modeling services for Lenovo, enhancing presentation effects in VR/AR applications and boosting user immersion.",
+      "c3_t": "BMW - 4S Store Personalized Purchase System", "c3_d": "AR technology displaying high-precision 3D models on mobiles/tablets for a personalized car purchase demo system, showing interior structures and dynamic effects.",
+      "c4_t": "Daimler Mercedes-Benz - AR Car Launch Event", "c4_d": "Visualized vehicle wind resistance effects and autonomous driving demos using AR, intuitively showing radar sensing accuracy and 3D road driving simulations."
     },
     "stats": {
       "title": "Cooperation Results",

@@ -25,45 +25,46 @@
                 <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
             </div>
             
+            <!-- 【修改】智能出行 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="mobility-btn">
                     <span data-i18n="header.nav.mobility">智能出行</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="mobility-dropdown">
                     <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
                     <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
                 </div>
             </div>
 
+            <!-- 【修改】低空飞行 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="flight-btn">
                     <span data-i18n="header.nav.flight">低空飞行</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="flight-dropdown">
                     <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
                     <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
                 </div>
             </div>
 
+            <!-- 【修改】AI搜寻 -->
             <div class="nav-item">
-                <a href="index.html#cases" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="ai-btn">
                     <span data-i18n="header.nav.ai_search">AI搜寻</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
-                <div class="nav-dropdown-menu">
+                <div class="nav-dropdown-menu" id="ai-dropdown">
                     <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
                     <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
                 </div>
             </div>
 
-            <!-- 关于我们 (独立页面) -->
             <div class="nav-item single-link">
                 <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
             </div>
 
-            <!-- 联系我们 (独立页面) -->
             <div class="nav-item single-link">
                 <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
             </div>
@@ -90,7 +91,7 @@
     <div class="cases-hero-bg">
         <section class="cases-hero">
             <!-- 图片占位 -->
-            <img class="cases-hero-img" src="./images/cases-hero-bg.jpg" alt="行业案例大图">
+            <img class="cases-hero-img" src="images/cases-hero.webp" alt="行业案例大图">
             <div class="cases-hero-content">
                 <h1 data-i18n="industry.hero.title">智能出行<br>每一程，都是美好的期待</h1>
                 <p data-i18n="industry.hero.subtitle">致力于通过智能出行技术，将“准时抵达”升级为“美好体验”<br>我们重新定义出行——不止于效率，更在乎你路上的每一刻心情。</p>
@@ -158,37 +159,49 @@
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c1_t">奇瑞-智慧小巴</h3>
                     <p data-i18n="industry.sec_cockpit.c1_d">涵盖HMI软件系统开发、虚拟人物形象设计、三维视觉动效等全流程。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases27-Chery - Smart Minibus.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c2_t">极氪-研发测试驾舱</h3>
                     <p data-i18n="industry.sec_cockpit.c2_d">涵盖中控屏、副驾屏、后排屏、HUD及透明A柱等软硬件内容。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases28-zeekr - R&D Test Cockpit.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c3_t">奇瑞-24年车展智能驾舱</h3>
                     <p data-i18n="industry.sec_cockpit.c3_d">进入奇瑞元宇宙空间，体验四种不同风格场景及智能语音交互。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases29-Chery - 2024 Auto Show Intelligent Cockpit.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-3.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c4_t">博世-23年车展智能娱乐座舱</h3>
                     <p data-i18n="industry.sec_cockpit.c4_d">支持方向盘、蓝牙手柄等多种交互模式的车机竞速游戏。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases30-Bosch - 2023 Auto Show Intelligent Entertainment Rig.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-4.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c5_t">奥迪-23年车展智能娱乐座舱</h3>
                     <p data-i18n="industry.sec_cockpit.c5_d">车内游戏与座椅、方向盘、氛围灯等硬件结合的沉浸式世界。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases31-Audi - 2023 Auto Show Intelligent Entertainment Rig.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-5.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c6_t">奥迪-E-Torn辅助VR设计</h3>
                     <p data-i18n="industry.sec_cockpit.c6_d">辅助设计团队进行车辆外观、交互、体验的开发及虚拟试驾。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases32-Audi - E-Tron VR Assisted Design.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-6.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_cockpit.c7_t">清华大学-模拟驾驶</h3>
                     <p data-i18n="industry.sec_cockpit.c7_d">基于VR技术的驾驶培训环境，研究驾驶员认知、情绪对行为的影响。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases33-Tsinghua University - Driving Simulation.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-7.webp" alt="案例大图"></div></div>
+                </div>
+                <!-- 【新增】场景设计实验平台 -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c8_t">场景设计实验平台</h3>
+                    <p data-i18n="industry.sec_cockpit.c8_d">搭建HMI设计评审模拟体验系统，涵盖驾驶场景还原、座舱MR互动体验、移动光照、环境声音与音效设计还原及核心组网等模块，配备高清显示、高性能渲染、MR设备、专业音视频等硬件与控制软件，模拟真实用车场景。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="场景设计实验平台"></div></div>
+                </div>
+                <!-- 【新增】车路协同建模 -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_cockpit.c9_t">车路协同建模</h3>
+                    <p data-i18n="industry.sec_cockpit.c9_d">车路协同系统提供三维建模和数据支持，包括道路、路侧设施、建筑物等的3D Tiles建模，以及GLB、Geojson和Shp格式的数据。平台端将提供详细的路网数据和独立对象模型，车端则要求精准的基础设施数据，以支持智能交通和自动驾驶应用。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="车路协同建模"></div></div>
                 </div>
             </div>
         </div>
@@ -201,20 +214,40 @@
             </div>
             <div class="project-list">
                 <div class="project-item">
-                    <h3 data-i18n="industry.sec_hmi.c1_t">东风-HMI车机界面</h3>
-                    <p data-i18n="industry.sec_hmi.c1_d">为中高端车型打造，提升了视觉冲击力与交互效率。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases21-Dongfeng HMI vehicle machine interface.webp" alt="案例大图"></div></div>
-                </div>
+                    
+                <!-- 【新增】极氪动态壁纸 -->
                 <div class="project-item">
-                    <h3 data-i18n="industry.sec_hmi.c2_t">奇瑞-3D HMI界面</h3>
-                    <p data-i18n="industry.sec_hmi.c2_d">充满科技魅力，提升了智能化和视觉美感的使用体验。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <h3 data-i18n="industry.sec_hmi.c4_t">极氪-动态壁纸</h3>
+                    <p data-i18n="industry.sec_hmi.c4_d">为极氪打造的高品质动态壁纸，结合车载系统提供细腻逼真的视觉效果，随环境与时间动态变化，极大地提升了座舱的沉浸感与美学体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases2-1.gif" alt="动态壁纸"></div></div>
+                </div>
+                <!-- 【新增】现代HMI -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c5_t">3D HMI</h3>
+                    <p data-i18n="industry.sec_hmi.c5_d">以立体场景+3D卡片承载导航、娱乐与车控能力，通过景深视差、动效与即时反馈提升可用性与沉浸感；同时引入轻量任务/徽章积分与虚拟伙伴提示机制，增强用户黏性。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="现代HMI"></div></div>
+                </div>
+                <!-- 【新增】摩托车头盔HUD -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c6_t">摩托车头盔HUD</h3>
+                    <p data-i18n="industry.sec_hmi.c6_d">一款搭载MR显示能力的智能摩托车头盔，支持导航HUD、眼动追踪、环境感知等功能。融合了增强现实、360°可视、声音控制等多项先进技术，通过语音指令控制音乐、电话与导航，确保骑行过程操作便捷安全。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases2-3.webp" alt="摩托车头盔HUD"></div></div>
+                </div>
+                <h3 data-i18n="industry.sec_hmi.c1_t">东风-HMI车机界面</h3>
+                    <p data-i18n="industry.sec_hmi.c1_d">为中高端车型打造，提升了视觉冲击力与交互效率。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_hmi.c3_t">北汽-VR-HMI车机界面</h3>
                     <p data-i18n="industry.sec_hmi.c3_d">VR设备与车机3D座舱深度融合，查看三维实景与虚拟元素的叠加。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases23-Baic-vr-hmi.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases2-4.gif" alt="案例大图"></div></div>
                 </div>
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_hmi.c2_t">奇瑞-3D HMI界面</h3>
+                    <p data-i18n="industry.sec_hmi.c2_d">充满科技魅力，提升了智能化和视觉美感的使用体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/" alt="案例大图"></div></div>
+                </div>
+                
             </div>
         </div>
 
@@ -228,12 +261,12 @@
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_vpa.c1_t">长城-四维数字人+车载助手</h3>
                     <p data-i18n="industry.sec_vpa.c1_d">数字人形象伴随车主在行驶过程中进行自然的情感化对话。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases34-great Wall - olacat digital human driving assistant.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases3-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_vpa.c2_t">坦克300-坦克男女数字人助手</h3>
                     <p data-i18n="industry.sec_vpa.c2_d">不同车型搭配专属数字人，支持自然语音交流与操作。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases35-Tank 300 - Tank Male and Female Digital Human Driving Assistant.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases3-2.webp" alt="案例大图"></div></div>
                 </div>
             </div>
         </div>
@@ -248,57 +281,63 @@
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c1_t">广汽-Aion ADiGO World</h3>
                     <p data-i18n="industry.sec_ent.c1_d">结合行驶数据，通过自然语音控制实现星球生长的生态系统。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases1-guangqi ADiGO World.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-1.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c2_t">Smart-赛车游戏</h3>
                     <p data-i18n="industry.sec_ent.c2_d">驾驶员通过油门、刹车和方向盘控制赛车，身临其境。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases2-Smart Race Car Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c3_t">现代-赛车游戏</h3>
                     <p data-i18n="industry.sec_ent.c3_d">先进物理引擎打造，提供激动人心的赛车玩法。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases3-Hyundai Racing Games.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-3.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c4_t">梅赛德斯奔驰-车载赛车</h3>
                     <p data-i18n="industry.sec_ent.c4_d">支持手柄、手机、触摸屏及氛围灯多人交互。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-Mercedes Benz Racing Games.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-4.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c5_t">奇瑞星途-追风车云游戏</h3>
                     <p data-i18n="industry.sec_ent.c5_d">云游戏技术，无需本地高性能硬件即可享受高质量游戏。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases5-Chery Cloud Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-5.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c6_t">安通林-车载音乐游戏</h3>
                     <p data-i18n="industry.sec_ent.c6_d">与车内灯光、音响、座椅震动同步的节奏游戏。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-Antolin - In-Car Music Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-6.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c7_t">一汽红旗-佛吉亚娱乐系统</h3>
                     <p data-i18n="industry.sec_ent.c7_d">红旗H9后排轻度娱乐系统，支持碎片化时间交互。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases7-Faurecia in car entertainment.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-7.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c8_t">Kart Party-赛车游戏</h3>
                     <p data-i18n="industry.sec_ent.c8_d">基于区块链技术的去中心化赛车经济系统。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases8-Kart Party - Racing Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-8.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c9_t">吉利-宠物养成游戏</h3>
                     <p data-i18n="industry.sec_ent.c9_d">通过培养虚拟宠物增加用户粘性与社交互动。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases9-Geely - Pet Raising Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-9.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c10_t">体感卡啦OK跳舞游戏</h3>
                     <p data-i18n="industry.sec_ent.c10_d">通过麦克风和前置摄像头实现全身动作共舞互动。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases11-ktv - in car + for exhibitions.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-10.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_ent.c11_t">体感网球游戏</h3>
                     <p data-i18n="industry.sec_ent.c11_d">通过身体动作控制虚拟网球运动，享受科技乐趣。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases10-Tennis game - in car + for exhibitions.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases4-11.webp" alt="案例大图"></div></div>
+                </div>
+                <!-- 【新增】上汽通用可成长性智能体 -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_ent.c12_t">可成长性智能体</h3>
+                    <p data-i18n="industry.sec_ent.c12_d">以生成式AI为能力底座，通过人格化、成长机制与跨端承接（车机+手机+随身硬件），围绕智能体养成、探索玩法与多人互动广场，为用户提供持续、可进化的陪伴与服务体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="可成长性智能体"></div></div>
                 </div>
             </div>
         </div>
@@ -310,16 +349,23 @@
                 <p data-i18n="industry.sec_vrar.sub">虚拟现实与增强现实应用展示。</p>
             </div>
             <div class="project-list">
+                <!-- 【新增】VisionPro数字样车 -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_vrar.c3_t">VisionPro数字样车</h3>
+                    <p data-i18n="industry.sec_vrar.c3_d">快速提供整车1:1的“数字样车”呈现，通过设备进行虚实结合效果，实现色彩纹理、环境、方案等功能的演示和交互。支持多人、多设备基于同一数字样车数据协同交互，提升跨团队协作与决策体验。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/" alt="VisionPro数字样车"></div></div>
+                </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_vrar.c1_t">戴姆勒奔驰-AR娱乐游戏</h3>
                     <p data-i18n="industry.sec_vrar.c1_d">车内隐藏线索、AR互动谜题，通过图像识别、陀螺仪实现解谜体验。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases14-Mercedes Benz - in car AR entertainment game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases5-2.webp" alt="案例大图"></div></div>
                 </div>
                 <div class="project-item">
                     <h3 data-i18n="industry.sec_vrar.c2_t">现代-手势游戏</h3>
                     <p data-i18n="industry.sec_vrar.c2_d">利用先进手势识别技术，在车内轻松操控游戏。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases15-Hyundai - Cockpit Gesture Game.webp" alt="案例大图"></div></div>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases5-3.webp" alt="案例大图"></div></div>
                 </div>
+                
             </div>
         </div>
 
@@ -330,16 +376,35 @@
                 <p data-i18n="industry.sec_other.sub">其它相关前沿技术展示与合作。</p>
             </div>
             <div class="project-list">
+                <!-- 案例 1：哪吒汽车 -->
                 <div class="project-item">
-                    <h3 data-i18n="industry.sec_other.c1_t">汽车博物馆-动捕赛车游戏</h3>
-                    <p data-i18n="industry.sec_other.c1_d">采用Kinect动作捕捉，玩家亲身动作控制赛车。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/ph-case.jpg" alt="案例大图"></div></div>
+                    <h3 data-i18n="industry.sec_other.c1_t">哪吒汽车-AR直播虚拟线上发布会</h3>
+                    <p data-i18n="industry.sec_other.c1_d">采用虚幻引擎配合摄像机追踪系统、绿幕抠像等专业级转播和渲染合成技术打造出的发布会直播效果。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-1.webp" alt="哪吒汽车AR发布会"></div></div>
                 </div>
+
+                <!-- 案例 4：奔驰AR发布会 (新增) -->
                 <div class="project-item">
-                    <h3 data-i18n="industry.sec_other.c2_t">哪吒汽车-AR直播虚拟发布会</h3>
-                    <p data-i18n="industry.sec_other.c2_d">虚幻引擎与摄像机追踪技术打造的AR直播。</p>
-                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases39-nezha automobile ar live virtual online conference.webp" alt="案例大图"></div></div>
+                    <h3 data-i18n="industry.sec_other.c4_t">戴姆勒奔驰-AR汽车发布会</h3>
+                    <p data-i18n="industry.sec_other.c4_d">视觉化特效展示车辆风阻效果，汽车自动驾驶功能效果演示基于增强现实技术，利用丰富视觉特效向用户直观展示车辆风阻技术、车辆雷达感应精度，使用三维技术还原真车路面行驶效果，演示车辆的自动驾驶功能。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-2.webp" alt="戴姆勒奔驰AR发布会"></div></div>
                 </div>
+
+                <!-- 案例 2：联想汽车建模 (新增) -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_other.c2_t">联想—汽车建模</h3>
+                    <p data-i18n="industry.sec_other.c2_d">为联想提供高精度汽车建模服务，利用先进的3D建模技术，创建逼真的汽车模型。该项目不仅提升了联想在虚拟现实（VR）和增强现实（AR）应用中的展示效果，还增强了用户的互动体验和沉浸感。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-3.gif" alt="联想汽车建模"></div></div>
+                </div>
+
+                <!-- 案例 3：宝马个性化购车系统 (新增) -->
+                <div class="project-item">
+                    <h3 data-i18n="industry.sec_other.c3_t">宝马-4S店个性化购车系统</h3>
+                    <p data-i18n="industry.sec_other.c3_d">增强现实技术在手机或平板展示产品的高精度三维模型用于4S店的个性化购车演示系统，向客户直观展示车辆内构的分体演示，车门、天窗的开、关效果展示等。</p>
+                    <div class="project-imgs"><div class="pj-img"><img src="./images/cases6-4.webp" alt="宝马4S店购车系统"></div></div>
+                </div>
+
+        
             </div>
         </div>
 
