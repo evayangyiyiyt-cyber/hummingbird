@@ -395,8 +395,8 @@
     "pillars": {
       "p1_t": "Policy Driven", "p1_d": "CAAC promotes digital and simulated training, opening policy dividends.",
       "p2_t": "Market Size", "p2_d": "Pilot shortage exceeds 7M. With low-altitude economy opening, annual demand increases by 1M.",
-      "p3_t": "Core Customers", "p3_d": "Drone schools and aviation colleges connect directly to improve teaching efficiency and pass rates.",
-      "p4_t": "Extended Customers", "p4_d": "Covering plant protection, logistics, mapping, patrol, and rescue with customized courses."
+      "p3_t": "Efficient Training", "p3_d": "Drone schools and aviation colleges connect directly to improve teaching efficiency and pass rates.",
+      "p4_t": "Specialized Course Teaching", "p4_d": "Covering plant protection, logistics, mapping, patrol, and rescue with customized courses."
     },
     "subject1": {
       "title": "Subject 1: Theory & Assembly",
@@ -548,13 +548,13 @@
   "contact": {
     "hero": {
       "title": "Contact Us",
-      "subtitle": "Expect the possibilities, Welcome to inquire"
+      "subtitle": "Expect the possibilities"
     },
     "global": {
       "title": "Global Presence",
-      "bj_city": "China · Beijing (HQ)", "bj_dept": "Core R&D & Business Center", "bj_addr": "Zone A, No.1 Banbidian, Gaobeidian Rd, Chaoyang Dist, Beijing",
-      "jp_city": "Japan · Osaka", "jp_dept": "APAC Innovation Design Center", "jp_addr": "2-2-2 Umeda, Kita-ku, Osaka",
-      "sg_city": "Singapore", "sg_dept": "Overseas Business Expansion Center", "sg_addr": "1 Raffles Place, #04-61, One Raffles Place"
+      "bj_city": "China · Beijing (HQ)", "bj_dept": "Core R&D & Business Center", "bj_addr": "北京市东城区朝阳门北大街8号富华大厦F座1302",
+      "jp_city": "Japan · Osaka", "jp_dept": "APAC Innovation Design Center", "jp_addr": "大阪府大阪市東淀川区東中島1丁目ステュディオ新大阪17-5-607",
+      "sg_city": "Singapore", "sg_dept": "Overseas Business Expansion Center", "sg_addr": "待定"
     },
     "biz": {
       "title": "Business Consulting",

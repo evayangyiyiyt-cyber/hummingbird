@@ -16,7 +16,7 @@
     <!-- 统一的顶部导航栏 -->
     <header class="header">
         <div class="logo">
-            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <img class="logo-img" src="./images/hummingbird-logo1.png" alt="Logo">
             <span data-i18n="header.logo">蜂鸟互动</span>
         </div>
 
@@ -90,7 +90,7 @@
     <!-- 1. 主视觉 Hero -->
     <div class="cases-hero-bg">
         <section class="cases-hero">
-            <img class="cases-hero-img" src="./images/fl-hero-bg.jpg" alt="无人机物流平台">
+            <img class="cases-hero-img" src="./images/flight-logistics-hero.webp" alt="无人机物流平台">
             <div class="cases-hero-content">
                 <h1 data-i18n="flight_logistics.hero.title">无人机物流平台<br>一站式解决方案服务商</h1>
                 <p data-i18n="flight_logistics.hero.subtitle">人才培养+行业应用</p>
@@ -107,56 +107,62 @@
     </div>
 
     <!-- 3. 双核驱动业务布局 -->
-    <section class="section-padding">
-        <div class="section-title">
-            <h2 data-i18n="flight_logistics.dual_core.title">双核驱动业务布局</h2>
-            <p data-i18n="flight_logistics.dual_core.sub">形成“培训认证-上岗就业-数据反馈-优化培训”闭环</p>
+<section class="section-padding">
+    <div class="section-title">
+        <h2 data-i18n="flight_logistics.dual_core.title">双核驱动业务布局</h2>
+        <p data-i18n="flight_logistics.dual_core.sub">形成“培训认证-上岗就业-数据反馈-优化培训”闭环</p>
+    </div>
+    
+    <div class="fl-dual-core">
+        <!-- 【修改】添加 style，linear-gradient是渐变黑色遮罩（保证白字清晰），url里面填入你的本地图片路径 -->
+        <div class="fl-core-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%), url('./images/flight-logistics1-1.webp');">
+            <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_a">核心业务A</span>
+            <h3 data-i18n="flight_logistics.dual_core.title_a">模拟培训系统</h3>
+            <p data-i18n="flight_logistics.dual_core.desc_a">无人机领域的“驾校”。为行业输送合格人才，奠定安全基础。</p>
         </div>
         
-        <div class="fl-dual-core">
-            <div class="fl-core-card">
-                <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_a">核心业务A</span>
-                <h3 data-i18n="flight_logistics.dual_core.title_a">模拟培训系统</h3>
-                <p data-i18n="flight_logistics.dual_core.desc_a">无人机领域的“驾校”。为行业输送合格人才，奠定安全基础。</p>
-            </div>
-            <div class="fl-core-card">
-                <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_b">核心业务B</span>
-                <h3 data-i18n="flight_logistics.dual_core.title_b">物流调度平台</h3>
-                <p data-i18n="flight_logistics.dual_core.desc_b">无人机领域的“滴滴货运”。切入千亿级市场，将人才价值商业化。</p>
-            </div>
+        <!-- 【修改】添加 style -->
+        <div class="fl-core-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%), url('./images/flight-logistics1-2.webp');">
+            <span class="fl-tag" data-i18n="flight_logistics.dual_core.tag_b">核心业务B</span>
+            <h3 data-i18n="flight_logistics.dual_core.title_b">物流调度平台</h3>
+            <p data-i18n="flight_logistics.dual_core.desc_b">无人机领域的“滴滴货运”。切入千亿级市场，将人才价值商业化。</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 4. 连接B端与C端的空中物流网络 (三大模式) -->
-    <section class="section-padding" style="padding-top: 0;">
-        <div class="section-title">
-            <h2 data-i18n="flight_logistics.network.title">连接B端与C端的空中物流网络</h2>
-            <p data-i18n="flight_logistics.network.sub">生态模式:构建“飞手+自营+商家”三方共赢的物流生态</p>
+<!-- 4. 连接B端与C端的空中物流网络 (三大模式) -->
+<section class="section-padding" style="padding-top: 0;">
+    <div class="section-title">
+        <h2 data-i18n="flight_logistics.network.title">连接B端与C端的空中物流网络</h2>
+        <p data-i18n="flight_logistics.network.sub">生态模式:构建“飞手+自营+商家”三方共赢的物流生态</p>
+    </div>
+    
+    <div class="fl-network-grid">
+        <!-- 【修改】添加 style -->
+        <div class="fl-network-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%), url('./images/flight-logistics2-1.webp');">
+            <h3 data-i18n="flight_logistics.network.m1_t">签约飞手模式</h3>
+            <h4 data-i18n="flight_logistics.network.m1_tag">轻资产运营·类滴滴模式</h4>
+            <p data-i18n="flight_logistics.network.m1_d">整合社会持证飞手资源。平台负责调度与结算飞手按接单。</p>
+            <div class="fl-apply" data-i18n="flight_logistics.network.m1_apply">适用:个人寄递、应急订单</div>
         </div>
         
-        <div class="fl-network-grid">
-            <div class="fl-network-card">
-                <h3 data-i18n="flight_logistics.network.m1_t">签约飞手模式</h3>
-                <h4 data-i18n="flight_logistics.network.m1_tag">轻资产运营·类滴滴模式</h4>
-                <p data-i18n="flight_logistics.network.m1_d">整合社会持证飞手资源。平台负责调度与结算飞手按接单。</p>
-                <div class="fl-apply" data-i18n="flight_logistics.network.m1_apply">适用:个人寄递、应急订单</div>
-            </div>
-            
-            <div class="fl-network-card">
-                <h3 data-i18n="flight_logistics.network.m2_t">自营机队模式</h3>
-                <h4 data-i18n="flight_logistics.network.m2_tag">高标准·质量保证</h4>
-                <p data-i18n="flight_logistics.network.m2_d">自建机队+飞行中心，执行标准化航线，确保高效与安全。</p>
-                <div class="fl-apply" data-i18n="flight_logistics.network.m2_apply">适用:医疗标本、高价值物品</div>
-            </div>
-            
-            <div class="fl-network-card">
-                <h3 data-i18n="flight_logistics.network.m3_t">商家入驻模式</h3>
-                <h4 data-i18n="flight_logistics.network.m3_tag">做大生态·平台赋能</h4>
-                <p data-i18n="flight_logistics.network.m3_d">第三方物流接入系统，平台提供调度算法与分润机制。</p>
-                <div class="fl-apply" data-i18n="flight_logistics.network.m3_apply">适用:大型企业常态配送。</div>
-            </div>
+        <!-- 【修改】添加 style -->
+        <div class="fl-network-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%), url('./images/flight-logistics2-2.webp');">
+            <h3 data-i18n="flight_logistics.network.m2_t">自营机队模式</h3>
+            <h4 data-i18n="flight_logistics.network.m2_tag">高标准·质量保证</h4>
+            <p data-i18n="flight_logistics.network.m2_d">自建机队+飞行中心，执行标准化航线，确保高效与安全。</p>
+            <div class="fl-apply" data-i18n="flight_logistics.network.m2_apply">适用:医疗标本、高价值物品</div>
         </div>
-    </section>
+        
+        <!-- 【修改】添加 style -->
+        <div class="fl-network-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%), url('./images/flight-logistics2-3.webp');">
+            <h3 data-i18n="flight_logistics.network.m3_t">商家入驻模式</h3>
+            <h4 data-i18n="flight_logistics.network.m3_tag">做大生态·平台赋能</h4>
+            <p data-i18n="flight_logistics.network.m3_d">第三方物流接入系统，平台提供调度算法与分润机制。</p>
+            <div class="fl-apply" data-i18n="flight_logistics.network.m3_apply">适用:大型企业常态配送。</div>
+        </div>
+    </div>
+</section>
 
     <!-- 5. 四大核心系统架构 (深色系卡片布局) -->
     <section class="section-padding">
@@ -230,22 +236,22 @@
         
         <div class="pillars-grid">
             <div class="pillar-item">
-                <h4 class="pillar-num">01.TIME</h4>
+                <h4 class="pillar-num">01.</h4>
                 <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p1_t">人员合规</h3>
                 <p class="pillar-desc" data-i18n="flight_logistics.firewall.p1_d">实名登记+CAAC执照验证+动态人脸识别，人证合一。</p>
             </div>
             <div class="pillar-item">
-                <h4 class="pillar-num">02.CONTENT</h4>
+                <h4 class="pillar-num">02.</h4>
                 <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p2_t">空域合规</h3>
                 <p class="pillar-desc" data-i18n="flight_logistics.firewall.p2_d">对接CAAC低空协同接口，自动避开禁飞区，航线合法校验。</p>
             </div>
             <div class="pillar-item">
-                <h4 class="pillar-num">03.INTERACTIVE</h4>
+                <h4 class="pillar-num">03.</h4>
                 <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p3_t">安全监控</h3>
                 <p class="pillar-desc" data-i18n="flight_logistics.firewall.p3_d">异常数据自动报警，支持自动返航/迫降，可视化中心把控。</p>
             </div>
             <div class="pillar-item">
-                <h4 class="pillar-num">04.MODULE</h4>
+                <h4 class="pillar-num">04.</h4>
                 <h3 class="pillar-title" data-i18n="flight_logistics.firewall.p4_t">双重保险</h3>
                 <p class="pillar-desc" data-i18n="flight_logistics.firewall.p4_d">单次订单险(货物/三责)+年度运营险(设备/人身)全面兜底。</p>
             </div>

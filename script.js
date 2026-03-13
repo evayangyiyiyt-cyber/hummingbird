@@ -285,3 +285,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 专门处理模块内 Tab 切换的逻辑
+    function initTabs(pillSelector) {
+        const pills = document.querySelectorAll(pillSelector);
+        pills.forEach(pill => {
+            pill.addEventListener('click', function() {
+                // 1. 找到当前点击所在的整个模块区 (eco-module)
+                const container = this.closest('.eco-module');
+                
+                // 2. 移除同级的所有按钮高亮状态
+                const allPills = container.querySelectorAll('.pill');
+                allPills.forEach(p => p.classList.remove('active'));
+                
+                // 3. 激活当前被点击的按钮
+                this.classList.add('active');
+                
+                // 4. 隐藏模块内所有的面板
+                const allPanels = container.querySelectorAll('.tab-panel');
+                allPanels.forEach(panel => panel.style.display = 'none');
+                
+                // 5. 根据按钮绑定的 data-target，将其对应的面板显示出来
+                const targetId = this.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+                if(targetPanel) {
+                    targetPanel.style.display = 'grid'; // 使用grid是因为对应 .card-grid-3 的布局
+                }
+            });
+        });
+    }
+
+    // 初始化 游戏区 和 影音区 的 Tabs
+    initTabs('.game-pills .pill');
+    initTabs('.film-pills .pill');
+});

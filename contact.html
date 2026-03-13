@@ -16,7 +16,7 @@
     <!-- 统一的顶部导航栏 -->
     <header class="header">
         <div class="logo">
-            <img class="logo-img" src="./images/logo.png" alt="Logo">
+            <img class="logo-img" src="./images/hummingbird-logo1.png" alt="Logo">
             <span data-i18n="header.logo">蜂鸟互动</span>
         </div>
 
@@ -88,15 +88,20 @@
     </header>
 
     <!-- 1. Hero 主视觉 -->
-    <div class="cases-hero-bg" style="background-color: #111;">
-        <section class="cases-hero">
-            <img class="cases-hero-img" src="./images/contact-hero-bg.jpg" alt="联系我们">
-            <div class="cases-hero-content">
-                <h1 data-i18n="contact.hero.title">联系我们</h1>
-                <p data-i18n="contact.hero.subtitle">期待与您共创无限可能，欢迎垂询</p>
-            </div>
-        </section>
-    </div>
+
+    <!-- 原来可能是: <section class="cases-hero"> -->
+    <!-- 修改为: -->
+    <section class="cases-hero contact-hero">
+    <!-- 背景图 -->
+         <img class="cases-hero-img" src="./images/" alt="联系我们背景">
+    
+         <div class="cases-hero-content">
+            <h1 data-i18n="contact.hero.title">联系我们</h1>
+            <p data-i18n="contact.hero.subtitle">期待与您共创无限可能</p>
+         </div>
+    </section>
+
+    
 
     <!-- 2. 全球布局 -->
     <section class="section-padding">
@@ -108,29 +113,29 @@
         <div class="global-grid">
             <!-- 北京 -->
             <div class="global-card">
-                <div class="g-img"><img src="./images/loc-beijing.jpg" alt="北京"></div>
+                <div class="g-img"><img src="./images/contact-map1.webp" alt="北京"></div>
                 <div class="g-info">
                     <h3 data-i18n="contact.global.bj_city">中国 · 北京 (总部)</h3>
                     <h4 data-i18n="contact.global.bj_dept">核心研发与商务中心</h4>
-                    <p data-i18n="contact.global.bj_addr">北京市朝阳区高碑店路半壁店1号文化产业园A区</p>
+                    <p data-i18n="contact.global.bj_addr">北京市东城区朝阳门北大街8号富华大厦F座1302</p>
                 </div>
             </div>
             <!-- 大阪 -->
             <div class="global-card">
-                <div class="g-img"><img src="./images/loc-osaka.jpg" alt="大阪"></div>
+                <div class="g-img"><img src="./images/contact-map2.webp" alt="大阪"></div>
                 <div class="g-info">
                     <h3 data-i18n="contact.global.jp_city">日本 · 大阪</h3>
                     <h4 data-i18n="contact.global.jp_dept">亚太区创新设计中心</h4>
-                    <p data-i18n="contact.global.jp_addr">大阪府大阪市北区梅田 2-2-2</p>
+                    <p data-i18n="contact.global.jp_addr">大阪府大阪市東淀川区東中島1丁目ステュディオ新大阪17-5-607</p>
                 </div>
             </div>
             <!-- 新加坡 -->
             <div class="global-card">
-                <div class="g-img"><img src="./images/loc-sg.jpg" alt="新加坡"></div>
+                <div class="g-img"><img src="./images/contact-map3.webp" alt="新加坡"></div>
                 <div class="g-info">
                     <h3 data-i18n="contact.global.sg_city">新加坡</h3>
                     <h4 data-i18n="contact.global.sg_dept">海外业务拓展中心</h4>
-                    <p data-i18n="contact.global.sg_addr">1 Raffles Place, #04-61, One Raffles Place</p>
+                    <p data-i18n="contact.global.sg_addr">待定</p>
                 </div>
             </div>
         </div>
@@ -174,25 +179,25 @@
         <div class="social-grid">
             <div class="social-item">
                 <div class="social-icon">
-                    <img src="./images/icon-wechat.png" alt="WeChat">
+                    <img src="./images/contact-logo1.webp" alt="WeChat">
                 </div>
                 <div class="social-text">
                     <h4>WeChat</h4>
-                    <p>HummingBird_Official</p>
+                    <p>蜂鸟互动</p>
                 </div>
             </div>
             <div class="social-item">
                 <div class="social-icon">
-                    <img src="./images/icon-weibo.png" alt="Weibo">
+                    <img src="./images/contact-logo2.webp" alt="Weibo">
                 </div>
                 <div class="social-text">
                     <h4>Weibo</h4>
-                    <p>@蜂鸟互动</p>
+                    <p>@北京蜂鸟互动科技有限公司</p>
                 </div>
             </div>
             <div class="social-item">
                 <div class="social-icon">
-                    <img src="./images/icon-twitter.png" alt="X">
+                    <img src="./images/contact-logo3.webp" alt="X">
                 </div>
                 <div class="social-text">
                     <h4>X</h4>
