@@ -7,13 +7,49 @@
     <link rel="stylesheet" href="style.css">
     
     <!-- 【新增】防翻译闪烁脚本 (必须放在 head 里) -->
+    <!-- 【修改】基于 IP 自动识别语言 + 防闪烁脚本 -->
     <script>
-        // 页面渲染前尽早读取本地存储的语言
-        var savedLang = localStorage.getItem('preferredLang') || 'zh';
-        // 如果用户之前选了非中文，先给网页打上 loading 标记，让 CSS 隐藏文字
-        if (savedLang !== 'zh') {
+        (function() {
+            // 1. 读取本地存储，看用户是否以前访问过或手动选过语言
+            var savedLang = localStorage.getItem('preferredLang');
+            
+            // 如果已经有缓存，执行防闪烁逻辑并结束
+            if (savedLang) {
+                if (savedLang !== 'zh') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+                return; 
+            }
+
+            // 2. 如果是首次访问，先隐藏文字防止乱码闪烁
             document.documentElement.classList.add('lang-loading');
-        }
+
+            // 3. 调用免费无限制的 GeoJS 接口获取当前 IP 的国家代码
+            fetch('https://get.geojs.io/v1/ip/country.json')
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    var country = data.country; // 返回两位字母代码，如 "CN", "JP", "US"
+                    var targetLang = 'en';      // 默认设置为英语 (除中、日外的其他 IP)
+
+                    // 4. 判断逻辑
+                    if (['CN', 'TW', 'HK', 'MO'].indexOf(country) !== -1) {
+                        targetLang = 'zh'; // 中国大陆及港澳台 IP -> 中文
+                    } else if (country === 'JP') {
+                        targetLang = 'ja'; // 日本 IP -> 日文
+                    }
+
+                    // 5. 保存设置到本地
+                    localStorage.setItem('preferredLang', targetLang);
+
+                    // 6. 刷新页面以应用新语言 (由于接口极快，仅在用户有生之年第一次访问时闪刷一次)
+                    location.reload();
+                })
+                .catch(function() {
+                    // 如果由于网络原因 API 请求失败，兜底显示英语
+                    localStorage.setItem('preferredLang', 'en');
+                    location.reload();
+                });
+        })();
     </script>
 </head>
 <body>
@@ -120,7 +156,7 @@
                 <img src="./images/index-photo.webp" alt="轮播图1" class="slide-img">
                 <img src="./images/ai-search-cases-hero.webp" alt="轮播图2" class="slide-img">
                 <img src="./images/flight-logistics-hero.webp" alt="轮播图3" class="slide-img">
-                <img src="./images/ai-search-intelligent-hero.webp" alt="轮播图3" class="slide-img">
+                <img src="./images/ai-search-intelligent-hero.webp" alt="轮播图4" class="slide-img">
             </div>
         </div>
     </section>

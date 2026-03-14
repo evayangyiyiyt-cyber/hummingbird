@@ -551,8 +551,12 @@
   },
   "contact": {
     "hero": {
-      "title": "お問い合わせ",
-      "subtitle": "無限の可能性を共に創造しましょう"
+        "top": "MASTERING <i>the TECHNIQUES</i>",
+        
+        "main_title": "お問い合わせ",
+        "sub_title": "長期的かつ互恵的な協力関係を築くことを楽しみにしています",
+        "desc_zh": "品質を創造し、喜びを創造する",
+        "desc_en": "We are committed to creating quality and happiness"
     },
     "global": {
       "title": "グローバル展開",

@@ -551,8 +551,13 @@
   },
   "contact": {
     "hero": {
-      "title": "联系我们",
-      "subtitle": "期待与您共创无限可能"
+        "top": "MASTERING <i>the TECHNIQUES</i>",
+        
+        "main_title": "联系我们",
+        "sub_title": "期待与您建立长久、互利的合作关系",
+        "desc_zh": "我们致力于创造品质，创造快乐",
+        "desc_en": "We are committed to creating quality and happiness"
+
     },
     "global": {
       "title": "全球布局",

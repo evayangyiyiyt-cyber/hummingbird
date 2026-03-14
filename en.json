@@ -21,8 +21,8 @@
     "we_are": "WE ARE",
     "main_title": "HUMMINGBIRD",
     "sub_title": "Interactive",
-    "desc_zh": "Committed to creating quality, creating happiness",
-    "desc_en": "We are committed to creating quality and happiness"
+    "desc_zh": "Committed to creating quality",
+    "desc_en": "creating happiness"
   },
   "intro": {
     "p1": "Founded in 2013, Hummingbird Interactive focuses on future mobility experiences.",
@@ -550,8 +550,13 @@
   },
   "contact": {
     "hero": {
-      "title": "Contact Us",
-      "subtitle": "Expect the possibilities"
+        "top": "MASTERING <i>the TECHNIQUES</i>",
+        
+        "main_title": "Contact Us",
+        "sub_title": "Looking forward to establishing a long-term partnership with you",
+        "desc_zh": "Committed to creating quality",
+        "desc_en": "creating happiness"
+
     },
     "global": {
       "title": "Global Presence",
