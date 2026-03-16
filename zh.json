@@ -3,8 +3,8 @@
     "logo": "蜂鸟互动",
     "nav": {
       "home": "首页",
-      "mobility": "智能出行",
-      "industry_cases": "行业案例",
+      
+      "industry_cases": "智能出行",
       "funcar": "Funcar",
       "flight": "低空飞行",
       "ai_search": "AI搜寻",
@@ -193,7 +193,7 @@
       "p3": "凭借创新技术与优质服务，蜂鸟互动持续推动行业发展，为用户打造更加智能、便捷的出行体验。"
     },
     "pillars": {
-      "title": "BEYOND<br>REALITY",
+      "title": "SMART<br>MOBILITY",
       "sub": "无缝出行·自由随心",
       "p1_t": "突破时空限制",
       "p1_d": "多物理设备互联通,消除端/云/车壁垒,带来新体验",

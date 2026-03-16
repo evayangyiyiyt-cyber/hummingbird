@@ -3,8 +3,8 @@
     "logo": "Hummingbird",
     "nav": {
       "home": "Home",
-      "mobility": "Smart Mobility",
-      "industry_cases": "Industry Cases",
+      
+      "industry_cases": "Smart Mobility",
       "funcar": "Funcar",
       "flight": "Low-alt Flight",
       "ai_search": "AI Search",

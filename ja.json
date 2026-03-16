@@ -3,8 +3,8 @@
     "logo": "ハミングバード",
     "nav": {
       "home": "ホーム",
-      "mobility": "スマートモビリティ",
-      "industry_cases": "業界事例",
+      
+      "industry_cases": "スマートモビリティ",
       "funcar": "Funcar",
       "flight": "低空飛行",
       "ai_search": "AI検索",

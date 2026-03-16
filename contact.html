@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>联系我们 - 蜂鸟互动</title>
     <link rel="stylesheet" href="style.css">
-    <<!-- 【修改】基于 IP 自动识别语言 + 防闪烁脚本 -->
+    <!-- 【修改】基于 IP 自动识别语言 + 防闪烁脚本 -->
     <script>
         (function() {
             // 1. 读取本地存储，看用户是否以前访问过或手动选过语言
@@ -62,18 +62,13 @@
             <div class="nav-item single-link">
                 <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
             </div>
-            
-            <!-- 【修改】智能出行 -->
-            <div class="nav-item">
-                <a href="javascript:void(0)" class="nav-link" id="mobility-btn">
-                    <span data-i18n="header.nav.mobility">智能出行</span>
-                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </a>
-                <div class="nav-dropdown-menu" id="mobility-dropdown">
-                    <a href="cases.html" data-i18n="header.nav.industry_cases">行业案例</a>
-                    <a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a>
-                </div>
+            <div class="nav-item single-link">
+                <a href="cases.html" class="nav-link" data-i18n="header.nav.industry_cases">智能出行</a>
             </div>
+            <div class="nav-item single-link">
+                <a href="funcar.html" class="nav-link" data-i18n="header.nav.funcar">Funcar</a>
+            </div>
+            
 
             <!-- 【修改】低空飞行 -->
             <div class="nav-item">
@@ -87,17 +82,7 @@
                 </div>
             </div>
 
-            <!-- 【修改】AI搜寻 -->
-            <div class="nav-item">
-                <a href="javascript:void(0)" class="nav-link" id="ai-btn">
-                    <span data-i18n="header.nav.ai_search">AI搜寻</span>
-                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </a>
-                <div class="nav-dropdown-menu" id="ai-dropdown">
-                    <a href="ai-search-intelligent.html" data-i18n="header.nav.ai_sub1">智能搜寻</a>
-                    <a href="ai-search-cases.html" data-i18n="header.nav.ai_sub2">应用场景</a>
-                </div>
-            </div>
+            
 
             <div class="nav-item single-link">
                 <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>

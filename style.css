@@ -816,3 +816,369 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .hero-content h1 { font-size: 32px; letter-spacing: 2px; }
     .hero-content h2 { font-size: 18px; letter-spacing: 2px; }
 }
+
+
+/* ========================================= */
+/* 极致还原：图1 专业配件与硬件展示区风格      */
+/* ========================================= */
+
+.acc-card { 
+    background-color: #111 !important; /* 保持卡片背景色，或者根据需要调整 */
+    border-radius: 30px !important; 
+    padding: 0 !important;             /* 重要：去掉卡片全局 padding，这样左图才能顶格 */
+    display: flex; 
+    gap: 20px; 
+    align-items: stretch; 
+    overflow: hidden;                  /* 确保圆角能切掉图片边缘 */
+}
+
+
+
+/* 修改左侧图片区域，让它铺满且无内边距 */
+.acc-img-placeholder { 
+    flex: 1.2 !important; 
+    background-color: transparent !important; /* 移除深灰底色 */
+    border-radius: 30px 0 0 30px !important;  /* 左侧上下圆角与外层卡片对应 */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0 !important;                     /* 移除内边距，让图片平铺 */
+    overflow: hidden;                         /* 确保图片溢出部分被隐藏 */
+}
+
+/* 图片处理：直接撑满容器 */
+.acc-img-placeholder img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;                        /* 铺满整个区域，不留白 */
+    display: block;
+}
+
+/* 右侧文字区域单独加 padding */
+.acc-info { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 40px 40px 40px 10px;      /* 右侧加 padding，左侧不加 */
+}
+.acc-info h3 { font-size: 24px !important; font-weight: bold; margin-bottom: 10px; }
+.acc-desc { color: #888; font-size: 14px; margin-bottom: 25px; }
+
+/* 4. 双列网格对齐清单 */
+.acc-grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 强制分两列 */
+    gap: 15px 30px;
+    margin-bottom: 30px;
+}
+.ag-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* 5. 价格与底部按钮 */
+.acc-price { 
+    font-size: 32px !important; 
+    font-weight: bold; 
+    margin-bottom: 25px !important; 
+    margin-top: auto; 
+}
+
+/* 满宽亮黄绿按钮 */
+.btn-buy-yellow {
+    background-color: #1e60d9; 
+    color: #111 !important; 
+    width: 100%; 
+    display: block; 
+    text-align: center; 
+    padding: 16px 0; 
+    border-radius: 40px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+.btn-buy-yellow:hover {
+    background-color: #1e60d9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(207, 255, 4, 0.3);
+}
+
+/* ========================================= */
+/* 下方硬件 6 格样式 (白底大圆角图块)        */
+/* ========================================= */
+
+.hw-item { text-align: center; }
+
+/* 硬件白底正方形大图块 */
+.hw-icon { 
+    height: auto !important; 
+    aspect-ratio: 1 / 1; /* 无论怎么缩放都是完美的正方形 */
+    background-color: #f5f5f5 !important; 
+    border-radius: 24px !important; 
+    margin-bottom: 15px !important; 
+    padding: 20px !important; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: transform 0.3s ease;
+}
+.hw-icon:hover { transform: translateY(-5px); }
+
+/* 图片本身占满盒子内部 */
+.hw-icon img { 
+    width: 85% !important; 
+    height: 85% !important; 
+    object-fit: contain; 
+}
+
+/* 将标题颜色变白 */
+.hw-item h5 { 
+    font-size: 16px !important; 
+    color: #fff !important; 
+    font-weight: 500;
+}
+
+/* 强制隐藏底部灰色的解释小字，使排版极简 */
+.hw-item p { 
+    display: none !important; 
+}
+
+/* 手机端适配：强制保持横向布局，缩小比例 */
+@media (max-width: 1024px) {
+    .acc-card { 
+        flex-direction: row !important; /* 强制保持横向 */
+        gap: 15px !important; 
+        padding: 15px !important; 
+    }
+    
+    /* 左侧图片区变窄一点 */
+    .acc-img-placeholder { 
+        flex: 1 !important; 
+        min-height: 150px !important; 
+        border-radius: 15px !important; 
+    }
+    
+    /* 右侧文字区字体缩小 */
+    .acc-info { padding: 10px 10px 10px 0 !important; }
+    .acc-info h3 { font-size: 16px !important; margin-bottom: 5px !important; }
+    .acc-desc { font-size: 12px !important; margin-bottom: 10px !important; }
+    
+    /* 清单也缩小 */
+    .acc-grid-list { gap: 5px 15px !important; margin-bottom: 15px !important; }
+    .ag-item { font-size: 12px !important; }
+    
+    /* 价格和按钮缩小 */
+    .acc-price { font-size: 20px !important; margin-bottom: 10px !important; }
+    .btn-buy-yellow { padding: 10px 0 !important; font-size: 14px !important; }
+}
+
+
+
+
+
+/* ========================================================= */
+/* 智能出行 (Cases) - 高级感排版与层级优化方案                  */
+/* ========================================================= */
+
+/* 1. 导航栏升级为“悬浮磨砂胶囊” */
+.cases-tab-nav { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 0 auto 80px auto; 
+    position: sticky; 
+    top: 100px; /* 距离顶部留出呼吸空间 */
+    background: rgba(20, 20, 20, 0.85); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 900; 
+    padding: 10px 15px !important;
+    border-radius: 50px; 
+    width: fit-content;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.tab-btn { 
+    background: transparent; 
+    border: none; 
+    color: #888; 
+    font-size: 15px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    padding: 10px 24px; 
+    border-radius: 30px; 
+    transition: all 0.3s ease; 
+}
+.tab-btn:hover { 
+    color: #fff; 
+    background: rgba(255,255,255,0.05);
+}
+/* 选中的按钮变成醒目的蓝色实心胶囊 */
+.tab-btn.active { 
+    background: var(--accent-color); 
+    color: #fff; 
+    box-shadow: 0 4px 15px rgba(41, 121, 255, 0.3);
+}
+.tab-btn.active::after { display: none !important; } /* 移除旧的下划线 */
+
+
+/* 2. 背景全宽交替 (利用覆盖机制打破原本的宽度限制) */
+.cases-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+.case-section { 
+    scroll-margin-top: 160px; 
+    padding: 100px 0 !important; /* 给每个分类增加上下超大呼吸空间 */
+    margin-bottom: 0 !important; 
+}
+/* 【核心】偶数项(第2、4、6个类别)增加极深灰背景色区分 */
+.case-section:nth-child(even) {
+    background-color: #ffffff; 
+    border-top: 1px solid #151515;
+    border-bottom: 1px solid #151515;
+}
+/* 重新约束内部文字和图片的宽度 */
+.pane-header, .project-list {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+
+/* 3. 类别大标题排版强化 */
+.pane-header { 
+    text-align: center; 
+    margin-bottom: 100px; 
+}
+.pane-header h2 { 
+    font-size: 68px !important; /* 字体加大，增强对比 */
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 0px; 
+    color: #fff;
+}
+.pane-header p { 
+    color: #888; 
+    font-size: 14px !important; 
+    line-height: 1.8;
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-top: -10px; 
+}
+/* 标题下方增加一条主题色装饰线，高级感拉满 */
+.pane-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+
+/* 4. 案例项目层级优化 */
+.project-item { 
+    margin-bottom: 100px !important; 
+    padding-bottom: 100px !important; 
+}
+.project-item h3 { 
+    font-size: 28px !important; /* 案例名称比旧版大一号 */
+    font-weight: 600;
+    margin-bottom: 15px; 
+    color: #e0e0e0;
+}
+.project-item p { 
+    color: #aaa; 
+    font-size: 16px !important; 
+    margin-bottom: 40px; 
+    line-height: 1.9; 
+    max-width: 1200px; 
+}
+/* 案例大图阴影悬浮感 */
+/* 强制恢复为原版的 500px 高度 */
+.pj-img {
+    height: 500px !important; 
+}
+
+/* 覆盖并取消大屏幕下 600px 的设定 */
+@media (min-width: 1200px) {
+    .pj-img { 
+        height: 500px !important; 
+    }
+}
+
+
+
+
+/* 5. 手机端细节适配 */
+@media (max-width: 768px) {
+    /* 手机端导航变成两行药丸状 */
+    .cases-tab-nav {
+        width: 90%;
+        border-radius: 20px;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 15px !important;
+        top: 80px;
+    }
+    .tab-btn { padding: 8px 16px; font-size: 13px; }
+    
+    .pane-header h2 { font-size: 32px !important; }
+    .pane-header p { font-size: 15px !important; }
+    .project-item h3 { font-size: 22px !important; }
+    .pj-img { height: 250px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; }
+    .case-section { padding: 60px 0 !important; }
+}
+
+/* ========================================================= */
+/* 智能出行 - 纯白交替背景下的深色文字适配                      */
+/* ========================================================= */
+
+/* 1. 偶数项背景变白，并将上下边界线改为浅灰色，让黑白过渡更柔和 */
+.case-section:nth-child(even) {
+    background-color: #ffffff !important; 
+    border-top: 1px solid #eeeeee !important;
+    border-bottom: 1px solid #eeeeee !important;
+}
+
+/* 2. 白色区块里的【分类大标题】和【副标题】变深色 */
+.case-section:nth-child(even) .pane-header h2 { 
+    color: #111111 !important; 
+}
+.case-section:nth-child(even) .pane-header p { 
+    color: #666666 !important; 
+}
+
+/* 3. 白色区块里的【案例子标题】和【描述正文】变深色 */
+.case-section:nth-child(even) .project-item h3 { 
+    color: #111111 !important; 
+}
+.case-section:nth-child(even) .project-item p { 
+    color: #555555 !important; 
+}
+
+/* 4. 白色区块里，案例项目之间的【底部横线】改成浅灰，避免黑线太突兀 */
+.case-section:nth-child(even) .project-item {
+    border-bottom-color: #eeeeee !important;
+}
+
+/* 5. 白色区块下的图片阴影稍微调淡，展现更清爽高级的“悬浮白卡片”质感 */
+.case-section:nth-child(even) .pj-img {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08) !important;
+}
+
+/* ========================================================= */
+/* 修复：让案例描述文字与下方图片严格等宽对其                      */
+/* ========================================================= */
+
+.project-item p {
+    max-width: 100% !important;     /* 强制取消单独的宽度限制，让它和图片一样占满100% */
+    text-align: justify !important; /* 将文字设为两端对齐，左右边缘会和图片完美平齐 */
+    margin-left: 0 !important;      /* 确保没有多余的左侧偏移 */
+    margin-right: 0 !important;     /* 确保没有多余的右侧偏移 */
+}
