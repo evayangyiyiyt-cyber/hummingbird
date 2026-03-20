@@ -3,32 +3,28 @@
     "logo": "Hummingbird",
     "nav": {
       "home": "Home",
-      
       "industry_cases": "Smart Mobility",
       "funcar": "Funcar",
-      "flight": "Low-alt Flight",
-      "ai_search": "AI Search",
+      "flight": "Low-altitude Flight",
       "about": "About Us",
       "contact": "Contact",
       "flight_sub1": "Sim Training",
-      "flight_sub2": "Logistics Platform",
-      "ai_sub1": "Smart Search",
-      "ai_sub2": "App Scenarios"
+      "flight_sub2": "Logistics Platform"
     }
   },
   "hero": {
-    "top_title": "MASTERING <i>the TECHNIQUES</i>",
+    "top_title": "MASTERING <i>THE TECHNOLOGY</i>",
     "we_are": "WE ARE",
     "main_title": "HUMMINGBIRD",
     "sub_title": "Interactive",
     "desc_zh": "Committed to creating quality",
-    "desc_en": "creating happiness"
+    "desc_en": "Committed to creating happiness"
   },
   "intro": {
     "p1": "Founded in 2013, Hummingbird Interactive focuses on future mobility experiences.",
-    "p2": "We revolutionize driving with smart entertainment, expand 3D traffic with low-altitude flight tech, and safeguard safety with AI patrols.",
-    "p3": "We are committed to every mobile space—whether in-car, outdoors, or in the air,",
-    "p4": "Creating smarter, more enjoyable, and safer future experiences for users."
+    "p2": "We revolutionize driving with smart entertainment, expand into 3D mobility with low-altitude flight technology, and safeguard safety with AI patrols.",
+    "p3": "We are committed to every mobile space—whether in-car, outdoors, or in the air.",
+    "p4": "Creating smarter, more enjoyable, and safer experiences for the future."
   },
   "business": {
     "title": "Business Overview",
@@ -37,38 +33,48 @@
   "cases": {
     "learn_more": "Learn More",
     "c1": {
-      "title": "Smart Mobility",
-      "desc": "Deeply engaged in IoV technology, providing full-stack solutions like smart entertainment, HMI, and smart cabin VPA for dozens of OEMs.",
-      "l1": "Comprehensive product development system covering from requirements to delivery.",
-      "l2": "Deeply adapted to various mainstream automotive chips and operating systems.",
-      "l3": "Rich in-car content ecosystem to meet users' diverse needs.",
-      "l4": "AI voice assistant and digital human interaction for an immersive cabin experience."
+      "title": "Funcar Smart Mobility Platform",
+      "desc": "A complete in-car entertainment platform featuring a curated selection of premium games, redefining entertainment during travel.",
+      "l1": "A variety of high-quality games available anytime, making every journey more enjoyable",
+      "l2": "Creates a personalized space with rich social features and a dedicated user center",
+      "l3": "Supports multiple hardware platforms and is compatible with mainstream in-vehicle systems",
+      "l4": "Offers diverse audiovisual entertainment content to meet various needs"
     },
     "c2": {
-      "title": "FunCar",
-      "desc": "A complete in-car entertainment platform equipped with multiple premium games, redefining the travel entertainment experience.",
-      "l1": "Play multiple premium games anytime, making the journey no longer monotonous.",
-      "l2": "Complete social and personal center functions to create an exclusive space.",
-      "l3": "Supports multi-hardware platform adaptation, compatible with mainstream head units.",
-      "l4": "Rich audio-visual entertainment content to meet visual and auditory needs."
+      "title": "Smart Cockpit Ecosystem",
+      "desc": "Transforms traditional vehicles into “smart mobile spaces” that integrate work, entertainment, and relaxation. Through deep hardware-software integration, it enables seamless connectivity between users, vehicles, and the environment.",
+      "l1": "Cross-screen interaction with one-click switching between multiple scenarios",
+      "l2": "Immersive cockpit feedback integrated with seats and ambient lighting",
+      "l3": "High-precision 3D visualization models for vehicle–road coordination"
     },
     "c3": {
-      "title": "Low-altitude Flight",
-      "desc": "Creating a closed-loop ecosystem of B-end professional training + C-end flight experience to boost the low-altitude economy.",
-      "l1": "Provide standard and compliant flight training to ensure teaching safety and quality.",
-      "l2": "Build an efficient and smart low-altitude logistics network to empower industry applications.",
-      "l3": "Output professional flight technology and qualification certification.",
-      "l4": "Efficient and smart drone logistics and distribution experience."
+      "title": "HMI",
+      "desc": "Builds an intuitive and efficient communication bridge between users and vehicles. By combining 3D visualization with generative AI, it delivers a highly technological and aesthetically refined interaction experience.",
+      "l1": "3D spatial scenes and high-quality dynamic wallpapers",
+      "l2": "Integrated MR/HUD display technologies",
+      "l3": "Generative interaction prototyping based on large models"
     },
     "c4": {
-      "title": "AI Search",
-      "desc": "Smart robot security patrol solution, achieving 24/7 continuous smart patrol and real-time monitoring and early warning.",
-      "l1": "All-terrain adaptability, stable operation in complex environments.",
-      "l2": "AI smart visual recognition for precise anomaly detection.",
-      "l3": "Autonomous navigation and path planning to improve patrol efficiency.",
-      "l4": "Cloud management platform for visual data control."
+      "title": "VPA (Virtual Personal Assistant)",
+      "desc": "As the “central intelligence” of the smart cockpit, VPA provides personalized companionship and proactive services through humanized digital avatars and natural, emotionally expressive voice interaction.",
+      "l1": "Brand-specific high-fidelity 3D digital human customization",
+      "l2": "Evolvable, personified intelligent assistant system"
+    },
+    "c5": {
+      "title": "Immersive In-Car Entertainment",
+      "desc": "Transforms in-car entertainment into an essential travel companion. By deeply integrating with native vehicle hardware, it supports cloud gaming, motion interaction, and immersive audiovisual experiences, making every journey enjoyable.",
+      "l1": "Realistic racing experiences using steering wheel and pedals",
+      "l2": "Motion-based dance and interactive games using in-car cameras",
+      "l3": "in-car virtual economy systems and virtual pet development"
+    },
+    "c6": {
+      "title": "Mixed Reality Experience",
+      "desc": "Applies virtual and augmented reality technologies to vehicle display and driving experiences, breaking physical limitations and creating next-generation immersive experiences.",
+      "l1": "Apple Vision Pro 1:1 digital vehicle prototype review",
+      "l2": "In-car AR puzzle games and augmented reality interaction",
+     "l3": "Holographic 3D vehicle customization system for offline dealerships"
     }
-  },
+},
   "corp": {
     "title": "About Hummingbird",
     "desc": "Team and Culture"
@@ -76,13 +82,13 @@
   "scope": {
     "title": "Scope of Business",
     "desc": "Projects",
-    "k1": "Smart Cabin",
+    "k1": "Smart Cockpit",
     "k2": "HMI",
     "k3": "VPA",
     "k4": "Cabin Ent.",
     "k5": "Funcar",
     "k6": "VR/AR",
-    "k7": "Low-alt Flight",
+    "k7": "Low-altitude Flight",
     "k8": "Drone Training",
     "k9": "Drone Logistics",
     "k10": "AI Search",
@@ -92,12 +98,12 @@
     "title": "Partners",
     "desc": "Establishing long-term strategic partnerships with famous enterprises",
     "cat1": "Smart Mobility Partners",
-    "cat2": "Low-alt Flight Partners",
+    "cat2": "Low-altitude Flight Partners",
     "cat3": "Other Partners"
   },
   "footer": {
     "col1": { "title": "Smart Mobility", "l1": "Business Overview", "l2": "Funcar" },
-    "col2": { "title": "Low-alt Flight", "l1": "Drone Racing", "l2": "App Scenarios", "l3": "Drone E-Proctoring" },
+    "col2": { "title": "Low-altitude Flight", "l1": "Drone Racing", "l2": "App Scenarios", "l3": "Drone E-Proctoring" },
     "col3": { "title": "AI Search", "l1": "AI Search", "l2": "App Scenarios" },
     "col4": { "title": "About Us", "l1": "Home", "l2": "About Us" },
     "col5": { "title": "Contact Us", "l1": "Beijing | Shenyang | Osaka | SG", "l2": "Business Consulting" }
@@ -136,25 +142,13 @@
       "game_title": "Gaming",
       "game_desc": "Funcar's gaming system includes rich genres to meet diverse needs. Whether cloud games, emulators, H5, or local games, Funcar provides a seamless immersive experience.",
       "game_t1": "Cloud Games", "game_t2": "Emulators", "game_t3": "H5 Games", "game_t4": "Local Games",
-      "g1_name": "Black Myth: Wukong", "g1_brand": "Game Science",
-      "g2_name": "Resident Evil 9",
-      "g3_name": "Uncharted",
       "ktv_title": "In-Car KTV",
       "ktv_desc": "Supports Bluetooth mics with a massive song library. Pro audio processing lets you enjoy KTV-level singing in your car.",
-      "k1_name": "Kill Bill",
-      "k2_name": "Wrong Love",
-      "k3_name": "Radio (Dum-Dum)",
       "film_title": "Movies & TV",
       "film_desc": "Rich online video resources including movies, TV series, shorts, and anime. Supports HD playback and resume function.",
       "film_t1": "Movies", "film_t2": "TV Series", "film_t3": "Shorts", "film_t4": "Anime",
-      "f1_name": "Now You See Me (1-2)",
-      "f2_name": "Iron Man (1-3)",
-      "f3_name": "Flash Point",
       "manga_title": "Comics",
-      "manga_desc": "Massive genuine HD comics covering works from multiple regions. Supports online reading and offline downloads.",
-      "m1_name": "One Punch Man",
-      "m2_name": "Jujutsu Kaisen",
-      "m3_name": "Demon Slayer"
+      "manga_desc": "Massive genuine HD comics covering works from multiple regions. Supports online reading and offline downloads."
     },
     "features": {
       "main_title": "Extraordinary in every detail.",
@@ -210,65 +204,66 @@
     "sec_cockpit": {
       "title": "Smart Cockpit",
       "sub": "Transforming traditional vehicles into smart mobile spaces.",
-      "c1_t": "Chery - Smart Minibus", "c1_d": "This project aims to develop a new HMI infotainment system hardware and software suite to meet Chery's vehicle styling, functional requirements, and body design specifications. It encompasses HMI software system development, intelligent voice virtual character design and development, third-party voice interface integration, and provision of hardware/software support.",
-      "c2_t": "Zeekr - R&D Test Cockpit", "c2_d": "This test cockpit serves as a compatible testing terminal for multiple Zeekr production and concept vehicles with both long and short wheelbases, incorporating extensive smart hardware and mechanical functions. The project includes styling design, mechanical principle design, smart hardware, wiring, and other hardware designs, as well as software demonstrations for the driver display, center console display, passenger display, rear display, HUD, and transparent A-pillars.",
-      "c3_t": "Chery - 2024 Auto Show Smart Cockpit", "c3_d": "Unveiled at the April 2024 Shanghai International Auto Show, this exhibit immerses users in Chery's metaverse space via VR headsets. Integrated with the in-car fragrance system and Chery's starlight roof, it delivers four distinct themed experiences while enabling interactive Q&A with the voice assistant.",
-      "c4_t": "Bosch - 2023 Auto Show Entertainment Cockpit", "c4_d": "A multi-control racing game for in-vehicle systems, supporting diverse user preferences via steering wheel buttons, Bluetooth gamepads, mobile virtual controllers, and touchscreens.",
-      "c5_t": "Audi - 2023 Auto Show Entertainment Cockpit", "c5_d": "Integrated ambient lighting, speakers, steering wheel, brakes, and accelerator. Players control game operations via the platform steering wheel, driving their favorite vehicles freely in the virtual world. Connected car technology applies real-vehicle functions within the game, enabling players to experience identical driving and infotainment capabilities as in actual vehicles.",
-      "c6_t": "Audi E-Torn Assisted VR Design", "c6_d": "After recreating the E-Tron in UE4 simulation, this project assists Audi's design team in developing vehicle aesthetics, controls, interactions, and experiences. The final recreation enables VR road testing that blends virtual and real-world elements.",
-      "c7_t": "Tsinghua University - Driving Simulation", "c7_d": "A Tsinghua University research team developed a VR-based driving simulation environment featuring simulated roads, traffic signs and signals, other vehicles, and pedestrians. By analyzing driver behavior, decision-making processes, and interactions with vehicles and the environment, the project investigates how factors like driver cognition, emotions, and attention influence driving behavior.",
-      "c8_t": "Scene Design Experiment Platform", "c8_d": "Builds an HMI design review simulation system covering driving scene restoration, MR interaction, dynamic lighting, and environmental audio. Equipped with HD displays, high-performance rendering, and MR devices to support full-sensory design presentation.",
-      "c9_t": "Vehicle-to-Infrastructure Coordination Modeling", "c9_d": "The vehicle-road collaboration system provides 3D modeling and data support, including 3D Tiles modeling for roads, roadside facilities, buildings, etc., along with data in GLB, GeoJSON, and SHP formats. The platform will deliver detailed road network data and independent object models (e.g., traffic lights, cameras), while the vehicle requires precise infrastructure data to support intelligent transportation and autonomous driving applications. Project implementation will establish the data foundation and technical support for intelligent and efficient vehicle-road coordination systems."
+      "c1_t": "Chery - ibar", "c1_d": "This project focuses on developing a next-generation HMI infotainment system, including both hardware and software, tailored to Chery’s vehicle design and functional requirements. It covers HMI system development, intelligent voice avatar design, third-party voice integration, and end-to-end hardware and software support.",
+      "c2_t": "Zeekr - R&D Test Cockpit", "c2_d": "This test cockpit serves as a versatile development and validation platform compatible with multiple ZEEKR production and concept vehicles across different wheelbase configurations. It integrates a wide range of smart hardware and mechanical systems. The project covers styling design, mechanical engineering, hardware integration, wiring design, and multi-screen software demonstrations, including the instrument cluster, center display, passenger display, rear display, HUD, and enhanced A-pillar visualization.",
+      "c3_t": "Chery - Smart Cockpit(Auto Shanghai 2024)", "c3_d": "Unveiled at Auto Shanghai 2024, this smart cockpit experience immerses users in Chery’s virtual ecosystem through VR technology. Integrated with in-car fragrance systems and a starlight roof, it delivers four themed interactive scenarios, while enabling natural voice-based interactions with the in-vehicle assistant.",
+      "c4_t": "Bosch - Interactive Entertainment Cockpit (Auto Show 2023)", "c4_d": "An in-vehicle racing game designed for multi-modal interaction, supporting various control methods including steering wheel buttons, Bluetooth controllers, mobile-based virtual controllers, and touchscreens, catering to diverse user preferences.",
+      "c5_t": "Audi – Immersive Gaming Cockpit (Auto Show 2023)", "c5_d": "This entertainment cockpit integrates ambient lighting, audio systems, steering wheel controls, braking, and acceleration into a unified gaming experience. Players can operate vehicles using the physical steering wheel, freely exploring virtual environments. By leveraging connected vehicle technologies, real-world vehicle functions are replicated within the game, delivering an experience consistent with actual driving and infotainment systems.",
+      "c6_t": "Audi E-Torn Assisted VR Design", "c6_d": "Using Unreal Engine 4 (UE4), the Audi e-tron was recreated in a high-fidelity simulation environment to support the design team in developing vehicle styling, controls, and interaction experiences. The final system enables immersive VR-based road testing, seamlessly blending virtual and real-world elements.",
+      "c7_t": "Tsinghua University - Driving Simulation", "c7_d": "A VR-based driving simulation platform developed by a Tsinghua University research team. The system recreates realistic road environments, including traffic signals, surrounding vehicles, and pedestrians. It is used to study driver behavior, decision-making, and human–vehicle–environment interactions, with a focus on how cognition, emotion, and attention impact driving performance.",
+      "c8_t": "Scene Design Experiment Platform", "c8_d": "A simulation platform for HMI design validation, supporting driving scenario reconstruction, MR interaction, dynamic lighting, and spatial audio. Equipped with high-resolution displays, high-performance rendering systems, and MR devices, it enables immersive and multi-sensory design evaluation.",
+      "c9_t": "Vehicle-to-Infrastructure (V2I) Data Modeling", "c9_d": "This platform provides 3D modeling and data support for vehicle-to-infrastructure (V2I) systems, including 3D Tiles for roads, roadside facilities, and buildings, as well as data in GLB, GeoJSON, and SHP formats. It delivers detailed road network data and independent object models such as traffic lights and cameras. The system establishes a robust data foundation to support intelligent transportation and autonomous driving applications."
     },
     "sec_hmi": {
       "title": "HMI",
       "sub": "The communication bridge and interaction window between humans and vehicles.",
-      "c1_t": "Dongfeng - HMI Interface", "c1_d": "A new HMI system designed for mid-to-high-end sedans, offering a smooth interactive experience and modern visual design.",
-      "c2_t": "Chery - 3D HMI Interface", "c2_d": "Chery's concept vehicle integrates an intelligent voice assistant, allowing drivers and passengers to effortlessly control functions without distraction. This integrated control system enhances focus on driving and journey enjoyment.",
-      "c3_t": "BAIC - VR HMI Interface", "c3_d": "A VR HMI system specifically designed for rear passengers. Traditional headrest screens and rear curtain screens are small and come with high optional costs, whereas VR devices offer an infinitely expansive viewing experience at a relatively low cost. Additionally, VR devices can simultaneously run office, social, and entertainment applications, delivering a more immersive and private leisure experience. Via Bluetooth, VR devices can be paired with both the vehicle and HMI systems, allowing passengers to adjust ventilation, seat temperature, and view navigation information without repeatedly removing their VR headsets.",
-      "c4_t": "ZEEKER - Live Wallpaper", "c4_d": "High-quality live wallpapers created for ZEEKR, providing delicate and realistic visual effects that change dynamically with the environment and time, greatly enhancing cabin immersion.",
-      "c5_t": "3D HMI", "c5_d": "Building a “3D HMI” intelligent cockpit: Integrates navigation, entertainment, and vehicle control capabilities through 3D scenes and cards, enhancing usability and immersion with depth parallax, animations, and real-time feedback. Introduces lightweight tasks/badge points and virtual companion prompts to boost user engagement, while ensuring safety through driving-state interaction downgrades and permission policies.",
-      "c6_t": "Motorcycle Helmet HUD", "c6_d": "A smart motorcycle helmet equipped with MR display capabilities, supporting navigation HUD, eye tracking, environmental awareness, and more. Features lightweight design and riding safety enhancements. Integrating augmented reality, 360° visibility, and voice control, it ensures convenient and safe operation during rides. Riders can maintain focus on the road without looking down at their phones."
+      "c1_t": "Dongfeng – HMI System Design", "c1_d": "A next-generation HMI system designed for premium sedan models, featuring a smooth interaction experience and a modern, refined visual language.",
+      "c2_t": "Chery - 3D HMI Interface", "c2_d": "Designed for Chery’s concept vehicle, this 3D HMI system integrates an intelligent voice assistant, enabling drivers and passengers to control vehicle functions more intuitively. The system minimizes interaction friction, enhancing both driving focus and overall user experience.",
+      "c3_t": "BAIC – VR-Based Rear Seat HMI System", "c3_d": "A VR-based HMI system designed for rear-seat passengers. Compared to traditional headrest or ceiling-mounted screens, VR devices offer a more immersive and cost-effective viewing experience. The system supports entertainment, social, and productivity applications, creating a private and engaging in-cabin environment. Through Bluetooth connectivity, users can interact with the vehicle’s HMI system to control features such as climate, seat settings, and navigation without removing the headset.",
+      "c4_t": "ZEEKR - Live Wallpaper", "c4_d": "High-quality live wallpapers created for ZEEKR, providing delicate and realistic visual effects that change dynamically with the environment and time, greatly enhancing cabin immersion.",
+      "c5_t": "3D HMI Interactive Cockpit System", "c5_d": "A 3D HMI cockpit system that integrates navigation, entertainment, and vehicle controls through spatial interfaces and card-based interactions. By leveraging depth, motion, and real-time feedback, it enhances usability and immersion. The system also introduces lightweight task guidance and virtual assistant prompts to improve user engagement, while ensuring safety through adaptive interaction strategies based on driving conditions.",
+      "c6_t": "Smart Motorcycle Helmet with AR HUD", "c6_d": "A smart motorcycle helmet featuring AR-based HUD capabilities, supporting navigation, eye tracking, and real-time environmental awareness. Designed for lightweight comfort and enhanced riding safety, it integrates augmented reality, 360° situational visibility, and voice control, allowing riders to stay focused on the road without relying on mobile devices.",
+      "c7_t": "Generative Interaction Prototyping", "c7_d": "Addresses the limitations of traditional in-vehicle interaction, such as inflexibility, deep functional hierarchies, and complex operations. By leveraging AI-generated responses to user needs, the system focuses on response efficiency and content accuracy, providing diversified interaction interfaces and proactive services. It also delivers research and analysis on in-vehicle generative interaction markets, scenario requirement analysis, product solution design, and technical feasibility evaluation reports.",
+      "c8_t": "Scenario Design & Simulation Platform", "c8_d": "Builds an HMI design evaluation and simulation system, covering driving scenario reconstruction, in-cabin MR interactive experiences, dynamic lighting, environmental sound and audio design restoration, and core networking modules. Equipped with high-definition displays, high-performance rendering, MR devices, and control software, it supports multi-sensory design presentation and scientific testing, enabling continuous HMI design optimization."
     },
     "sec_vpa": {
       "title": "VPA",
-      "sub": "The 'brain' and 'soul' of the smart cabin.",
-      "c1_t": "Great Wall - 4D Digital Human + Assistant", "c1_d": "Great Wall Motors' ORA Cat series integrates an intelligent voice assistant and digital avatar into the infotainment system. This avatar provides voice feedback and prompts to accompany owners during their driving journey.",
-      "c2_t": "Tank 300 - Male/Female Avatar Assistant", "c2_d": "The Great Wall Motors “Tank 300” series features an in-vehicle system with an intelligent voice assistant. Different models pair with assistants of varying genders, providing voice feedback and driving suggestions throughout the journey."
+      "sub": "The 'brain' and 'soul' of the Smart Cockpit.",
+      "c1_t": "Great Wall – Digital Avatar & In-Vehicle Assistant", "c1_d": "Great Wall Motors’ ORA series integrates an intelligent voice assistant and a digital avatar into the in-vehicle system. During driving, the avatar accompanies the user by providing voice feedback and prompts.",
+      "c2_t": "Tank 300 – Gender-Based Digital Avatar Assistant", "c2_d": "The Great Wall Motors Tank 300 series features an in-vehicle intelligent voice assistant. Different models are paired with digital assistants of different genders, which provide voice feedback and prompts based on the driver’s actions throughout the journey."
     },
     "sec_ent": {
       "title": "Cabin Entertainment",
       "sub": "In-car entertainment systems have become indispensable smart companions for users.",
-      "c1_t": "GAC Aion - ADiGO World", "c1_d": "Combined with driving data, an ecosystem of planetary growth realized through natural voice control.",
-      "c2_t": "Smart - Racing Game", "c2_d": "Drivers control the racing car via accelerator, brake, and steering wheel for an immersive experience.",
-      "c3_t": "Hyundai - Racing Game", "c3_d": "Built with an advanced physics engine, providing exciting racing gameplay.",
-      "c4_t": "Mercedes-Benz - In-Car Racing", "c4_d": "Supports multiplayer interaction via controllers, phones, touch screens, and ambient lighting.",
-      "c5_t": "Exeed - Cloud Gaming", "c5_d": "Cloud gaming tech allows high-quality gaming without needing high-performance local hardware.",
-      "c6_t": "Antolin - In-Car Music Game", "c6_d": "Rhythm games synchronized with in-car lighting, audio, and seat vibration.",
-      "c7_t": "Hongqi - Faurecia Entertainment System", "c7_d": "Light entertainment system for the rear seats of Hongqi H9, supporting fragmented time interaction.",
-      "c8_t": "Kart Party - Racing Game", "c8_d": "A decentralized racing economy system based on blockchain technology.",
-      "c9_t": "Geely - Pet Raising Game", "c9_d": "Increases user stickiness and social interaction by cultivating virtual pets.",
-      "c10_t": "Motion Karaoke & Dance Game", "c10_d": "Full-body motion dance interaction via microphone and front camera.",
-      "c11_t": "Motion Tennis Game", "c11_d": "Control virtual tennis movement through body motions, enjoying the fun of technology.",
-      "c12_t": "Growable Intelligent Agent", "c12_d": "Based on generative AI, through personification and growth mechanisms, it builds sustainable content supply and relationship chains around agent cultivation and multiplayer interactive plazas."
+      "c1_t": "GAC Aion – ADiGO World", "c1_d": "ADiGO World, deployed in GAC Aion vehicles, is one of the first in-car ecosystem entertainment systems in China to integrate vehicle TBOX driving data. The system collects user driving behavior data in real time and reflects it through dynamic changes in a virtual planetary ecosystem. Users can grow their unique virtual planet based on driving duration, mileage, and other metrics.",
+      "c2_t": "Smart – In-Car Racing Game", "c2_d": "An in-car racing game that allows users to enjoy an immersive gaming experience with friends. The driver controls the game using the accelerator, brake pedal, and steering wheel.",
+      "c3_t": "Hyundai - Racing Game", "c3_d": "A highly realistic racing game developed for Hyundai, designed to simulate real driving experiences. The game uses advanced physics engines and graphics technologies to deliver engaging gameplay and a wide selection of tracks.",
+      "c4_t": "Mercedes-Benz – In-Car Racing System", "c4_d": "This system supports multiple control modes to match different user preferences, including real cockpit hardware such as steering wheel, brake, accelerator, vibrating seats, and ambient lighting. It also supports multiplayer interaction via Bluetooth controllers, mobile virtual controllers, and touchscreens. Using a real steering wheel enhances the realism and enjoyment of the racing experience.",
+      "c5_t": "Exeed – In-Car Cloud Gaming", "c5_d": "This system leverages cloud computing to shift game resources and processing power from local devices to remote servers, streaming game content to in-vehicle entertainment systems or personal devices. It enables passengers to enjoy high-quality gaming experiences without relying on local hardware performance.",
+      "c6_t": "Antolin – In-Car Music Rhythm Game", "c6_d": "Antolin’s music game system integrates seamlessly with in-car ambient lighting, audio systems, and seat vibration. Players interact by tapping the steering wheel or clapping to match the rhythm. During gameplay, the display shows visuals while lighting, sound, seat vibration, and even climate systems respond dynamically, creating an immersive audiovisual experience.",
+      "c7_t": "Hongqi – Faurecia Rear-Seat Entertainment System", "c7_d": "Built on Faurecia hardware, this light entertainment system is designed for the rear seats of the Hongqi H9. Users interact through rear touchscreens, enabling casual gaming experiences during short travel periods.",
+      "c8_t": "Kart Party – Racing Game", "c8_d": "Kart Party is a virtual racing game where players enter the game world by acquiring a vehicle license. Players can purchase complete vehicles and a wide range of components, including functional, performance, decorative, and consumable parts. These can be obtained through race points, task rewards, and daily check-ins, allowing users to upgrade and customize their vehicles. The game also incorporates blockchain technology to build a decentralized ecosystem.",
+      "c9_t": "Geely – Virtual Pet Development Game", "c9_d": "A virtual pet development game created for Geely, known as Super POC. The game integrates with in-car entertainment features, allowing users to interact by raising virtual pets. It enhances user engagement, enriches the driving experience, and promotes social interaction among users.",
+      "c10_t": "Motion-Based Karaoke & Dance Game", "c10_d": "A multiplayer motion-interactive game designed for social and party scenarios. In vehicles, users interact through microphones and front cameras for singing and upper-body motion matching. In exhibition environments, larger spaces and screens enable full-body group dancing and singing experiences.",
+      "c11_t": "Motion-Based Tennis Game", "c11_d": "An interactive game combining motion sensing and entertainment. Players can control virtual tennis actions through body movements in rear-seat or exhibition scenarios. The project is designed to provide an engaging and interactive experience, suitable for both in-car entertainment and public demonstrations.",
+      "c12_t": "Evolvable Intelligent Agent System", "c12_d": "Built on generative AI capabilities, this system introduces personified agents with growth mechanisms. It forms a closed-loop ecosystem around three core modules: agent development, exploration gameplay, and multiplayer interactive spaces. The system supports continuous content generation and relationship building, providing users with an evolving and long-term companion experience."
     },
     "sec_vrar": {
       "title": "VR/AR",
       "sub": "Virtual and Augmented Reality Applications",
-      "c1_t": "Daimler Benz - AR Entertainment Game", "c1_d": "The Mercedes-Benz In-Car AR Puzzle Game is an entertainment experience combining augmented reality technology with puzzle elements. It features “in-car hidden clues,” “in-car AR interactive puzzles,” “in-car AR maze challenges,” and “in-car AR puzzle stories.” Players complete decryption levels through interactions like image recognition, augmented reality, gyroscope tracking, and touch controls. This experiential activity at the Mercedes-Benz booth during CES garnered significant user enthusiasm.",
-      "c2_t": "Hyundai - Gesture Game", "c2_d": "Developed an innovative gesture-controlled game for Hyundai Motor, enabling users to effortlessly operate the game within the vehicle through advanced gesture recognition technology. This project enhances in-car interactivity and entertainment, showcasing Hyundai's technological innovation capabilities. The gesture game not only adds fun to the driving experience but also demonstrates Hyundai's focus on user needs and technological foresight, elevating the brand's technological appeal and user satisfaction.",
-      "c3_t": "VisionPro Digital Prototype", "c3_d": "Rapidly delivers a 1:1 “digital prototype” representation of the entire vehicle. Through device-enabled virtual-physical integration, it enables demonstrations and interactions with color textures, environments, design concepts, and more. Supports multi-user, multi-device collaboration based on the same digital prototype data, enhancing communication efficiency and decision-making experiences. Enables rapid digital vehicle visualization without physical prototypes, delivering comprehensive demonstrations of color textures, environmental ambiance, design concepts, and interactive experiences. This significantly boosts design validation efficiency, presentation impact, and cross-team collaboration capabilities.",
-      "c4_t": "Honda In-Car XR Entertainment Platform", "c4_d": "Independently developed a multi-device hyper-casual game based on navigation positioning. Building upon navigation fundamentals, this augmented reality game merges the real and virtual worlds, delivering unique social and visual experiences.",
-      "c5_t": "Toyota C-HR Virtual-Reality Hybrid Driving Experience ", "c5_d": "A simulated driving experience integrating the new model with virtual race tracks, featuring a realistic smart cockpit built around motion-sensing driving equipment. Users can experience the intelligent motion-sensing cockpit firsthand, with motion seats delivering real-time vibrations and collision effects mimicking actual vehicle movement."
-
+      "c1_t": "Mercedes-Benz – AR Puzzle Game Experience", "c1_d": "An in-car AR puzzle game experience that combines augmented reality with puzzle-solving gameplay. It includes features such as hidden clues inside the vehicle, AR interactive puzzles, AR maze challenges, and narrative-based puzzle scenarios. Players complete challenges through interactions such as image recognition, augmented reality, gyroscope input, and touch controls. The experience was showcased at the Mercedes-Benz booth at CES and received strong user engagement.",
+      "c2_t": "Hyundai – Gesture-Controlled Game", "c2_d": "An innovative gesture-controlled game developed for Hyundai, utilizing advanced gesture recognition technology to enable intuitive in-car interaction. The project enhances in-cabin interactivity and entertainment, demonstrating Hyundai’s technological capabilities. It increases engagement during driving while reflecting a forward-looking approach to user needs and in-car experience.",
+      "c3_t": "Apple Vision Pro – Digital Vehicle Prototype", "c3_d": "A system that enables rapid presentation of a full-scale (1:1) digital vehicle prototype. Through device-based mixed reality interaction, it supports the visualization and interaction of colors, materials, environments, and design solutions. It also allows multiple users and devices to collaboratively interact with the same digital vehicle data, improving cross-team collaboration and decision-making efficiency.",
+      "c4_t": "Honda – In-Car XR Entertainment Platform", "c4_d": "An independently developed multi-device casual gaming platform based on navigation positioning. Built on navigation data, it creates an augmented reality experience that integrates the real and virtual worlds, delivering a new form of social and visual interaction.",
+      "c5_t": "Toyota IZOA – VR Mixed Reality Driving Experience", "c5_d": "A simulated driving experience that combines a new vehicle model with virtual racing environments. Built with motion-based driving equipment, it creates a realistic intelligent cockpit that users can physically sit in and operate. The motion seat provides real-time feedback such as vibration and collision effects during driving."
     },
     "sec_other": {
       "title": "Others",
       "sub": "Other cutting-edge technology showcases and partnerships.",
-      "c1_t": "NETA Auto - AR Live Virtual Launch", "c1_d": "AR live broadcasting created with Unreal Engine, camera tracking technology, and professional green screen matting.",
-      "c2_t": "Lenovo - Automotive Modeling", "c2_d": "Provided high-precision 3D car modeling services for Lenovo, enhancing presentation effects in VR/AR applications and boosting user immersion.",
-      "c3_t": "BMW - 4S Store Personalized Purchase System", "c3_d": "AR technology displaying high-precision 3D models on mobiles/tablets for a personalized car purchase demo system, showing interior structures and dynamic effects.",
-      "c4_t": "Daimler Mercedes-Benz - AR Car Launch Event", "c4_d": "Visualized vehicle wind resistance effects and autonomous driving demos using AR, intuitively showing radar sensing accuracy and 3D road driving simulations."
+      "c1_t": "Neta Auto – AR Virtual Launch Event", "c1_d": "An online launch event for the Neta U520U/400U, featuring a virtual stage built with 3D technology combined with real human footage. Different themed visual effects are presented throughout the event, while real vehicle footage is integrated into the virtual stage. The system showcases the Neta U series from multiple perspectives, including both exterior and interior details.",
+      "c2_t": "Lenovo – High-Precision Vehicle Modeling", "c2_d": "Provided high-precision vehicle modeling services for Lenovo using advanced 3D modeling technologies to create realistic vehicle models. The project enhances presentation quality in VR and AR applications, while improving user interaction and immersion.",
+      "c3_t": "BMW – AR-Based Vehicle Customization System", "c3_d": "An AR-based system for personalized vehicle configuration in dealerships, enabling high-precision 3D model visualization on mobile devices such as tablets and smartphones. It allows customers to view detailed vehicle structures, including component-level displays, as well as interactive demonstrations such as door and sunroof opening and closing.",
+      "c4_t": "Mercedes-Benz – AR Vehicle Launch Presentation", "c4_d": "An AR-based vehicle presentation featuring visual effects to demonstrate aerodynamic performance and autonomous driving capabilities. Through enhanced visualizations, it showcases airflow behavior, radar sensing accuracy, and simulated real-road driving scenarios using 3D technology, providing an intuitive understanding of vehicle technologies."
     },
     "stats": {
       "title": "Cooperation Results",
@@ -397,7 +392,7 @@
     },
     "pillars": {
       "p1_t": "Policy Driven", "p1_d": "CAAC promotes digital and simulated training, opening policy dividends.",
-      "p2_t": "Market Size", "p2_d": "Pilot shortage exceeds 7M. With low-altitude economy opening, annual demand increases by 1M.",
+      "p2_t": "Market Size", "p2_d": "The pilot shortage has become a major issue, and demand has surged following the liberalization of the low-altitude airspace economy.",
       "p3_t": "Efficient Training", "p3_d": "Drone schools and aviation colleges connect directly to improve teaching efficiency and pass rates.",
       "p4_t": "Specialized Course Teaching", "p4_d": "Covering plant protection, logistics, mapping, patrol, and rescue with customized courses."
     },
@@ -436,10 +431,10 @@
       "title": "Training Modes",
       "subtitle": "Process for building scientific muscle memory + spatial orientation.",
       "m1_t": "Free Flight Mode",
-      "m1_sub": "Seamless connection between rapid aerial screening and precise ground confirmation",
+
       "m1_d": "Open, unconstrained practice environment. Control the drone freely with no task limits. Suitable for novices to familiarize with basics or experts to test parameters. Supports free setting adjustments to explore techniques.",
       "m2_t": "Racing Track Mode",
-      "m2_sub": "Seamless connection between rapid aerial screening and precise ground confirmation",
+
       "m2_d": "Racing challenge gameplay with fixed tracks and checkpoints. Cross and reach the finish line in specified order. Tracks feature obstacles. System auto-records time, testing route planning and high-speed handling."
     },
     "special": {
@@ -496,7 +491,7 @@
       "title": "Air Logistics Network Connecting B2B and B2C",
       "sub": "Ecosystem model: Building a win-win logistics ecosystem of 'Pilots + Self-operated + Merchants'",
       "m1_t": "Contracted Pilot Model",
-      "m1_tag": "Asset-light operation · Uber-like model",
+      "m1_tag": "Asset-light operation",
       "m1_d": "Integrating certified pilot resources in society. The platform is responsible for dispatching and settling pilots per order.",
       "m1_apply": "Applicable: Personal delivery, emergency orders",
       "m2_t": "Self-operated Fleet Model",
@@ -550,13 +545,11 @@
   },
   "contact": {
     "hero": {
-        "top": "MASTERING <i>the TECHNIQUES</i>",
-        
+        "top": "MASTERING <i>THE TECHNOLOGY</i>",
         "main_title": "Contact Us",
         "sub_title": "Looking forward to establishing a long-term partnership with you",
         "desc_zh": "Committed to creating quality",
         "desc_en": "creating happiness"
-
     },
     "global": {
       "title": "Global Presence",
