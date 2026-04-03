@@ -3,7 +3,7 @@
     "logo": "Hummingbird",
     "nav": {
       "home": "Home",
-      "industry_cases": "Smart Mobility",
+      "mobility": "Smart Mobility",
       "funcar": "Funcar",
       "flight": "Low-altitude Flight",
       "about": "About Us",
@@ -102,10 +102,10 @@
     "cat3": "Other Partners"
   },
   "footer": {
-    "col1": { "title": "Smart Mobility", "l1": "Business Overview", "l2": "Funcar" },
-    "col2": { "title": "Low-altitude Flight", "l1": "Drone Racing", "l2": "App Scenarios", "l3": "Drone E-Proctoring" },
-    "col3": { "title": "AI Search", "l1": "AI Search", "l2": "App Scenarios" },
-    "col4": { "title": "About Us", "l1": "Home", "l2": "About Us" },
+    "col1": { "title": "Smart Mobility"},
+    "col2": { "title": "Funcar"},
+    "col3": { "title": "Low-altitude Flight", "l1": "Sim Training", "l2": "Logistics Platform" },
+    "col4": { "title": "About Us"},
     "col5": { "title": "Contact Us", "l1": "Beijing | Shenyang | Osaka | SG", "l2": "Business Consulting" }
   },
   "funcar": {
