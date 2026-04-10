@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 基于设备系统语言自动识别 + 防闪烁脚本 -->
+    <script>
+        (function() {
+            var savedLang = localStorage.getItem('preferredLang');
+            if (!savedLang) {
+                var userLang = navigator.language || navigator.userLanguage; 
+                var targetLang = 'en'; 
+                if (userLang.indexOf('zh') !== -1) { targetLang = 'zh'; } 
+                else if (userLang.indexOf('ja') !== -1) { targetLang = 'ja'; }
+                localStorage.setItem('preferredLang', targetLang);
+                savedLang = targetLang;
+            }
+            if (savedLang !== 'zh') {
+                document.documentElement.classList.add('lang-loading');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/hummingbird-logo1.webp" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+
+        <nav class="nav-links">
+            <div class="nav-item single-link">
+                <a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a>
+            </div>
+            <div class="nav-item single-link">
+                <a href="cases.html" class="nav-link" data-i18n="header.nav.mobility">智能出行</a>
+            </div>
+            <div class="nav-item single-link">
+                <a href="funcar.html" class="nav-link" data-i18n="header.nav.funcar">Funcar</a>
+            </div>
+            
+
+            <!-- 【修改】低空飞行 -->
+            <div class="nav-item">
+                <a href="javascript:void(0)" class="nav-link" id="flight-btn">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu" id="flight-dropdown">
+                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                </div>
+            </div>
+
+            
+
+            <div class="nav-item single-link">
+                <a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a>
+            </div>
+            <div class="nav-item single-link">
+                <a href="careers.html" class="nav-link" data-i18n="header.nav.careers">加入我们</a>
+            </div>
+
+            <div class="nav-item single-link">
+                <a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a>
+            </div>
+            
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg>
+                </div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉区 (Hero) -->
+    <section class="hero hero-careers" id="hero">
+        <!-- 你可以在 images 文件夹下放一张你喜欢的背景图 careers-bg.webp -->
+        <img class="hero-bg-img" src="./images/contactus-hero.webp" alt="加入我们背景">
+        <div class="hero-content">
+            <h1 data-i18n="careers.hero.title">招聘信息</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-desc" data-i18n="careers.hero.subtitle">诚邀与我们共同推动日本市场业务扩展的伙伴</p>
+        </div>
+    </section>
+
+    <!-- 公司简介引导 -->
+    <section class="intro section-padding" style="padding-bottom: 40px;">
+        <p data-i18n="careers.intro.p1">Hummingbird株式会社正在加速推进全球业务发展，业务领域涵盖智能座舱、车载娱乐系统、低空出行、AI解决方案以及VR内容等方向。</p>
+        <p data-i18n="careers.intro.p2">我们期待能够与日本企业共同创造新的合作机会，并欢迎能够推动业务成长的人才加入我们的团队。</p>
+    </section>
+
+    <!-- SECTION 1: 我们期待的人才 (Message) -->
+    <div class="careers-message">
+        <h2 data-i18n="careers.message.title">我们期待的人才</h2>
+        <p data-i18n="careers.message.p1">我们所寻找的，并不仅仅是单纯的销售人员，而是能够深入理解客户需求，并通过最合适的解决方案建立长期信任关系的人才。</p>
+        <p data-i18n="careers.message.p2">同时，我们也欢迎具备连接内容、技术与商业视角，并能够主动推动创造新价值的人加入团队。</p>
+    </div>
+
+    <!-- SECTION 2: 招聘职位 (Jobs) -->
+    <section class="careers-jobs">
+        <div class="section-title">
+            <h2 data-i18n="careers.jobs.title">招聘职位</h2>
+        </div>
+        
+        <div class="jobs-grid">
+            <!-- 职位 1 -->
+            <div class="job-card">
+                <h3 data-i18n="careers.jobs.j1.name">法人销售 / 事业开发</h3>
+                
+                <h4 data-i18n="careers.jobs.j1.t_res">工作内容</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j1.r1">面向日本企业提供技术开发委托与技术服务的提案销售</li>
+                    <li data-i18n="careers.jobs.j1.r2">与客户进行需求沟通，并制作提案资料</li>
+                    <li data-i18n="careers.jobs.j1.r3">开拓新客户并强化与现有客户的合作关系</li>
+                    <li data-i18n="careers.jobs.j1.r4">与公司内部技术团队、产品团队协作推进项目提案</li>
+                    <li data-i18n="careers.jobs.j1.r5">参与合同谈判、合作推进以及项目启动支持</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j1.t_req">任职要求（必备条件）</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j1.q1">具有法人销售、事业开发或客户管理相关工作经验</li>
+                    <li data-i18n="careers.jobs.j1.q2">具有与日本企业进行商务洽谈与沟通的经验</li>
+                    <li data-i18n="careers.jobs.j1.q3">具备能够与公司内外相关人员顺畅协作的沟通能力</li>
+                    <li data-i18n="careers.jobs.j1.q4">具备能够制作提案书和销售资料的日语能力</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j1.t_pref">优先条件</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j1.p1">在 IT、软件、XR 或数字内容行业具有相关经验</li>
+                    <li data-i18n="careers.jobs.j1.p2">具有新客户开拓销售经验</li>
+                    <li data-i18n="careers.jobs.j1.p3">具备中文商务沟通能力</li>
+                    <li data-i18n="careers.jobs.j1.p4">具有跨境业务经验</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j1.t_ideal">理想的人才特质</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j1.i1">具备客户导向意识，能够进行问题解决型提案</li>
+                    <li data-i18n="careers.jobs.j1.i2">能主动发现机会并积极行动</li>
+                    <li data-i18n="careers.jobs.j1.i3">能够积极面对并享受快速变化的业务环境</li>
+                </ul>
+            </div>
+
+            <!-- 职位 2 -->
+            <div class="job-card">
+                <h3 data-i18n="careers.jobs.j2.name">VR内容事业开发 / 商务合作负责人</h3>
+                
+                <h4 data-i18n="careers.jobs.j2.t_res">工作内容</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j2.r1">推进VR内容相关的企业客户销售与商务洽谈</li>
+                    <li data-i18n="careers.jobs.j2.r2">推动与内容方、平台公司、制作公司等合作伙伴的协作</li>
+                    <li data-i18n="careers.jobs.j2.r3">开拓日本市场的业务合作伙伴</li>
+                    <li data-i18n="careers.jobs.j2.r4">推动联合企划、内容合作及版权授权合作</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j2.t_req">任职要求（必备条件）</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j2.q1">具有内容行业、娱乐行业或企业销售相关经验</li>
+                    <li data-i18n="careers.jobs.j2.q2">具有与外部合作伙伴进行商务谈判与协调的经验</li>
+                    <li data-i18n="careers.jobs.j2.q3">对VR / XR / 数字内容领域具有浓厚兴趣</li>
+                    <li data-i18n="careers.jobs.j2.q4">具备商务文档撰写能力及对外沟通能力</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j2.t_pref">优先条件</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j2.p1">熟悉 VR、XR、游戏、影视或IP商业相关领域</li>
+                    <li data-i18n="careers.jobs.j2.p2">具有联盟合作、业务合作或版权授权销售经验</li>
+                    <li data-i18n="careers.jobs.j2.p3">具有与日本企业进行内容合作的经验</li>
+                    <li data-i18n="careers.jobs.j2.p4">具备中文或英语沟通能力</li>
+                </ul>
+
+                <h4 data-i18n="careers.jobs.j2.t_ideal">理想的人才特质</h4>
+                <ul class="job-list">
+                    <li data-i18n="careers.jobs.j2.i1">能够从内容与商业两个角度思考价值创造</li>
+                    <li data-i18n="careers.jobs.j2.i2">能够整合公司内外资源推动项目进展</li>
+                    <li data-i18n="careers.jobs.j2.i3">对创造新的合作模式与业务机会充满热情</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 简历投递 CTA 区块 -->
+    <section class="careers-cta">
+        <h3 data-i18n="careers.cta.title">期待您的加入</h3>
+        <p data-i18n="careers.cta.desc">请将您的简历发送至以下邮箱，并注明申请职位</p>
+        <!-- 这里的 href="mailto:..." 会在用户点击时自动唤起发邮件的客户端 -->
+        <a href="mailto:hr@hummingbird.com" class="cta-email">hr@hummingbird.com</a>
+    </section>
+
+    <!-- 统一的底部导航栏 -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img class="logo-img" src="./images/hummingbird-logo2.webp" alt="Logo">
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="f-col"><h4><a href="index.html" data-i18n="header.nav.home">首页</a></h4><div class="f-links"></div></div>
+                <div class="f-col"><h4><a href="cases.html" data-i18n="header.nav.mobility">智能出行</a></h4><div class="f-links"></div></div>
+                <div class="f-col"><h4><a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a></h4><div class="f-links"></div></div>
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
+                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    </div>
+                </div>
+                <div class="f-col"><h4><a href="about.html" data-i18n="header.nav.about">关于我们</a></h4><div class="f-links"></div></div>
+                <div><h4><a href="careers.html" data-i18n="header.nav.careers">加入我们</a></h4><div class="f-links"></div></div>
+                <div class="f-col contact-col">
+                    <h4><a href="contact.html" data-i18n="header.nav.contact">联系我们</a></h4>
+                    <div class="f-links">
+                        <span data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</span>
+                        <span data-i18n="footer.col5.l2">商务咨询</span>
+                        <span data-i18n="footer.col5.l3">business@hummingbird.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -511,14 +511,46 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 .corp-img-row img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .corp-img-row img:not([src]), .corp-img-row img[src=""] { background-color: #111 !important; border-bottom: 1px solid #222 !important; }
 
-/* 联系我们专属全屏 Hero */
-.hero-contact-full { position: relative; z-index: 1; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 40px; overflow: hidden; }
-.hc-bg-img { position: absolute !important; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
-.hc-content { transform: translateY(-80px); }
-.hc-top { font-weight: 300; letter-spacing: 1px; margin-top: -10px; margin-bottom: 130px; color: rgba(255, 255, 255, 1); }
-.hc-main { font-size: 80px; letter-spacing: 5px; font-weight: 400; margin-top: 160px; margin-bottom: 10px; line-height: 1; color: #fff; }
-.hc-sub { font-size: 16px; letter-spacing: 5px; margin-bottom: 180px; font-weight: 300; color: #fff; }
-.hc-desc, .hc-desc-en { font-size: 16px; color: #ffffff; line-height: 1.8; }
+/* ==========================================================================
+   联系我们页面 - 专属半高 Hero (视觉同“加入我们”，标签完全独立)
+   ========================================================================== */
+
+/* 1. 控制高度，不再是全屏 100vh，而是清爽的 450px */
+.hero-contact-half { 
+    height: 450px !important; 
+    min-height: auto !important; 
+}
+
+/* 2. 主标题：大字号 + 粗体 */
+.hc-title { 
+    font-size: 56px !important; 
+    font-weight: 700 !important; 
+    color: #fff !important; 
+    margin-bottom: 20 !important; 
+    margin-top: 0 !important;
+    letter-spacing: 4px; 
+    line-height: 1.2;
+}
+
+
+
+/* 4. 副标题：小字号 + 浅灰色 */
+.hc-subtitle { 
+    font-size: 18px !important; 
+    color: #cccccc !important; 
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important;
+    letter-spacing: 1px; 
+    font-weight: normal !important;
+}
+
+/* 5. 手机与平板端响应式适配 */
+@media (max-width: 768px) {
+    .hero-contact-half { height: 300px !important; }
+    .hc-title { font-size: 36px !important; letter-spacing: 2px; }
+    .hc-subtitle { font-size: 15px !important; padding: 0 20px; }
+    .hc-divider { margin: 15px auto; }
+}
 
 .contact-block-title { text-align: center; margin-bottom: 50px; }
 .title-bar { display: none; }
@@ -1012,4 +1044,142 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     
     .ft-steps-wrap { padding: 25px 15px !important; margin-bottom: 30px !important; }
     .ft-tags-wrap { margin-bottom: 25px !important; }
+}
+
+
+/* ==========================================================================
+   加入我们页面专属样式 (Careers)
+   ========================================================================== */
+
+/* 1. Hero 区域微调 */
+.hero-careers { height: 450px !important; }
+.hero-careers h1 { font-size: 56px !important; font-weight: 700 !important; color: #fff; margin-bottom: 0; letter-spacing: 4px; }
+.hero-careers .hero-desc { font-size: 18px; color: #ccc; margin-top: 20px; }
+
+/* 2. "我们期待的人才" 专属寄语模块 */
+.careers-message { 
+    text-align: center; 
+    max-width: 900px; 
+    margin: 0 auto 100px auto; 
+    padding: 60px 5%; 
+    background-color: #111; 
+    border-radius: 20px; 
+    border: 1px solid #222;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.careers-message h2 { font-size: 32px; margin-bottom: 25px; color: var(--accent-color); letter-spacing: 4px; }
+.careers-message p { font-size: 16px; line-height: 1.9; color: #e0e0e0; margin-bottom: 15px; text-align: justify; }
+
+/* 3. 职位卡片网格布局 */
+.jobs-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* 两列并排展示 */
+    gap: 40px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 5% 100px 5%; 
+}
+.job-card { 
+    background-color: #111; 
+    border-radius: 24px; 
+    padding: 50px; 
+    border: 1px solid #222; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.job-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4); 
+    border-color: #333; 
+}
+
+/* 4. 职位卡片内部排版 */
+.job-card h3 { 
+    font-size: 28px; 
+    color: #fff; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #222; 
+    padding-bottom: 20px; 
+}
+.job-card h4 { 
+    font-size: 16px; 
+    color: var(--accent-color); 
+    margin-top: 30px; 
+    margin-bottom: 15px; 
+    font-weight: 600;
+}
+.job-list { list-style: none; padding: 0; }
+.job-list li { 
+    position: relative; 
+    padding-left: 20px; 
+    margin-bottom: 12px; 
+    font-size: 14px; 
+    color: #aaa; 
+    line-height: 1.7; 
+}
+.job-list li::before { 
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 8px; 
+    width: 6px; 
+    height: 6px; 
+    background-color: var(--accent-color); 
+    border-radius: 50%; 
+}
+
+/* 5. 手机与平板端响应式 */
+@media (max-width: 1024px) {
+    .jobs-grid { grid-template-columns: 1fr; } /* 屏幕变窄时变成一行一个 */
+    .job-card { padding: 40px 30px; }
+}
+@media (max-width: 768px) {
+    .hero-careers h1 { font-size: 36px !important; }
+    .careers-message { margin: 0 5% 60px 5%; padding: 40px 20px; }
+    .careers-message h2 { font-size: 24px; }
+    .careers-message p { font-size: 15px; }
+    .job-card h3 { font-size: 22px; }
+}
+
+/* ==========================================================================
+   加入我们页面 - 简历投递 CTA 模块
+   ========================================================================== */
+.careers-cta {
+    text-align: center;
+    padding: 0 5% 120px 5%;
+    background-color: var(--bg-color); /* 融入黑色背景 */
+}
+.careers-cta h3 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+.careers-cta p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 40px;
+}
+/* 邮箱按钮设计成发光线框风格，科技感强 */
+.cta-email {
+    display: inline-block;
+    font-size: 24px;
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 16px 50px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+.cta-email:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(41, 121, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* 手机端适配邮箱大小 */
+@media (max-width: 768px) {
+    .careers-cta h3 { font-size: 26px; }
+    .cta-email { font-size: 18px; padding: 12px 30px; }
 }
