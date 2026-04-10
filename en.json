@@ -606,6 +606,10 @@
         "t_ideal": "Ideal Candidate",
         "i1": "Able to think about value creation from both content and business perspectives", "i2": "Capable of coordinating multiple stakeholders to move projects forward", "i3": "Passionate about developing new partnership models and business opportunities"
       }
+    },
+    "cta": {
+      "title": "We Look Forward to Your Joining",
+      "desc": "Please send your resume to the following email and specify the position you are applying for."
     }
   }
 }
