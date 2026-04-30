@@ -588,10 +588,7 @@
         "name": "Corporate Sales / Business Development",
         "t_res": "Responsibilities",
         "r1": "Propose development outsourcing and technical services to Japanese companies", "r2": "Identify client needs and prepare proposal materials", "r3": "Develop new clients while strengthening relationships with existing customers", "r4": "Work closely with internal technical and product teams to deliver solutions", "r5": "Support contract negotiations, partnership development, and project launch processes",
-        "t_req": "Requirements",
-        "q1": "Experience in corporate sales, business development, or account management", "q2": "Experience in business negotiations with Japanese companies", "q3": "Strong communication skills and ability to collaborate with internal and external stakeholders", "q4": "Professional Japanese language ability for preparing proposals and sales materials",
-        "t_pref": "Preferred Qualifications",
-        "p1": "Experience in IT, software, XR, or digital content industries", "p2": "Experience in new client acquisition", "p3": "Business communication ability in Chinese", "p4": "Experience in cross-border business operations",
+
         "t_ideal": "Ideal Candidate",
         "i1": "Customer-oriented with strong problem-solving and proposal skills", "i2": "Proactive and able to identify and create opportunities independently", "i3": "Comfortable working in a fast-changing business environment"
       },
@@ -599,10 +596,7 @@
         "name": "VR Content Business Dev / Alliance Manager",
         "t_res": "Responsibilities",
         "r1": "Promote VR content solutions through B2B sales and business negotiations", "r2": "Build partnerships with content holders, platforms, and production companies", "r3": "Develop new business partners in the Japanese market", "r4": "Promote joint projects, content partnerships, and licensing collaborations",
-        "t_req": "Requirements",
-        "q1": "Experience in the content industry, entertainment industry, or B2B sales", "q2": "Experience negotiating and coordinating with external partners", "q3": "Strong interest in VR, XR, and digital content", "q4": "Ability to prepare business documents and communicate professionally with partners",
-        "t_pref": "Preferred Qualifications",
-        "p1": "Knowledge of VR, XR, gaming, film, or IP business", "p2": "Experience in alliances, business partnerships, or licensing sales", "p3": "Experience collaborating with Japanese companies on content projects", "p4": "Communication skills in Chinese or English",
+
         "t_ideal": "Ideal Candidate",
         "i1": "Able to think about value creation from both content and business perspectives", "i2": "Capable of coordinating multiple stakeholders to move projects forward", "i3": "Passionate about developing new partnership models and business opportunities"
       }

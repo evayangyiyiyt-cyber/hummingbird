@@ -1183,3 +1183,24 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .careers-cta h3 { font-size: 26px; }
     .cta-email { font-size: 18px; padding: 12px 30px; }
 }
+
+
+/* ==========================================================================
+   修复：多语言简介区长文本溢出边界问题
+   ========================================================================== */
+
+/* 1. 取消所有简介段落的强制不换行限制，允许长英文/日文自然换行 */
+.intro p,
+.cases-intro p,
+.ais-intro-box p {
+    white-space: normal !important; 
+}
+
+/* 2. 收拢外层容器的最大宽度，让多行文字排版更紧凑、阅读更舒适 */
+.intro,
+.cases-intro,
+.ais-intro-box {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
