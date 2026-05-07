@@ -74,7 +74,15 @@
       "l1": "Apple Vision Pro 1:1 digital vehicle prototype review",
       "l2": "In-car AR puzzle games and augmented reality interaction",
      "l3": "Holographic 3D vehicle customization system for offline dealerships"
-    }
+    },
+    "c7": {
+        "title": "AI Smart Cockpit",
+        "desc": "Built around in-car AI foundation models and multimodal interaction capabilities, this solution creates a next-generation smart cockpit with intelligent understanding, personalized recommendations, ecosystem integration, and AI companion features. Across travel, entertainment, office, and lifestyle service scenarios, it delivers a more natural, proactive, and personalized human-vehicle interaction experience.",
+        "l1": "Multimodal perception and natural language interaction",
+        "l2": "Personalized content recommendations and scenario-based services",
+        "l3": "AI voice assistant, intelligent Q&A, and schedule integration",
+        "l4": "Integration of in-car ecosystems, entertainment content, and third-party services"
+      }
 },
   "corp": {
     "title": "About Hummingbird",
@@ -123,7 +131,7 @@
       "set_desc": "Complete solution including all accessories",
       "s1_list": "Game Controller x1 | Microphone x1 | Tablet x1 | Stand x1 | Cable x1",
       "s2_list": "Game Controller x1 | Car Mic x1 | CarPlay x1 | Cable x1",
-      "btn_buy": "Buy Now",
+      "btn_buy": "Coming Soon",
       "hw_1": "Game Controller", "hw_1_desc": "Ergonomic design, precise control",
       "hw_2": "Car Microphone", "hw_2_desc": "Hi-Fi sound, essential for KTV",
       "hw_3": "CarPlay", "hw_3_desc": "Seamless connection, smart mirroring",
@@ -174,7 +182,7 @@
     "cta": {
       "title": "Ready to experience Funcar?",
       "subtitle": "Download now to experience the complete smart Funcar platform.",
-      "btn": "Download Demo"
+      "btn": "Coming Soon"
     }
   },
   "industry": {
@@ -556,11 +564,11 @@
       "title": "Global Presence",
       "bj_city": "China · Beijing (HQ)", "bj_dept": "Core R&D & Business Center", "bj_addr": "北京市东城区朝阳门北大街8号富华大厦F座1302",
       "jp_city": "Japan · Osaka", "jp_dept": "APAC Innovation Design Center", "jp_addr": "大阪府大阪市東淀川区東中島1丁目ステュディオ新大阪17-5-607",
-      "sg_city": "Singapore", "sg_dept": "Overseas Business Expansion Center", "sg_addr": "待定"
+      "sg_city": "Singapore", "sg_dept": "Overseas Business Expansion Center", "sg_addr": ""
     },
     "biz": {
       "title": "Business Consulting",
-      "label_contact": "Contact Person", "name": "Manager Wang",
+      "label_contact": "Contact Person", "name": "Manager Yang",
       "label_email": "Business Email",
       "scan_tip": "Scan for WeChat"
     },
@@ -584,26 +592,56 @@
     },
     "jobs": {
       "title": "Open Positions",
+      "osaka_title": "Osaka Office, Japan",
+      "beijing_title": "Beijing HQ, China",
       "j1": {
         "name": "Corporate Sales / Business Development",
         "t_res": "Responsibilities",
         "r1": "Propose development outsourcing and technical services to Japanese companies", "r2": "Identify client needs and prepare proposal materials", "r3": "Develop new clients while strengthening relationships with existing customers", "r4": "Work closely with internal technical and product teams to deliver solutions", "r5": "Support contract negotiations, partnership development, and project launch processes",
-
-        "t_ideal": "Ideal Candidate",
-        "i1": "Customer-oriented with strong problem-solving and proposal skills", "i2": "Proactive and able to identify and create opportunities independently", "i3": "Comfortable working in a fast-changing business environment"
+        "t_req": "Requirements",
+        "q1": "Experience in corporate sales, business development, or account management", "q2": "Experience in business negotiations with Japanese companies", "q3": "Strong communication skills and ability to collaborate with internal and external stakeholders", "q4": "Professional Japanese language ability for preparing proposals and sales materials"
       },
       "j2": {
-        "name": "VR Content Business Dev / Alliance Manager",
+        "name": "VR Content Business Development / Alliance Manager",
         "t_res": "Responsibilities",
         "r1": "Promote VR content solutions through B2B sales and business negotiations", "r2": "Build partnerships with content holders, platforms, and production companies", "r3": "Develop new business partners in the Japanese market", "r4": "Promote joint projects, content partnerships, and licensing collaborations",
-
-        "t_ideal": "Ideal Candidate",
-        "i1": "Able to think about value creation from both content and business perspectives", "i2": "Capable of coordinating multiple stakeholders to move projects forward", "i3": "Passionate about developing new partnership models and business opportunities"
+        "t_req": "Requirements",
+        "q1": "Experience in the content industry, entertainment industry, or B2B sales", "q2": "Experience negotiating and coordinating with external partners", "q3": "Strong interest in VR, XR, and digital content", "q4": "Ability to prepare business documents and communicate professionally with partners"
+      },
+      "j3": {
+        "name": "Product Manager",
+        "t_res": "Responsibilities",
+        "r1": "Responsible for drafting and organizing product-related documents for company projects, including bid documents, implementation plans, project introductions, product manuals, and other materials", "r2": "Handle product prototyping and interaction design, and coordinate with R&D, testing, and other teams to drive product development, testing, and implementation", "r3": "Track product feedback and competitor trends, promote product iteration and optimization, and establish standardized product management processes", "r4": "Support the business team in product promotion, follow up on actual product usage, and continuously optimize the product experience",
+        "t_req": "Requirements",
+        "q1": "Associate degree or higher. Majors in Chinese language and literature, journalism and communication, computer science, or related fields are preferred. Experience in data-driven work, B2B software, automotive products, or game-related products is a plus", "q2": "Clear logical thinking, innovative mindset, and the ability to quickly understand and summarize complex information. Strong self-motivation is required", "q3": "Strong writing skills, with the ability to produce clear, well-structured, and logically organized documents", "q4": "Proficient in using AI-assisted tools, familiar with Office, WPS, and other office software, and capable of document formatting and structured expression"
+      },
+      "j4": {
+        "name": "Unity Developer",
+        "t_res": "Responsibilities",
+        "r1": "Responsible for the development and maintenance of client-side features for new product functions", "r2": "Continuously optimize code structure and improve the stability of existing product features", "r3": "Collaborate with other team members to complete project-related technical tasks",
+        "t_req": "Requirements",
+        "q1": "Bachelor's degree or higher. Candidates with a computer-related major or experience in UE / Unreal Engine development are preferred", "q2": "Proficient in C# programming, with a solid understanding of the U3D engine architecture, common components, and plugin development", "q3": "Proficient in UGUI development and capable of independently completing module development", "q4": "Familiar with object-oriented programming, MVC, and commonly used design patterns"
+      },
+      "j5": {
+        "name": "Business Development / Channel Sales",
+        "t_res": "Responsibilities",
+        "r1": "Develop government and enterprise key accounts: connect with central and state-owned enterprises, universities, and other partners; take responsibility for VR/AR project sales and channel development; conduct on-site visits, needs analysis, and business negotiations", "r2": "Follow up throughout the full project lifecycle: work with product and technical teams on early-stage communication, proposal alignment, contract signing, and payment follow-up to ensure smooth project implementation", "r3": "Maintain client relationships: manage existing cooperation projects and customer relationships, continuously explore opportunities for follow-up cooperation, and build a network of industry channel resources", "r4": "Execute market strategies: independently carry out sales plans based on the company's product and market strategies, provide market feedback, and support business optimization",
+        "t_req": "Requirements",
+        "q1": "Associate degree or higher. Experience in B2B sales, key account development, or channel development is preferred. Candidates without experience may also be considered if they have a strong interest in the VR/AR field and strong learning ability", "q2": "Strong business negotiation skills, communication skills, and customer service awareness, with the ability to handle necessary on-site visits and business trips", "q3": "Goal-oriented, able to handle performance pressure in a business development or channel sales role, with strong self-motivation", "q4": "Candidates with knowledge of the VR/AR industry or client resources in central and state-owned enterprises, universities, or the technology industry are preferred"
+      },
+      "j6": {
+        "name": "Graphic Designer",
+        "t_res": "Responsibilities",
+        "r1": "Complete end-to-end art and visual design work based on product and project requirements, including character design, scene creation, UI design, and related tasks", "r2": "Participate in the early-stage definition of the project's art style, and work with product, planning, and development teams to clarify the visual direction and design standards", "r3": "Produce design drafts according to project milestones, ensuring that the work meets project requirements and is delivered on time", "r4": "Optimize and refine design proposals based on internal feedback or client requirements",
+        "t_req": "Requirements",
+        "q1": "Good design creativity and aesthetic judgment, with strong control over form, color, composition, and overall project style", "q2": "Proficient in professional design and drawing software such as Photoshop, with the ability to independently deliver high-quality art and visual design work", "q3": "Familiar with AIGC, AI image generation, and other design assistance tools, and able to use them to improve design efficiency and visual quality based on project needs", "q4": "Experience in game art, in-car interaction design, VR/AR art, or related projects is preferred. Candidates with mature project cases or portfolios are preferred"
       }
     },
     "cta": {
       "title": "We Look Forward to Your Joining",
-      "desc": "Please send your resume to the following email and specify the position you are applying for."
+      "desc": "Please send your resume to the corresponding email and specify the position you are applying for.",
+      "osaka_label": "Osaka Office, Japan",
+      "beijing_label": "Beijing HQ, China"
     }
   }
 }

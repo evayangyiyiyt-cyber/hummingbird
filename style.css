@@ -181,7 +181,7 @@ video.funcar-hero-video { position: absolute !important; top: 0; left: 0; width:
 .acc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 80px; }
 .acc-card { background-color: #111 !important; border-radius: 30px !important; padding: 0 !important; display: flex; gap: 20px; align-items: stretch; overflow: hidden; }
 .acc-img-placeholder { flex: 1.2 !important; background-color: transparent !important; border-radius: 30px 0 0 30px !important; display: flex; align-items: center; justify-content: center; padding: 0 !important; overflow: hidden; }
-.acc-img-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.acc-img-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: left center; display: block; }
 .acc-info { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 40px 40px 10px; }
 .acc-info h3 { font-size: 24px !important; font-weight: bold; margin-bottom: 10px; }
 .acc-desc { color: #888; font-size: 14px; margin-bottom: 25px; }
@@ -580,8 +580,83 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 .biz-qr p { color: #333; font-size: 12px; font-weight: bold; }
 
 .social-grid { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.social-item { display: flex; align-items: center; background-color: #111; padding: 20px 40px; border-radius: 8px; width: 100%; max-width: 350px; gap: 20px; transition: transform 0.3s, background-color 0.3s; border: 1px solid #222; }
-.social-item:hover { background-color: #161616; transform: translateY(-3px); border-color: #333; }
+/* ==========================================================================
+   社交媒体模块 - 鼠标悬浮显示二维码特效
+   ========================================================================== */
+
+.social-grid { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+
+.social-item { 
+    position: relative; /* 【关键】必须加上 relative，二维码才能根据它来定位 */
+    display: flex; 
+    align-items: center; 
+    background-color: #111; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    width: 100%; 
+    max-width: 350px; 
+    gap: 20px; 
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s; 
+    border: 1px solid #222; 
+    cursor: pointer; /* 鼠标放上去变成小手，暗示可以交互 */
+}
+
+.social-item:hover { 
+    background-color: #161616; 
+    border-color: #333; 
+}
+
+.social-icon { width: 40px; height: 40px; flex-shrink: 0; }
+.social-icon img { width: 100%; height: 100%; object-fit: contain; }
+.social-text { text-align: left; }
+.social-text h4 { color: #fff; font-size: 16px; margin-bottom: 2px; }
+.social-text p { color: #888; font-size: 13px; margin: 0; }
+
+/* --- 【新增】二维码默认隐藏弹窗 --- */
+.social-qr {
+    position: absolute;
+    bottom: 100%; /* 定位在卡片的正上方 */
+    left: 50%;
+    transform: translate(-50%, 10px); /* 默认往下偏一点 */
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 丝滑弹出的曲线 */
+    z-index: 10;
+    pointer-events: none; /* 防止鼠标误触导致弹窗闪烁 */
+}
+
+/* 弹窗底部的小三角指示器 */
+.social-qr::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* 在白框的正下方 */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent; /* 画一个向下的白色小三角 */
+}
+
+.social-qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* --- 【新增】鼠标悬浮时，二维码浮现 --- */
+.social-item:hover .social-qr {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -15px); /* 向上浮出 */
+}
+
 .social-icon { width: 40px; height: 40px; flex-shrink: 0; }
 .social-icon img { width: 100%; height: 100%; object-fit: contain; }
 .social-text { text-align: left; }
@@ -856,6 +931,11 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
         height: 300px !important; 
         border-radius: 30px 30px 0 0 !important; /* 圆角改为上方 */
     }
+    
+    .acc-img-placeholder img {
+        object-position: center center !important; /* 手机端恢复居中显示 */
+    }
+
     
     /* 文字内容区放在下方 */
     .acc-info { 
@@ -1141,7 +1221,7 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 }
 
 /* ==========================================================================
-   加入我们页面 - 简历投递 CTA 模块
+   加入我们页面 - 简历投递 CTA 模块 (双邮箱版)
    ========================================================================== */
 .careers-cta {
     text-align: center;
@@ -1157,15 +1237,36 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 .careers-cta p {
     font-size: 16px;
     color: #888;
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* 增加底部间距 */
 }
+
+/* 双邮箱并排容器 */
+.cta-emails-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* 两个邮箱之间的间距 */
+    flex-wrap: wrap; /* 空间不够时允许换行 */
+}
+.cta-email-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.cta-email-label {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 /* 邮箱按钮设计成发光线框风格，科技感强 */
 .cta-email {
     display: inline-block;
-    font-size: 24px;
+    font-size: 22px;
     color: var(--accent-color);
     font-weight: bold;
-    padding: 16px 50px;
+    padding: 14px 40px;
     border: 2px solid var(--accent-color);
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -1178,9 +1279,10 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     transform: translateY(-3px);
 }
 
-/* 手机端适配邮箱大小 */
+/* 手机端适配：改为上下排列并调整字号 */
 @media (max-width: 768px) {
     .careers-cta h3 { font-size: 26px; }
+    .cta-emails-wrapper { gap: 40px; flex-direction: column; }
     .cta-email { font-size: 18px; padding: 12px 30px; }
 }
 
@@ -1203,4 +1305,47 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     max-width: 1200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+
+
+/* ==========================================================================
+   加入我们页面 - 办公地点分隔标题样式
+   ========================================================================== */
+
+.office-title-wrap {
+    text-align: center;
+    margin: 40px 0 40px 0;
+    padding: 0 5%;
+}
+
+.office-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 12px 35px;
+   
+}
+
+/* 蓝色发光点点缀 */
+.office-title::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 12px var(--accent-color);
+}
+
+/* 修正下方网格的底部间距 */
+.careers-jobs .jobs-grid:first-of-type {
+    padding-bottom: 60px; /* 两地职位之间的间距 */
+}
+
+@media (max-width: 768px) {
+    .office-title { font-size: 20px; padding: 10px 25px; }
 }
