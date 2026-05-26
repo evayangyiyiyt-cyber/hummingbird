@@ -816,58 +816,64 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .ais-intro-box { text-align: justify; padding: 0; }
     .ais-intro-box p { display: inline; white-space: normal; font-size: 15px; margin: 0; }
     
-    /* Footer 手机端极简列表排版 */
+    /* Footer 手机端竖向极简排版 */
     .footer { padding: 40px 5%; }
-    .footer-container { flex-direction: column; }
+    .footer-container { flex-direction: column; gap: 30px; } /* gap控制Logo与下方文字的间距 */
     
-    /* 顶部 Logo 加个底边框分隔 */
-    .footer-left { display: block; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #222; width: 100%; }
-    
-    .footer-nav { flex-direction: column; gap: 0; }
-    
-    /* 每一行变成横向排列，并带底部边框 */
-    .f-col { 
-        display: flex; 
-        flex-direction: row; 
-        align-items: center; 
-        border-bottom: 1px solid #222; 
-        padding: 30px 0; 
-        gap: 20px; 
+    /* 顶部 Logo 取消底边框，消除下方多余的空隙 */
+    .footer-left { 
+        display: block; 
+        margin-bottom: 0; 
+        padding-bottom: 0; 
+        border-bottom: none; /* 去掉Logo下面的横线 */
+        width: 100%; 
     }
     
-    /* 左侧主标题粗体、白字 */
-    .f-col h4 { 
-        width: 100px; /* 固定宽度，让右侧内容对齐 */
+    /* 导航列整体变为竖向排列，调整大块之间的间距 */
+    .footer-nav { 
+        flex-direction: column; 
+        gap: 30px; /* 大标题模块之间的间距 */
+    }
+    
+    /* 每一列(包含加入我们)改为上下排列，去掉底部边框 */
+    .f-col, .footer-nav > div { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        border-bottom: none; /* 去掉所有横线 */
+        padding: 0; 
+        gap: 12px; /* 大标题和小标题之间的间距 */
+    }
+    
+    /* 大标题恢复自然宽度，保持白字 */
+    .f-col h4, .footer-nav > div > h4 { 
+        width: auto; /* 取消原来的100px固定宽度 */
         margin-bottom: 0; 
-        flex-shrink: 0; 
-        font-size: 18px; 
-        font-weight: 700; 
+        font-size: 16px; 
+        font-weight: 600; 
         color: #fff;
     }
     
-    /* 右侧子链接横向排列 */
+    /* 下方子链接竖向排列 */
     .f-links { 
         display: flex; 
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        gap: 20px; 
-        flex: 1; 
-    }
-    .f-links a { 
-        display: inline-block; 
-        margin-bottom: 0; 
-        color: #888; 
-        font-size: 15px; 
+        flex-direction: column; 
+        gap: 10px; /* 多个小标题之间的间距 */
+        width: 100%; 
     }
     
-    /* 最后一项联系我们：改为垂直排版防止文字太长挤压屏幕 */
-    .f-col.contact-col { 
-        flex-direction: column; 
-        align-items: flex-start; 
-        padding-top: 30px; 
-        border-bottom: none; /* 最后一项不需要底边框 */
+    .f-links a { 
+        display: block; 
+        margin-bottom: 0; 
+        color: #888; 
+        font-size: 14px; 
     }
-    .f-col.contact-col h4 { margin-bottom: 10px; }
+    
+    /* 联系我们同样保持垂直排版，清理原有的多余留白 */
+    .f-col.contact-col { 
+        padding-top: 0; 
+    }
+    .f-col.contact-col h4 { margin-bottom: 0; }
     .f-col.contact-col .f-links { flex-direction: column; gap: 10px; }
     .f-col.contact-col .f-links span { margin-bottom: 0; color: #888; font-size: 14px; }
 }
