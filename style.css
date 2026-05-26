@@ -936,6 +936,32 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
         font-size: 22px !important;
         margin-bottom: 8px !important;
     }
+    /* 1. 修复 “更是你的移动智慧空间” 强制一行并缩小字号 */
+    .fc-quote h1 {
+        font-size: 24px !important;      /* 从 42px 缩到 24px */
+        white-space: nowrap !important;  /* 强制不换行 */
+        letter-spacing: 1px !important;
+    }
+    .fc-quote h2 {
+        font-size: 18px !important;      /* 副标题也相应缩小 */
+    }
+
+    /* 2. 修复 “准备好体验Funcar了吗？” 强制一行并缩小字号 */
+    .fc-cta h2 {
+        font-size: 22px !important;      /* 从 36px 缩到 22px */
+        white-space: nowrap !important;  /* 强制不换行 */
+        letter-spacing: 1px !important;
+    }
+
+    /* 3. 修复轮播图手机端比例，防止高宽失调被强行拉伸 */
+    .scene-slide {
+        height: auto !important;         /* 【关键】取消电脑端写死的 450px 高度 */
+        aspect-ratio: 16 / 9;            /* 【关键】强制维持 16:9 宽屏黄金比例 */
+    }
+    .scene-slide img {
+        height: 100% !important;
+        object-fit: cover !important;    /* 填充 16:9 区域，画面不挤压、不缩水、不准变形 */
+    }
 
 }
 
