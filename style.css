@@ -963,6 +963,82 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
         object-fit: cover !important;    /* 填充 16:9 区域，画面不挤压、不缩水、不准变形 */
     }
 
+     /* ---- 1. Hero 文字与排版微调 ---- */
+    .cases-hero-content h1 {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+    }
+    .cases-hero-content p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* ---- 2. 实操飞行与科目图片防挤压 ---- */
+    .ft-img-single {
+        width: 100% !important;
+        height: 200px !important;       /* 统一单张大图高度为 200px */
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        margin-top: 15px !important;
+    }
+    .ft-img-single img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .ft-card-img {
+        height: 200px !important;
+    }
+    .ft-card-img img {
+        object-fit: cover !important;
+    }
+
+    /* ---- 3. 自由飞行/竞速赛道的左右图文卡片适配 ---- */
+    .ft-mode-card-lr {
+        flex-direction: column !important; /* 左右卡片手机端还是上下排版观感最好 */
+    }
+    .ft-mode-img-lr {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        height: 200px !important;
+    }
+    .ft-mode-text-lr {
+        padding: 30px 20px !important;
+    }
+
+    /* ---- 4. 【修改】专项应用培训（3张竖图并排缩放） ---- */
+    .sp-images-3, .ft-img-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 【关键1】在手机上依然保持 3 列并排 */
+        gap: 8px !important; /* 【关键2】将间距缩窄到 8px，防止小屏幕挤压 */
+        margin-top: 20px !important;
+    }
+    
+    /* 竖图盒子采用固定纵横比，高度随宽度自适应 */
+    .sp-img-box, .ft-img-grid .ft-img-single {
+        height: auto !important;          /* 取消固定的高度 */
+        aspect-ratio: 1 / 1.1 !important; /* 【关键3】锁定纵横比（略微偏竖的黄金比例），防止拉伸 */
+        border-radius: 12px !important;   /* 完美保留大圆角 */
+        overflow: hidden !important;
+        margin-top: 0 !important;
+    }
+    .sp-img-box img, .ft-img-grid .ft-img-single img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;     /* 铺满盒子，防拉伸变形 */
+    }
+
+    /* 专项培训卡片内边距微调 */
+    .special-card {
+        padding: 30px 15px !important;
+    }
+    .special-card h3 {
+        font-size: 24px !important;
+    }
+
+
+
 }
 
 @media (max-width: 480px) {
