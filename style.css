@@ -361,7 +361,10 @@ img.cases-hero-img { position: absolute !important; top: 0; left: 0; width: 100%
 /* 业务领域 */
 .scope-business { padding-top: 100px; padding-bottom: 100px; text-align: center; }
 .scope-rows-container { display: flex; flex-direction: column; gap: 15px; align-items: center; width: 100%; }
-.scope-row { display: flex; justify-content: center; gap: 40px; width: 100%; flex-wrap: nowrap; }
+
+/* 【修改1】将 flex-wrap: nowrap; 改成 flex-wrap: wrap; 允许屏幕不够宽时自动换行 */
+.scope-row { display: flex; justify-content: center; gap: 40px; width: 100%; flex-wrap: wrap; }
+
 .scope-text { font-size: 30px; font-weight: 500; color: var(--text-muted); cursor: default; transition: all 0.4s ease; white-space: nowrap; }
 .scope-text:hover { color: var(--accent-color); text-shadow: 0 0 15px rgba(41, 121, 255, 0.6); transform: scale(1.1); }
 .scope-text.more { font-size: 30px; font-weight: bold; letter-spacing: 2px; }
@@ -909,6 +912,12 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .project-item h3 { font-size: 22px !important; }
     .pj-img { height: 250px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; }
     .case-section { padding: 60px 0 !important; }
+
+    .scope-business { padding-top: 50px; padding-bottom: 50px; } /* 手机端减小上下留白 */
+    .scope-row { gap: 15px; } /* 手机端减小词语之间的间距 */
+    .scope-text { font-size: 16px; } /* 手机端缩小字体，防止被挤出屏幕 */
+    .scope-text.more { font-size: 18px; } /* MORE也相应缩小 */
+
 }
 
 @media (max-width: 480px) {
