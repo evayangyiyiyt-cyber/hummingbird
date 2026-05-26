@@ -924,6 +924,19 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .scope-text { font-size: 16px; } /* 手机端缩小字体，防止被挤出屏幕 */
     .scope-text.more { font-size: 18px; } /* MORE也相应缩小 */
 
+    .fc-hero-content h2 {
+        font-size: 28px !important;     /* 【修改1】手机端字号缩小到 28px */
+        white-space: nowrap !important;  /* 【修改2】强制文本不换行 */
+        letter-spacing: 2px !important;  /* 【修改3】字间距稍微缩窄一点，更容易排开 */
+        margin-bottom: 15px !important;
+    }
+    
+    /* 顺便微调一下主标题 Funcar 的大小，让整体比例更好看 */
+    .fc-hero-content h1 {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+    }
+
 }
 
 @media (max-width: 480px) {
