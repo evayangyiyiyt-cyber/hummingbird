@@ -916,13 +916,7 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     .pane-header h2 { font-size: 32px !important; }
     .pane-header p { font-size: 15px !important; }
     .project-item h3 { font-size: 22px !important; }
-    .pj-img {
-        height: auto !important; /* 【核心】取消手机端固定的 500px 高度 */
-    }
-    .pj-img img, .pj-img video {
-        height: auto !important; /* 让图片和视频的高度跟着宽度自然缩放 */
-        object-fit: contain !important; /* 确保图片完整显示，不被裁剪或挤压 */
-    }
+    .pj-img { height: 200px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; }
     .case-section { padding: 60px 0 !important; }
 
     .scope-business { padding-top: 50px; padding-bottom: 50px; } /* 手机端减小上下留白 */
