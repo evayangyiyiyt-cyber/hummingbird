@@ -938,7 +938,7 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
     }
     /* 1. 修复 “更是你的移动智慧空间” 强制一行并缩小字号 */
     .fc-quote h1 {
-        font-size: 24px !important;      /* 从 42px 缩到 24px */
+        font-size: 30px !important;      /* 从 42px 缩到 24px */
         white-space: nowrap !important;  /* 强制不换行 */
         letter-spacing: 1px !important;
     }
@@ -948,7 +948,7 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 
     /* 2. 修复 “准备好体验Funcar了吗？” 强制一行并缩小字号 */
     .fc-cta h2 {
-        font-size: 22px !important;      /* 从 36px 缩到 22px */
+        font-size: 30px !important;      /* 从 36px 缩到 22px */
         white-space: nowrap !important;  /* 强制不换行 */
         letter-spacing: 1px !important;
     }
