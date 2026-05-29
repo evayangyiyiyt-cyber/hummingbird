@@ -1580,7 +1580,17 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 /* 01. Hero */
 .atc-hero-bg { width: 100%; margin-top: 0px; background-color: #000; }
 .atc-hero { height: 100vh; position: relative; }
-.atc-hero-img { opacity: 0.6; } /* 分离的内联透明度 */
+/* 【修复：添加绝对定位，让图片铺满背景并置于底层】 */
+.atc-hero-img { 
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* 保证图片等比例自适应填充 */
+    z-index: -1 !important;       /* 保证图片在文字的下方 */
+    opacity: 0.6 !important;      /* 保持我们需要的透明度 */
+}
 .atc-hero-content { max-width: 1200px; margin: 0 auto; text-align: center; }
 .atc-hero-content h1 { font-size: 56px; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: 2px; }
 .atc-hero-content p { font-size: 18px; color: #ccc; line-height: 1.8; margin-bottom: 40px; }
