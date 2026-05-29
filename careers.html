@@ -43,15 +43,16 @@
             </div>
             
 
-            <!-- 【修改】低空飞行 -->
+            <!-- 【修改】低空飞行（已更新为三个新二级页面，删除了旧页面） -->
             <div class="nav-item">
                 <a href="javascript:void(0)" class="nav-link" id="flight-btn">
                     <span data-i18n="header.nav.flight">低空飞行</span>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </a>
                 <div class="nav-dropdown-menu" id="flight-dropdown">
-                    <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
-                    <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                    <a href="flight-atc.html" data-i18n="header.nav.flight_sub_atc">飞控空管平台</a>
+                    <a href="flight-twin.html" data-i18n="header.nav.flight_sub_twin">作业孪生</a>
+                    <a href="flight-drill.html" data-i18n="header.nav.flight_sub_drill">模拟演练教学</a>
                 </div>
             </div>
 
@@ -248,27 +249,56 @@
         </div>
     </section>
 
-    <!-- 统一的底部导航栏 -->
+    <!-- 统一的底部导航栏 (Final Footer) -->
     <footer class="footer" id="footer">
         <div class="footer-container">
+            <!-- 左侧 Logo -->
             <div class="footer-left">
                 <div class="footer-logo">
                     <img class="logo-img" src="./images/hummingbird-logo2.webp" alt="Logo">
                 </div>
             </div>
+
+            <!-- 右侧 导航列 (完全匹配最新头部导航) -->
             <div class="footer-nav">
-                <div class="f-col"><h4><a href="index.html" data-i18n="header.nav.home">首页</a></h4><div class="f-links"></div></div>
-                <div class="f-col"><h4><a href="cases.html" data-i18n="header.nav.mobility">智能出行</a></h4><div class="f-links"></div></div>
-                <div class="f-col"><h4><a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a></h4><div class="f-links"></div></div>
+                
+                <!-- 1. 首页 (作为独立可点标题) -->
+                <div class="f-col">
+                    <h4><a href="index.html" data-i18n="header.nav.home">首页</a></h4>
+                    <div class="f-links"></div>
+                </div>
+
+                <!-- 2. 智能出行 -->
+                <div class="f-col">
+                    <h4><a href="cases.html" data-i18n="header.nav.mobility">智能出行</a></h4>
+                    <div class="f-links"></div>
+                </div>
+
+                <!-- 3. Funcar -->
+                <div class="f-col">
+                    <h4><a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a></h4>
+                    <div class="f-links"></div>
+                </div>
+
+                <!-- 4. 低空飞行 (带子菜单) -->
                 <div class="f-col">
                     <h4 data-i18n="header.nav.flight">低空飞行</h4>
                     <div class="f-links">
-                        <a href="flight-training.html" data-i18n="header.nav.flight_sub1">模拟培训</a>
-                        <a href="flight-logistics.html" data-i18n="header.nav.flight_sub2">物流平台</a>
+                        <a href="flight-atc.html" data-i18n="header.nav.flight_sub_atc">飞控空管平台</a>
+                        <a href="flight-twin.html" data-i18n="header.nav.flight_sub_twin">作业孪生</a>
+                        <a href="flight-drill.html" data-i18n="header.nav.flight_sub_drill">模拟演练教学</a>
                     </div>
                 </div>
-                <div class="f-col"><h4><a href="about.html" data-i18n="header.nav.about">关于我们</a></h4><div class="f-links"></div></div>
+
+                <!-- 5. 关于我们 -->
+                <div class="f-col">
+                    <h4><a href="about.html" data-i18n="header.nav.about">关于我们</a></h4>
+                    <div class="f-links"></div>
+                </div>
+
                 <div><h4><a href="careers.html" data-i18n="header.nav.careers">加入我们</a></h4><div class="f-links"></div></div>
+
+                <!-- 6. 联系我们 (修复了原代码中的标签错误) -->
                 <div class="f-col contact-col">
                     <h4><a href="contact.html" data-i18n="header.nav.contact">联系我们</a></h4>
                     <div class="f-links">

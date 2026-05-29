@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟演练教学 - 低空飞行 - 蜂鸟互动</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            var savedLang = localStorage.getItem('preferredLang');
+            if (savedLang) {
+                if (savedLang !== 'zh') document.documentElement.classList.add('lang-loading');
+                return; 
+            }
+            document.documentElement.classList.add('lang-loading');
+            fetch('https://get.geojs.io/v1/ip/country.json')
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    var targetLang = (['CN', 'TW', 'HK', 'MO'].indexOf(data.country) !== -1) ? 'zh' : (data.country === 'JP' ? 'ja' : 'en');
+                    localStorage.setItem('preferredLang', targetLang);
+                    location.reload();
+                }).catch(function() {
+                    localStorage.setItem('preferredLang', 'en');
+                    location.reload();
+                });
+        })();
+    </script>
+</head>
+<body>
+    <!-- 统一的顶部导航栏 -->
+    <header class="header">
+        <div class="logo">
+            <img class="logo-img" src="./images/hummingbird-logo1.webp" alt="Logo">
+            <span data-i18n="header.logo">蜂鸟互动</span>
+        </div>
+        <nav class="nav-links">
+            <div class="nav-item single-link"><a href="index.html" class="nav-link" data-i18n="header.nav.home">首页</a></div>
+            <div class="nav-item single-link"><a href="cases.html" class="nav-link" data-i18n="header.nav.mobility">智能出行</a></div>
+            <div class="nav-item single-link"><a href="funcar.html" class="nav-link" data-i18n="header.nav.funcar">Funcar</a></div>
+            
+            <div class="nav-item">
+                <a href="javascript:void(0)" class="nav-link" id="flight-btn">
+                    <span data-i18n="header.nav.flight">低空飞行</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="nav-dropdown-menu" id="flight-dropdown">
+                    <a href="flight-atc.html" data-i18n="header.nav.flight_sub_atc">飞控空管平台</a>
+                    <a href="flight-twin.html" data-i18n="header.nav.flight_sub_twin">作业孪生</a>
+                    <a href="flight-drill.html" data-i18n="header.nav.flight_sub_drill">模拟演练教学</a>
+                </div>
+            </div>
+            
+            <div class="nav-item single-link"><a href="about.html" class="nav-link" data-i18n="header.nav.about">关于我们</a></div>
+            <div class="nav-item single-link"><a href="careers.html" class="nav-link" data-i18n="header.nav.careers">加入我们</a></div>
+            <div class="nav-item single-link"><a href="contact.html" class="nav-link" data-i18n="header.nav.contact">联系我们</a></div>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <div class="globe-icon" id="lang-btn"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2 a 15.3 15.3 0 0 1 4 10 a 15.3 15.3 0 0 1 -4 10 a 15.3 15.3 0 0 1 -4 -10 a 15.3 15.3 0 0 1 4 -10 z"></path></svg></div>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <div class="lang-option" data-lang="zh">中文</div>
+                    <div class="lang-option" data-lang="en">English</div>
+                    <div class="lang-option" data-lang="ja">日本語</div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- 01. Hero 首屏 -->
+    <div class="atc-hero-bg">
+        <section class="cases-hero atc-hero">
+            <img class="cases-hero-img atc-hero-img" src="./images/cases-hero.webp" alt="模拟演练教学">
+            <div class="cases-hero-content atc-hero-content twin-hero-content">
+                <h1 data-i18n="drill.hero.title">面向低空行业场景的<br>模拟演练系统</h1>
+                <p data-i18n="drill.hero.subtitle">融合数字仿真、行业任务、飞行训练与教学管理能力，构建覆盖飞行操作、专项作业与应急演练的低空教学体系。</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 02. 系统概述 Overview -->
+    <section class="section-padding bg-darker">
+        <div class="section-title">
+            <h2 data-i18n="drill.overview.title">构建低空行业数字化教学体系</h2>
+        </div>
+        <div class="twin-overview-wrapper">
+            <div class="twin-overview-desc">
+                <p data-i18n="drill.overview.desc1">系统面向低空飞行与行业作业场景，提供覆盖基础飞行、专项应用、行业任务与应急处置的模拟演练能力。</p>
+                <p data-i18n="drill.overview.desc2" style="margin-top: 10px;">通过数字仿真、实时交互与教学管理系统，提升低空作业培训效率与实战能力。</p>
+            </div>
+            
+            <!-- 教学演练流程图 -->
+            <div class="twin-flowchart drill-flowchart">
+                <div class="flow-item" data-i18n="drill.overview.f1">理论学习</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-item" data-i18n="drill.overview.f2">模拟训练</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-item" data-i18n="drill.overview.f3">行业演练</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-item" data-i18n="drill.overview.f4">任务考核</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-item" data-i18n="drill.overview.f5">数据评估</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. 教学训练能力 Capabilities -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2 data-i18n="drill.cap.title">核心教学训练能力</h2>
+        </div>
+        <div class="atc-grid-3">
+            <div class="atc-card">
+                <div class="atc-card-num">01</div>
+                <h3 data-i18n="drill.cap.c1_t">基础飞行训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c1_1">起飞与降落</li><li data-i18n="drill.cap.c1_2">定点悬停</li><li data-i18n="drill.cap.c1_3">航线飞行</li><li data-i18n="drill.cap.c1_4">八字训练</li><li data-i18n="drill.cap.c1_5">姿态控制</li>
+                </ul>
+            </div>
+            <div class="atc-card">
+                <div class="atc-card-num">02</div>
+                <h3 data-i18n="drill.cap.c2_t">FPV 训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c2_1">第一视角飞行</li><li data-i18n="drill.cap.c2_2">竞速赛道训练</li><li data-i18n="drill.cap.c2_3">障碍物穿越训练</li><li data-i18n="drill.cap.c2_4">高速微操操控</li>
+                </ul>
+            </div>
+            <div class="atc-card">
+                <div class="atc-card-num">03</div>
+                <h3 data-i18n="drill.cap.c3_t">超视距训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c3_1">BVLOS操作</li><li data-i18n="drill.cap.c3_2">地面站控制面板</li><li data-i18n="drill.cap.c3_3">航线预规划与管理</li><li data-i18n="drill.cap.c3_4">多机编队控制</li>
+                </ul>
+            </div>
+            <div class="atc-card">
+                <div class="atc-card-num">04</div>
+                <h3 data-i18n="drill.cap.c4_t">应急处置训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c4_1">链路失联自动返航</li><li data-i18n="drill.cap.c4_2">突发机械故障处理</li><li data-i18n="drill.cap.c4_3">迫降与紧急降落</li><li data-i18n="drill.cap.c4_4">空中冲突与风险规避</li>
+                </ul>
+            </div>
+            <div class="atc-card">
+                <div class="atc-card-num">05</div>
+                <h3 data-i18n="drill.cap.c5_t">协同作业训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c5_1">多机组协同作业</li><li data-i18n="drill.cap.c5_2">跨端指挥与联动</li><li data-i18n="drill.cap.c5_3">复杂任务协同编排</li>
+                </ul>
+            </div>
+            <div class="atc-card">
+                <div class="atc-card-num">06</div>
+                <h3 data-i18n="drill.cap.c6_t">数据评估训练</h3>
+                <ul>
+                    <li data-i18n="drill.cap.c6_1">全维度飞行评分</li><li data-i18n="drill.cap.c6_2">细粒度操作记录</li><li data-i18n="drill.cap.c6_3">三维训练回放复盘</li><li data-i18n="drill.cap.c6_4">学员进阶数据分析</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. 专项行业演练 Scenarios (修改：纯白背景 + 无框细线分隔) -->
+    <section class="section-padding drill-light-bg">
+        <div class="section-title">
+            <h2 data-i18n="drill.ind.title" style="color: #111;">专项行业演练场景</h2>
+        </div>
+        <div class="special-project-list">
+            <!-- 1. 光伏运维 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i1_t">光伏运维演练</h3>
+                <p data-i18n="drill.ind.i1_d">模拟光伏电站巡检、缺陷识别与设备运维流程，支持低空巡检路径训练与热斑、裂痕等异常AI识别演练。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i1_t1">集中式光伏电站</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i1_t2">分布式屋顶光伏</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i1_t3">山地光伏巡检</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i1_t4">热斑/裂痕检测</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-1-1.webp" alt="光伏运维1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-1-2.webp" alt="光伏运维2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-1-3.webp" alt="光伏运维3"></div>
+                </div>
+            </div>
+
+            <!-- 2. 安防巡检 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i2_t">安防巡检训练</h3>
+                <p data-i18n="drill.ind.i2_d">模拟工业园区、城市主干道与重点区域巡检任务，训练操作人员低空安防监测、人流车流追踪与突发事件识别能力。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i2_t1">工业园区安防</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i2_t2">城市主干道巡查</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i2_t3">重点区域监控</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i2_t4">突发事件追踪</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-2-1.webp" alt="安防巡检1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-2-2.webp" alt="安防巡检2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-2-3.webp" alt="安防巡检3"></div>
+                </div>
+            </div>
+
+            <!-- 3. 测绘监测 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i3_t">测绘监测教学</h3>
+                <p data-i18n="drill.ind.i3_d">模拟地形扫描、测绘建模、路径规划与数据采集流程，支持狭小空间、复杂地貌的高精度低空测绘任务训练。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i3_t1">地形地貌扫描</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i3_t2">三维测绘建模</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i3_t3">狭小空间测绘</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i3_t4">路径规划实操</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-3-1.webp" alt="测绘监测1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-3-2.webp" alt="测绘监测2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-3-3.webp" alt="测绘监测3"></div>
+                </div>
+            </div>
+
+            <!-- 4. 应急救援 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i4_t">应急救援演练</h3>
+                <p data-i18n="drill.ind.i4_d">模拟地震、火情等灾害现场侦察、人员搜救与物资定点空投任务，提升操作员在复杂环境与高压下的应急处置能力。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i4_t1">灾害现场侦察</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i4_t2">人员搜救定位</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i4_t3">物资定点空投</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i4_t4">夜间红外搜救</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-4-1.webp" alt="应急救援1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-4-2.webp" alt="应急救援2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-4-3.webp" alt="应急救援3"></div>
+                </div>
+            </div>
+
+            <!-- 5. 农林作业 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i5_t">农林作业训练</h3>
+                <p data-i18n="drill.ind.i5_d">模拟农田喷洒巡检、飞防作业轨迹编辑与大面积林区防灭火监测任务，支持多样化低空农业场景演练。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i5_t1">农田喷洒巡检</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i5_t2">飞防轨迹编辑</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i5_t3">林区防灭火</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i5_t4">果园长势监测</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-5-1.webp" alt="农林作业1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-5-2.webp" alt="农林作业2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-5-3.webp" alt="农林作业3"></div>
+                </div>
+            </div>
+
+            <!-- 6. 低空物流 -->
+            <div class="special-card">
+                <h3 data-i18n="drill.ind.i6_t">低空物流演练</h3>
+                <p data-i18n="drill.ind.i6_d">模拟低空物流包裹调度、干支线运输与跨楼宇航线配送场景，重点训练自动航线规划与多机型运力协同能力。</p>
+                <div class="special-tags-line">
+                    <span class="sp-tag" data-i18n="drill.ind.i6_t1">跨楼宇配送</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i6_t2">干支线运输协同</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i6_t3">自动航线规划</span>
+                    <span class="sp-tag" data-i18n="drill.ind.i6_t4">异常状况接管</span>
+                </div>
+                <div class="sp-images-3">
+                    <div class="sp-img-box"><img src="images/drill-ind-6-1.webp" alt="低空物流1"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-6-2.webp" alt="低空物流2"></div>
+                    <div class="sp-img-box"><img src="images/drill-ind-6-3.webp" alt="低空物流3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. 仿真场景 Showcase -->
+    <section class="section-padding">
+        <div class="section-title">
+            <h2 data-i18n="drill.scene.title">高真实感仿真场景系统</h2>
+            <p data-i18n="drill.scene.subtitle" class="atc-ui-subtitle">系统支持多类型数字仿真环境，构建贴近真实作业场景的训练空间。</p>
+        </div>
+        <div class="atc-ui-container">
+            <div class="atc-ui-img-wrapper">
+                <img src="./images/cases-hero.webp" alt="高真实感三维场景仿真 UI">
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 06. 训练模式 Mode -->
+    <section class="section-padding bg-darker drill-mode-section">
+        <div class="section-title">
+            <h2 data-i18n="drill.mode.title">多模式教学与演练体系</h2>
+        </div>
+        <div class="drill-modes-grid">
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m1">单人训练</h4></div>
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m2">多人协同</h4></div>
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m3">对抗演练</h4></div>
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m4">任务模式</h4></div>
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m5">考核模式</h4></div>
+            <div class="drill-mode-box"><h4 data-i18n="drill.mode.m6">教员控制模式</h4></div>
+        </div>
+    </section>
+
+    <!-- 07. 平台优势 Values (大图背景 + 纵向居中文字) -->
+    <!-- 背景图依然在这里 -->
+    <section class="section-padding drill-benefit-bg" style="background-image: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('./images/cases-hero.webp');">
+        <div class="section-title">
+            <h2 data-i18n="drill.value.title">核心演练教学优势</h2>
+        </div>
+        
+        <!-- 【核心修改】去掉了 atc-grid-4 和 glass-card，换成了纵向列表 -->
+        <div class="drill-benefit-list">
+            <div class="drill-benefit-text">
+                <h4 data-i18n="drill.value.v1_t">高真实感仿真</h4>
+                <p data-i18n="drill.value.v1_d">游戏引擎级画质渲染，物理引擎深度还原，贴近最真实的低空作业环境。</p>
+            </div>
+            <div class="drill-benefit-text">
+                <h4 data-i18n="drill.value.v2_t">行业化训练体系</h4>
+                <p data-i18n="drill.value.v2_d">摒弃泛泛的飞行动作，直接针对光伏、安防、物流等垂直场景开设专线课程。</p>
+            </div>
+            <div class="drill-benefit-text">
+                <h4 data-i18n="drill.value.v3_t">多人协同演练</h4>
+                <p data-i18n="drill.value.v3_d">支持多名学员在同一个服务器场景内执行分工明确的复杂任务训练。</p>
+            </div>
+            <div class="drill-benefit-text">
+                <h4 data-i18n="drill.value.v4_t">数据化教学评估</h4>
+                <p data-i18n="drill.value.v4_d">全量记录摇杆输入与飞行轨迹，客观量化生成能力雷达图，提升教学标准化水平。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08. CTA -->
+    <section class="section-padding atc-cta bg-darker" id="contact">
+        <h2 data-i18n="drill.cta.title">打造更智能的低空演练教学体系</h2>
+        <p data-i18n="drill.cta.subtitle">欢迎咨询低空仿真、行业演练与数字教学解决方案。</p>
+        <div class="atc-hero-btns atc-cta-btns">
+            <a href="#footer" class="btn-solid" data-i18n="atc.cta.btn1">联系方案团队</a>
+        </div>
+    </section>
+
+    <!-- 统一底部 Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-left"><div class="footer-logo"><img class="logo-img" src="./images/hummingbird-logo2.webp" alt="Logo"></div></div>
+            <div class="footer-nav">
+                <div class="f-col"><h4><a href="index.html" data-i18n="header.nav.home">首页</a></h4><div class="f-links"></div></div>
+                <div class="f-col"><h4><a href="cases.html" data-i18n="header.nav.mobility">智能出行</a></h4><div class="f-links"></div></div>
+                <div class="f-col"><h4><a href="funcar.html" data-i18n="header.nav.funcar">Funcar</a></h4><div class="f-links"></div></div>
+                <div class="f-col">
+                    <h4 data-i18n="header.nav.flight">低空飞行</h4>
+                    <div class="f-links">
+                        <a href="flight-atc.html" data-i18n="header.nav.flight_sub_atc">飞控空管平台</a>
+                        <a href="flight-twin.html" data-i18n="header.nav.flight_sub_twin">作业孪生</a>
+                        <a href="flight-drill.html" data-i18n="header.nav.flight_sub_drill">模拟演练教学</a>
+                    </div>
+                </div>
+                <div class="f-col"><h4><a href="about.html" data-i18n="header.nav.about">关于我们</a></h4><div class="f-links"></div></div>
+                <div><h4><a href="careers.html" data-i18n="header.nav.careers">加入我们</a></h4><div class="f-links"></div></div>
+                <div class="f-col contact-col">
+                    <h4><a href="contact.html" data-i18n="header.nav.contact">联系我们</a></h4>
+                    <div class="f-links">
+                        <span data-i18n="footer.col5.l1">北京|沈阳|日本大阪|新加坡</span>
+                        <span data-i18n="footer.col5.l2">商务咨询</span>
+                        <span data-i18n="footer.col5.l3">yangyiyi@fn-game.cn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
