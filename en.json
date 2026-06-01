@@ -865,7 +865,7 @@
   "atc": {
     "hero": {
       "title": "Intelligent Low-Altitude Flight Control & Air Traffic Management Platform",
-      "subtitle": "Integrating flight supervision, airspace management, route planning, real-time situational awareness, and digital twin technologies to build a safe, efficient, and scalable low-altitude flight operation system."
+      "subtitle": "Integrating flight supervision, airspace management, route planning, real-time situational awareness, and digital twin technologies to build a safe, efficient, and scalable low-altitude flight operation system"
     },
     "overview": {
       "title": "Building Digital Airspace Infrastructure for the Low-Altitude Economy",
@@ -1001,14 +1001,14 @@
     },
     "cta": {
       "title": "Building the Future of Digital Low-Altitude Airspace Together",
-      "subtitle": "Contact us for low-altitude flight supervision, digital airspace, drone operations, and city-scale low-altitude management solutions.",
+      "subtitle": "Contact us for low-altitude flight supervision, digital airspace, drone operations, and city-scale low-altitude management solutions",
       "btn1": "Contact Us"
     }
   },
   "twin": {
     "hero": {
       "title": "Digital Operations Capability Powered by GIS, Real-Time Streaming, and AI",
-      "subtitle": "Powered by GIS spatial computing, real-time video transmission, digital twin technologies, and AI recognition capabilities to enable real-time awareness, remote collaboration, and intelligent analysis for low-altitude operations."
+      "subtitle": "Powered by GIS spatial computing, real-time video transmission, digital twin technologies, and AI recognition capabilities to enable real-time awareness, remote collaboration, and intelligent analysis for low-altitude operations"
     },
     "overview": {
       "title": "Building a Digital Collaborative System for Low-Altitude Operations",
@@ -1132,14 +1132,14 @@
     },
     "cta": {
       "title": "Building the Next Generation of Digital Infrastructure for Low-Altitude Operations",
-      "subtitle": "Contact us for digital twin systems, GIS platforms, drone video transmission, and low-altitude industry solutions.",
+      "subtitle": "Contact us for digital twin systems, GIS platforms, drone video transmission, and low-altitude industry solutions",
       "btn": "Contact Us"
     }
   },
   "drill": {
     "hero": {
       "title": "Simulation Training System for Low-Altitude Industry Scenarios",
-      "subtitle": "Integrating digital simulation, industry-specific tasks, flight training, and educational management, the system builds a comprehensive low-altitude training framework covering flight operations, specialized missions, and emergency exercises."
+      "subtitle": "Integrating digital simulation, industry-specific tasks, flight training, and educational management, the system builds a comprehensive low-altitude training framework covering flight operations, specialized missions, and emergency exercises"
     },
     "overview": {
       "title": "Building a Digital Training System for Low-Altitude Operations",
@@ -1255,7 +1255,7 @@
     },
     "cta": {
       "title": "Build a Smarter Low-Altitude Training System",
-      "subtitle": "Contact us for low-altitude simulation, industry exercises, and digital training solutions."
+      "subtitle": "Contact us for low-altitude simulation, industry exercises, and digital training solutions"
     }
   }
 }

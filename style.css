@@ -1585,7 +1585,25 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 .atc-hero-content h1 { font-size: 56px; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: 2px; }
 .atc-hero-content p { font-size: 18px; color: #ccc; line-height: 1.8; margin-bottom: 40px; }
 .atc-hero-btns { display: flex; gap: 20px; justify-content: center; }
+/* 【核心新增】给所有低空飞行的 Hero 首屏增加一层黑色渐变防刺眼遮罩 */
+.atc-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 采用上浅下深的渐变遮罩，既能看清文字，又保留了天空的美感 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.75) 100%); 
+    z-index: 0; /* 处于背景图(-1)与文字(2)之间 */
+    pointer-events: none;
+}
 
+/* 确保文字内容处于遮罩层的上方 */
+.atc-hero-content {
+    position: relative;
+    z-index: 2; /* 确保文字不被遮罩盖住 */
+}
 /* 02. Overview 架构图 */
 .atc-overview-container { display: flex; align-items: center; justify-content: space-between; gap: 60px; max-width: 1400px; margin: 0 auto; }
 .atc-overview-text { flex: 1; }
