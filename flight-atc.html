@@ -70,7 +70,7 @@
     <!-- 01. Hero 首屏 -->
     <div class="atc-hero-bg">
         <section class="cases-hero atc-hero">
-            <img class="cases-hero-img atc-hero-img" src="./images/cases-hero.webp" alt="飞控空管平台">
+            <img class="cases-hero-img atc-hero-img" src="./images/flight-act-hero.png" alt="飞控空管平台">
             <div class="cases-hero-content atc-hero-content">
                 <h1 data-i18n="atc.hero.title">低空空域智能飞控与空管平台</h1>
                 <p data-i18n="atc.hero.subtitle">融合飞行监管、空域管理、航线规划、实时态势感知与数字孪生能力，构建安全、高效、可扩展的低空飞行运营体系</p>
@@ -81,246 +81,263 @@
         </section>
     </div>
 
-    <!-- 02. 平台概述 Overview -->
-    <section class="section-padding" id="overview">
-        <div class="atc-overview-container">
-            <div class="atc-overview-text">
-                <h2 data-i18n="atc.overview.title">构建低空经济时代的<br>数字化空域基础设施</h2>
-                <p data-i18n="atc.overview.p1">面向无人机、eVTOL、低空物流、城市巡检、应急救援等场景，平台提供从飞行审批、航线规划、飞行监管到异常预警的全流程数字化管理能力。</p>
-                <p data-i18n="atc.overview.p2">通过融合 GIS、数字孪生、AI算法、实时通信与多源感知数据，实现城市级低空空域的实时感知与智能调度。</p>
-            </div>
-            <div class="atc-arch-diagram">
-                <div class="arch-layer">
-                    <div class="layer-title" data-i18n="atc.arch.app_title">应用层</div>
-                    <div class="layer-items">
-                        <span data-i18n="atc.arch.app_1">飞行监管</span><span data-i18n="atc.arch.app_2">指挥调度</span><span data-i18n="atc.arch.app_3">空域审批</span><span data-i18n="atc.arch.app_4">应急管理</span><span data-i18n="atc.arch.app_5">运营分析</span>
+    <!-- ============================================== -->
+    <!-- 下方进入浅色企业级 SaaS 模式 (atc-light-page)  -->
+    <!-- ============================================== -->
+    <div class="atc-light-page">
+        
+        <!-- 02. 平台概述 Overview -->
+        <section class="section-padding" id="overview">
+            <div class="atc-overview-container">
+                <div class="atc-overview-text">
+                    <h2 data-i18n="atc.overview.title">构建低空经济时代的<br>数字化空域基础设施</h2>
+                    <p data-i18n="atc.overview.p1">面向无人机、eVTOL、低空物流、城市巡检、应急救援等场景，平台提供从飞行审批、航线规划、飞行监管到异常预警的全流程数字化管理能力。</p>
+                    <p data-i18n="atc.overview.p2">通过融合 GIS、数字孪生、AI算法、实时通信与多源感知数据，实现城市级低空空域的实时感知与智能调度。</p>
+                </div>
+                <!-- 架构图 (浅色明亮风) -->
+                <div class="atc-arch-diagram">
+                    <div class="arch-layer">
+                        <div class="layer-title" data-i18n="atc.arch.app_title">应用层 (Application)</div>
+                        <div class="layer-items">
+                            <span data-i18n="atc.arch.app_1">飞行监管</span><span data-i18n="atc.arch.app_2">指挥调度</span><span data-i18n="atc.arch.app_3">空域审批</span><span data-i18n="atc.arch.app_4">应急管理</span><span data-i18n="atc.arch.app_5">运营分析</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <div class="layer-title" data-i18n="atc.arch.algo_title">算法层 (Algorithm)</div>
+                        <div class="layer-items">
+                            <span data-i18n="atc.arch.algo_1">AI路径规划</span><span data-i18n="atc.arch.algo_2">冲突检测</span><span data-i18n="atc.arch.algo_3">风险预测</span><span data-i18n="atc.arch.algo_4">多机协同</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <div class="layer-title" data-i18n="atc.arch.data_title">数据层 (Data)</div>
+                        <div class="layer-items">
+                            <span data-i18n="atc.arch.data_1">空域数据</span><span data-i18n="atc.arch.data_2">GIS地理信息</span><span data-i18n="atc.arch.data_3">轨迹数据</span><span data-i18n="atc.arch.data_4">设备数据</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <div class="layer-title" data-i18n="atc.arch.per_title">感知层 (Perception)</div>
+                        <div class="layer-items">
+                            <span data-i18n="atc.arch.per_1">雷达</span><span data-i18n="atc.arch.per_2">ADS-B</span><span data-i18n="atc.arch.per_3">Remote ID</span><span data-i18n="atc.arch.per_4">气象</span><span data-i18n="atc.arch.per_5">IoT</span>
+                        </div>
                     </div>
                 </div>
-                <div class="arch-layer">
-                    <div class="layer-title" data-i18n="atc.arch.algo_title">算法层</div>
-                    <div class="layer-items">
-                        <span data-i18n="atc.arch.algo_1">AI路径规划</span><span data-i18n="atc.arch.algo_2">冲突检测</span><span data-i18n="atc.arch.algo_3">风险预测</span><span data-i18n="atc.arch.algo_4">多机协同</span>
-                    </div>
-                </div>
-                <div class="arch-layer">
-                    <div class="layer-title" data-i18n="atc.arch.data_title">数据层</div>
-                    <div class="layer-items">
-                        <span data-i18n="atc.arch.data_1">空域数据</span><span data-i18n="atc.arch.data_2">GIS地理信息</span><span data-i18n="atc.arch.data_3">轨迹数据</span><span data-i18n="atc.arch.data_4">设备数据</span>
-                    </div>
-                </div>
-                <div class="arch-layer">
-                    <div class="layer-title" data-i18n="atc.arch.per_title">感知层</div>
-                    <div class="layer-items">
-                        <span data-i18n="atc.arch.per_1">雷达</span><span data-i18n="atc.arch.per_2">ADS-B</span><span data-i18n="atc.arch.per_3">Remote ID</span><span data-i18n="atc.arch.per_4">气象</span><span data-i18n="atc.arch.per_5">IoT</span>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 03. 核心能力 Capabilities -->
-    <section class="section-padding bg-darker">
-        <div class="section-title">
-            <h2 data-i18n="atc.cap.title">核心平台能力</h2>
-        </div>
-        <div class="atc-grid-3">
-            <div class="atc-card">
-                <div class="atc-card-num">01</div>
-                <h3 data-i18n="atc.cap.c1_title">空域管理</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c1_1">空域划设</li><li data-i18n="atc.cap.c1_2">动态禁飞区</li><li data-i18n="atc.cap.c1_3">电子围栏</li><li data-i18n="atc.cap.c1_4">航路规划</li><li data-i18n="atc.cap.c1_5">空域容量管理</li>
-                </ul>
+        <!-- 03. 核心能力 Capabilities (高级浅灰底色) -->
+        <section class="section-padding atc-bg-gray">
+            <div class="section-title">
+                <h2 data-i18n="atc.cap.title">核心平台能力</h2>
             </div>
-            <div class="atc-card">
-                <div class="atc-card-num">02</div>
-                <h3 data-i18n="atc.cap.c2_title">飞行监管</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c2_1">实时飞行监控</li><li data-i18n="atc.cap.c2_2">飞行状态追踪</li><li data-i18n="atc.cap.c2_3">多目标监视</li><li data-i18n="atc.cap.c2_4">飞行日志记录</li><li data-i18n="atc.cap.c2_5">违规飞行识别</li>
-                </ul>
-            </div>
-            <div class="atc-card">
-                <div class="atc-card-num">03</div>
-                <h3 data-i18n="atc.cap.c3_title">智能调度</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c3_1">AI航线规划</li><li data-i18n="atc.cap.c3_2">多机协同</li><li data-i18n="atc.cap.c3_3">自动避障</li><li data-i18n="atc.cap.c3_4">冲突预测</li><li data-i18n="atc.cap.c3_5">动态重规划</li>
-                </ul>
-            </div>
-            <div class="atc-card">
-                <div class="atc-card-num">04</div>
-                <h3 data-i18n="atc.cap.c4_title">数字孪生空域</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c4_1">1:1城市空域映射</li><li data-i18n="atc.cap.c4_2">三维 GIS</li><li data-i18n="atc.cap.c4_3">实时环境同步</li><li data-i18n="atc.cap.c4_4">气象仿真</li><li data-i18n="atc.cap.c4_5">风险模拟</li>
-                </ul>
-            </div>
-            <div class="atc-card">
-                <div class="atc-card-num">05</div>
-                <h3 data-i18n="atc.cap.c5_title">应急指挥</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c5_1">应急事件联动</li><li data-i18n="atc.cap.c5_2">黑飞预警</li><li data-i18n="atc.cap.c5_3">一键返航</li><li data-i18n="atc.cap.c5_4">失联处理</li><li data-i18n="atc.cap.c5_5">应急路线生成</li>
-                </ul>
-            </div>
-            <div class="atc-card">
-                <div class="atc-card-num">06</div>
-                <h3 data-i18n="atc.cap.c6_title">数据分析</h3>
-                <ul>
-                    <li data-i18n="atc.cap.c6_1">飞行数据统计</li><li data-i18n="atc.cap.c6_2">热力分析</li><li data-i18n="atc.cap.c6_3">运营分析</li><li data-i18n="atc.cap.c6_4">风险评估</li><li data-i18n="atc.cap.c6_5">AI趋势预测</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 04. 场景解决方案 Solutions -->
-    <section class="section-padding">
-        <div class="section-title">
-            <h2 data-i18n="atc.sol.title">面向多行业低空应用场景</h2>
-        </div>
-        <div class="atc-grid-3">
-            <div class="atc-img-card">
-                <img src="./images/cases-hero.webp" alt="城市低空交通">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s1_title">城市低空交通</h3>
-                    <p data-i18n="atc.sol.s1_desc">eVTOL航路管理 · 城市空中交通 · 空域协同调度</p>
-                </div>
-            </div>
-            <div class="atc-img-card">
-                <img src="./images/cases-hero.webp" alt="无人机物流">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s2_title">无人机物流</h3>
-                    <p data-i18n="atc.sol.s2_desc">自动航线管理 · 多站点配送 · 飞行监管</p>
-                </div>
-            </div>
-            <div class="atc-img-card">
-                <img src="./images/cases-hero.webp" alt="能源巡检">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s3_title">能源巡检</h3>
-                    <p data-i18n="atc.sol.s3_desc">电力巡检 · 油气管线巡检 · 自动任务调度</p>
-                </div>
-            </div>
-            <div class="atc-img-card">
-                <img src="./images/atc-sol-4.webp" alt="应急救援">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s4_title">应急救援</h3>
-                    <p data-i18n="atc.sol.s4_desc">灾情侦察 · 指挥联动 · 临时空域管控</p>
-                </div>
-            </div>
-            <div class="atc-img-card">
-                <img src="./images/atc-sol-5.webp" alt="文旅与表演">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s5_title">文旅与表演</h3>
-                    <p data-i18n="atc.sol.s5_desc">无人机灯光秀 · 低空观光 · 活动空域保障</p>
-                </div>
-            </div>
-            <div class="atc-img-card">
-                <img src="./images/atc-sol-6.webp" alt="政务监管">
-                <div class="atc-img-overlay">
-                    <h3 data-i18n="atc.sol.s6_title">政务监管</h3>
-                    <p data-i18n="atc.sol.s6_desc">城市治理 · 黑飞监管 · 公安联动</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 05. 平台可视化 UI Showcase -->
-    <section class="section-padding bg-darker">
-        <div class="section-title">
-            <h2 data-i18n="atc.ui.title">全域实时态势感知</h2>
-            <p data-i18n="atc.ui.subtitle" class="atc-ui-subtitle">三维空域可视化 · 实时飞行追踪 · 飞行冲突预警 · AI风险分析 · 气象联动 · 多端协同指挥</p>
-        </div>
-        <div class="atc-ui-container">
-            <div class="atc-ui-img-wrapper">
-                <img src="./images/cases-hero.webp" alt="全域实时态势感知大屏 UI">
-            </div>
-        </div>
-    </section>
-
-    <!-- 06. 技术优势 Technology (增加底部空间) -->
-    <section class="section-padding atc-tech-section">
-        <div class="section-title">
-            <h2 data-i18n="atc.tech.title">核心技术能力</h2>
-        </div>
-        <div class="atc-grid-4">
-            <div class="atc-tech-card">
-                <h4 data-i18n="atc.tech.t1_title">数字孪生引擎</h4>
-                <p data-i18n="atc.tech.t1_desc">城市级三维建模<br>实时数据映射<br>高精度场景还原</p>
-            </div>
-            <div class="atc-tech-card">
-                <h4 data-i18n="atc.tech.t2_title">AI智能算法</h4>
-                <p data-i18n="atc.tech.t2_desc">路径规划与轨迹预测<br>冲突检测<br>风险实时评估</p>
-            </div>
-            <div class="atc-tech-card">
-                <h4 data-i18n="atc.tech.t3_title">高并发与时空数据</h4>
-                <p data-i18n="atc.tech.t3_desc">多机实时接入<br>GIS与多源数据融合<br>低延迟数据同步</p>
-            </div>
-            <div class="atc-tech-card">
-                <h4 data-i18n="atc.tech.t4_title">多协议无缝兼容</h4>
-                <p data-i18n="atc.tech.t4_desc">MAVLink / Remote ID<br>ADS-B 接入<br>第三方飞控融合</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 07. 平台价值 Benefits (背景图链接放回 HTML 中) -->
-    <section class="section-padding atc-benefit-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('./images/cases-hero.webp');">
-        <div class="section-title">
-            <h2 data-i18n="atc.benefit.title">保障空域安全，提升运营效能</h2>
-        </div>
-        <div class="atc-benefit-list">
-            <div class="atc-benefit-text">
-                <h4 data-i18n="atc.benefit.b1_title">提升飞行安全性</h4>
-                <p data-i18n="atc.benefit.b1_desc">降低空域冲突风险，排除违规飞行隐患。</p>
-            </div>
-            <div class="atc-benefit-text">
-                <h4 data-i18n="atc.benefit.b2_title">提升运营效率</h4>
-                <p data-i18n="atc.benefit.b2_desc">实现全流程自动化飞行调度与协同管理。</p>
-            </div>
-            <div class="atc-benefit-text">
-                <h4 data-i18n="atc.benefit.b3_title">降低管理成本</h4>
-                <p data-i18n="atc.benefit.b3_desc">极大减少人工空管的监管负担和运营阻力。</p>
-            </div>
-            <div class="atc-benefit-text">
-                <h4 data-i18n="atc.benefit.b4_title">支持城市级扩展</h4>
-                <p data-i18n="atc.benefit.b4_desc">完美适配未来超高密度立体低空交通体系。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 08. 合作模式 / 部署方式 (增加顶部空间) -->
-    <section class="section-padding bg-darker atc-deploy-section">
-        <div class="atc-deployment">
-            <h3 data-i18n="atc.deploy.title">灵活部署与行业适配</h3>
-            <div class="atc-deploy-grid">
-                <div class="deploy-card">
-                    <h4 data-i18n="atc.deploy.d1_t">私有化部署</h4>
+            <div class="atc-grid-3">
+                <div class="atc-card">
+                    <div class="atc-card-num">01</div>
+                    <h3 data-i18n="atc.cap.c1_title">空域管理</h3>
                     <ul>
-                        <li data-i18n="atc.deploy.d1_p1">城市级平台建设</li>
-                        <li data-i18n="atc.deploy.d1_p2">行业专项平台部署</li>
+                        <li data-i18n="atc.cap.c1_1">空域划设</li><li data-i18n="atc.cap.c1_2">动态禁飞区</li><li data-i18n="atc.cap.c1_3">电子围栏</li><li data-i18n="atc.cap.c1_4">航路规划</li><li data-i18n="atc.cap.c1_5">空域容量管理</li>
                     </ul>
                 </div>
-                <div class="deploy-card">
-                    <h4 data-i18n="atc.deploy.d2_t">SaaS云平台</h4>
+                <div class="atc-card">
+                    <div class="atc-card-num">02</div>
+                    <h3 data-i18n="atc.cap.c2_title">飞行监管</h3>
                     <ul>
-                        <li data-i18n="atc.deploy.d2_p1">开箱即用，按需订阅</li>
-                        <li data-i18n="atc.deploy.d2_p2">快速构建标准服务能力</li>
+                        <li data-i18n="atc.cap.c2_1">实时飞行监控</li><li data-i18n="atc.cap.c2_2">飞行状态追踪</li><li data-i18n="atc.cap.c2_3">多目标监视</li><li data-i18n="atc.cap.c2_4">飞行日志记录</li><li data-i18n="atc.cap.c2_5">违规飞行识别</li>
                     </ul>
                 </div>
-                <div class="deploy-card">
-                    <h4 data-i18n="atc.deploy.d3_t">API开放接口</h4>
+                <div class="atc-card">
+                    <div class="atc-card-num">03</div>
+                    <h3 data-i18n="atc.cap.c3_title">智能调度</h3>
                     <ul>
-                        <li data-i18n="atc.deploy.d3_p1">第三方系统数据级集成</li>
-                        <li data-i18n="atc.deploy.d3_p2">自定义功能快速调用与对接</li>
+                        <li data-i18n="atc.cap.c3_1">AI航线规划</li><li data-i18n="atc.cap.c3_2">多机协同</li><li data-i18n="atc.cap.c3_3">自动避障</li><li data-i18n="atc.cap.c3_4">冲突预测</li><li data-i18n="atc.cap.c3_5">动态重规划</li>
+                    </ul>
+                </div>
+                <div class="atc-card">
+                    <div class="atc-card-num">04</div>
+                    <h3 data-i18n="atc.cap.c4_title">数字孪生空域</h3>
+                    <ul>
+                        <li data-i18n="atc.cap.c4_1">1:1城市空域映射</li><li data-i18n="atc.cap.c4_2">三维 GIS</li><li data-i18n="atc.cap.c4_3">实时环境同步</li><li data-i18n="atc.cap.c4_4">气象仿真</li><li data-i18n="atc.cap.c4_5">风险模拟</li>
+                    </ul>
+                </div>
+                <div class="atc-card">
+                    <div class="atc-card-num">05</div>
+                    <h3 data-i18n="atc.cap.c5_title">应急指挥</h3>
+                    <ul>
+                        <li data-i18n="atc.cap.c5_1">应急事件联动</li><li data-i18n="atc.cap.c5_2">黑飞预警</li><li data-i18n="atc.cap.c5_3">一键返航</li><li data-i18n="atc.cap.c5_4">失联处理</li><li data-i18n="atc.cap.c5_5">应急路线生成</li>
+                    </ul>
+                </div>
+                <div class="atc-card">
+                    <div class="atc-card-num">06</div>
+                    <h3 data-i18n="atc.cap.c6_title">数据分析</h3>
+                    <ul>
+                        <li data-i18n="atc.cap.c6_1">飞行数据统计</li><li data-i18n="atc.cap.c6_2">热力分析</li><li data-i18n="atc.cap.c6_3">运营分析</li><li data-i18n="atc.cap.c6_4">风险评估</li><li data-i18n="atc.cap.c6_5">AI趋势预测</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 09. 页尾 CTA -->
-    <section class="section-padding atc-cta" id="contact">
-        <h2 data-i18n="atc.cta.title">共同构建未来低空数字空域</h2>
-        <p data-i18n="atc.cta.subtitle">欢迎咨询低空飞行监管、数字空域、无人机运营与城市级低空管理解决方案</p>
-        <div class="atc-hero-btns atc-cta-btns">
-            <a href="#footer" class="btn-solid" data-i18n="atc.cta.btn1">预约演示</a>
-        </div>
-    </section>
+        <!-- 04. 场景解决方案 Solutions (白底，暗色遮罩图片) -->
+        <section class="section-padding">
+            <div class="section-title">
+                <h2 data-i18n="atc.sol.title">面向多行业低空应用场景</h2>
+            </div>
+            <div class="atc-grid-3">
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-1.webp" alt="城市低空交通">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s1_title">城市低空交通</h3>
+                        <p data-i18n="atc.sol.s1_desc">eVTOL航路管理 · 城市空中交通 · 空域协同调度</p>
+                    </div>
+                </div>
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-2.webp" alt="无人机物流">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s2_title">无人机物流</h3>
+                        <p data-i18n="atc.sol.s2_desc">自动航线管理 · 多站点配送 · 飞行监管</p>
+                    </div>
+                </div>
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-3.webp" alt="能源巡检">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s3_title">能源巡检</h3>
+                        <p data-i18n="atc.sol.s3_desc">电力巡检 · 油气管线巡检 · 自动任务调度</p>
+                    </div>
+                </div>
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-4.webp" alt="应急救援">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s4_title">应急救援</h3>
+                        <p data-i18n="atc.sol.s4_desc">灾情侦察 · 指挥联动 · 临时空域管控</p>
+                    </div>
+                </div>
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-5.webp" alt="文旅与表演">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s5_title">文旅与表演</h3>
+                        <p data-i18n="atc.sol.s5_desc">无人机灯光秀 · 低空观光 · 活动空域保障</p>
+                    </div>
+                </div>
+                <div class="atc-img-card">
+                    <img src="./images/atc-sol-6.webp" alt="政务监管">
+                    <div class="atc-img-overlay">
+                        <h3 data-i18n="atc.sol.s6_title">政务监管</h3>
+                        <p data-i18n="atc.sol.s6_desc">城市治理 · 黑飞监管 · 公安联动</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. 平台可视化 UI Showcase (增加至两张图) -->
+        <section class="section-padding atc-bg-gray">
+            <div class="section-title">
+                <h2 data-i18n="atc.ui.title">全域实时态势感知</h2>
+                <p data-i18n="atc.ui.subtitle" class="atc-ui-subtitle">三维空域可视化 · 实时飞行追踪 · 飞行冲突预警 · AI风险分析 · 气象联动 · 多端协同指挥</p>
+            </div>
+            
+            <div class="atc-ui-container">
+                <!-- 第一张大图 -->
+                <div class="atc-ui-img-wrapper">
+                    <img src="./images/flight-atc-ui1.webp" alt="全域实时态势感知大屏 UI - 图1">
+                </div>
+                
+                <!-- 第二张大图 -->
+                <div class="atc-ui-img-wrapper">
+                    <!-- 请准备第二张图，并命名为 atc-dashboard-2.webp 放入 images 文件夹 -->
+                    <img src="./images/flight-atc-ui2.webp" alt="全域实时态势感知大屏 UI - 图2">
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. 技术优势 Technology (白底) -->
+        <section class="section-padding atc-tech-section">
+            <div class="section-title">
+                <h2 data-i18n="atc.tech.title">核心技术能力</h2>
+            </div>
+            <div class="atc-grid-4">
+                <div class="atc-tech-card">
+                    <h4 data-i18n="atc.tech.t1_title">数字孪生引擎</h4>
+                    <p data-i18n="atc.tech.t1_desc">城市级三维建模<br>实时数据映射<br>高精度场景还原</p>
+                </div>
+                <div class="atc-tech-card">
+                    <h4 data-i18n="atc.tech.t2_title">AI智能算法</h4>
+                    <p data-i18n="atc.tech.t2_desc">路径规划与轨迹预测<br>冲突检测<br>风险实时评估</p>
+                </div>
+                <div class="atc-tech-card">
+                    <h4 data-i18n="atc.tech.t3_title">高并发与时空数据</h4>
+                    <p data-i18n="atc.tech.t3_desc">多机实时接入<br>GIS与多源数据融合<br>低延迟数据同步</p>
+                </div>
+                <div class="atc-tech-card">
+                    <h4 data-i18n="atc.tech.t4_title">多协议无缝兼容</h4>
+                    <p data-i18n="atc.tech.t4_desc">MAVLink / Remote ID<br>ADS-B 接入<br>第三方飞控融合</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. 平台价值 Benefits (纵向排列，白底纯净) -->
+        <section class="section-padding atc-bg-gray">
+            <div class="section-title">
+                <h2 data-i18n="atc.benefit.title">保障空域安全，提升运营效能</h2>
+            </div>
+            <div class="atc-benefit-list">
+                <div class="atc-benefit-text">
+                    <h4 data-i18n="atc.benefit.b1_title">提升飞行安全性</h4>
+                    <p data-i18n="atc.benefit.b1_desc">降低空域冲突风险，排除违规飞行隐患。</p>
+                </div>
+                <div class="atc-benefit-text">
+                    <h4 data-i18n="atc.benefit.b2_title">提升运营效率</h4>
+                    <p data-i18n="atc.benefit.b2_desc">实现全流程自动化飞行调度与协同管理。</p>
+                </div>
+                <div class="atc-benefit-text">
+                    <h4 data-i18n="atc.benefit.b3_title">降低管理成本</h4>
+                    <p data-i18n="atc.benefit.b3_desc">极大减少人工空管的监管负担和运营阻力。</p>
+                </div>
+                <div class="atc-benefit-text">
+                    <h4 data-i18n="atc.benefit.b4_title">支持城市级扩展</h4>
+                    <p data-i18n="atc.benefit.b4_desc">完美适配未来超高密度立体低空交通体系。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08. 合作模式 / 部署方式 -->
+        <section class="section-padding atc-deploy-section">
+            <div class="atc-deployment">
+                <h3 data-i18n="atc.deploy.title">灵活部署与行业适配</h3>
+                <div class="atc-deploy-grid">
+                    <div class="deploy-card">
+                        <h4 data-i18n="atc.deploy.d1_t">私局化部署</h4>
+                        <ul>
+                            <li data-i18n="atc.deploy.d1_p1">城市级平台建设</li>
+                            <li data-i18n="atc.deploy.d1_p2">行业专项平台部署</li>
+                        </ul>
+                    </div>
+                    <div class="deploy-card">
+                        <h4 data-i18n="atc.deploy.d2_t">SaaS云平台</h4>
+                        <ul>
+                            <li data-i18n="atc.deploy.d2_p1">开箱即用，按需订阅</li>
+                            <li data-i18n="atc.deploy.d2_p2">快速构建标准服务能力</li>
+                        </ul>
+                    </div>
+                    <div class="deploy-card">
+                        <h4 data-i18n="atc.deploy.d3_t">API开放接口</h4>
+                        <ul>
+                            <li data-i18n="atc.deploy.d3_p1">第三方系统数据级集成</li>
+                            <li data-i18n="atc.deploy.d3_p2">自定义功能快速调用与对接</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09. 页尾 CTA -->
+        <section class="section-padding atc-cta atc-bg-gray" id="contact">
+            <h2 data-i18n="atc.cta.title">共同构建未来低空数字空域</h2>
+            <p data-i18n="atc.cta.subtitle">欢迎咨询低空飞行监管、数字空域、无人机运营与城市级低空管理解决方案。</p>
+            <div class="atc-hero-btns atc-cta-btns">
+                <a href="#footer" class="btn-solid" data-i18n="atc.cta.btn1">预约演示</a>
+            </div>
+        </section>
+
+    </div>
+    <!-- 浅色模式包裹层结束 -->
 
     <!-- 统一底部 Footer -->
     <footer class="footer" id="footer">

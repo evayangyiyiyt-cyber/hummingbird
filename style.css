@@ -1573,116 +1573,115 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 
 
 /* ========================================= */
-/* 10. 飞控空管平台专属 (flight-atc.html)    */
+/* 10. 飞控空管平台专属 (浅色企业级 SaaS 风格) */
 /* ========================================= */
-.bg-darker { background-color: #000; }
 
-/* 01. Hero */
+/* 01. Hero 首屏 (保留暗黑视觉冲击) */
 .atc-hero-bg { width: 100%; margin-top: 0px; background-color: #000; }
 .atc-hero { height: 100vh; position: relative; }
-.atc-hero-img { opacity: 0.6; } /* 分离的内联透明度 */
-.atc-hero-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+.atc-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); z-index: 0; pointer-events: none; }
+.atc-hero-img { position: absolute !important; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover !important; z-index: 0 !important; opacity: 0.5 !important; }
+.atc-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center; }
 .atc-hero-content h1 { font-size: 56px; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: 2px; }
-.atc-hero-content p { font-size: 18px; color: #ccc; line-height: 1.8; margin-bottom: 40px; }
+.atc-hero-content p { font-size: 18px; color: #e0e0e0; line-height: 1.8; margin-bottom: 40px; }
 .atc-hero-btns { display: flex; gap: 20px; justify-content: center; }
-/* 【核心新增】给所有低空飞行的 Hero 首屏增加一层黑色渐变防刺眼遮罩 */
-.atc-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* 采用上浅下深的渐变遮罩，既能看清文字，又保留了天空的美感 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.75) 100%); 
-    z-index: 0; /* 处于背景图(-1)与文字(2)之间 */
-    pointer-events: none;
+
+/* ============================================== */
+/* 浅色主题全局设定 (仅在此 Wrapper 内生效)         */
+/* ============================================== */
+.atc-light-page {
+    background-color: #ffffff;  /* 基础白底 */
+    color: #333333;             /* 基础深灰字 */
 }
 
-/* 确保文字内容处于遮罩层的上方 */
-.atc-hero-content {
-    position: relative;
-    z-index: 2; /* 确保文字不被遮罩盖住 */
+/* 覆盖公用标题的颜色为深色 */
+.atc-light-page .section-title h2 { color: #111111; font-weight: 700; }
+.atc-light-page .section-title p { color: #666666; }
+
+/* 交替的浅灰背景区块 */
+.atc-bg-gray {
+    background-color: #f7f8fa;
+    max-width: 100% !important;
+    width: 100%;
 }
-/* 02. Overview 架构图 */
+/* 防止交替背景的内部内容乱跑 */
+.atc-bg-gray .section-title, .atc-bg-gray .atc-grid-3, .atc-bg-gray .atc-ui-container, .atc-bg-gray .atc-benefit-list {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 02. Overview 架构图 (高级浅色版) */
 .atc-overview-container { display: flex; align-items: center; justify-content: space-between; gap: 60px; max-width: 1400px; margin: 0 auto; }
 .atc-overview-text { flex: 1; }
-.atc-overview-text h2 { font-size: 36px; line-height: 1.4; margin-bottom: 30px; color: #fff; }
-.atc-overview-text p { font-size: 16px; color: #aaa; line-height: 1.8; margin-bottom: 20px; }
+.atc-overview-text h2 { font-size: 36px; line-height: 1.4; margin-bottom: 30px; color: #111; font-weight: bold; }
+.atc-overview-text p { font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 20px; }
 .atc-arch-diagram { flex: 1; display: flex; flex-direction: column; gap: 15px; }
-.arch-layer { background: linear-gradient(90deg, rgba(41, 121, 255, 0.1) 0%, rgba(17, 17, 17, 0.8) 100%); border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.arch-layer:hover { transform: translateX(10px); box-shadow: 0 10px 30px rgba(41, 121, 255, 0.15); }
-.layer-title { font-size: 14px; font-family: 'ConthraxSb', sans-serif; color: var(--accent-color); margin-bottom: 15px; letter-spacing: 1px; }
+.arch-layer { background: linear-gradient(90deg, #f0f5ff 0%, #ffffff 100%); border: 1px solid #e2e8f0; border-left: 4px solid var(--accent-color); border-radius: 8px; padding: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.arch-layer:hover { transform: translateX(10px); box-shadow: 0 10px 30px rgba(41, 121, 255, 0.08); }
+.layer-title { font-size: 14px; font-family: 'ConthraxSb', sans-serif; color: var(--accent-color); margin-bottom: 15px; letter-spacing: 1px; font-weight: bold; }
 .layer-items { display: flex; flex-wrap: wrap; gap: 10px; }
-.layer-items span { background-color: #222; color: #e0e0e0; font-size: 13px; padding: 6px 15px; border-radius: 4px; border: 1px solid #333; }
+.layer-items span { background-color: #f8fafc; color: #333; font-size: 13px; padding: 6px 15px; border-radius: 4px; border: 1px solid #e2e8f0; }
 
 /* 通用网格系统 */
 .atc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
 .atc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1400px; margin: 0 auto; }
 
-/* 03. 核心能力 */
-.atc-card { background-color: #111; padding: 40px; border-radius: 12px; border: 1px solid #1a1a1a; transition: 0.3s ease; }
-.atc-card:hover { transform: translateY(-5px); border-color: #333; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
-.atc-card-num { font-size: 40px; font-family: 'ConthraxSb', sans-serif; color: rgba(255,255,255,0.05); margin-bottom: -20px; }
-.atc-card h3 { font-size: 22px; color: #fff; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 15px; }
-.atc-card ul li { position: relative; padding-left: 15px; margin-bottom: 12px; color: #aaa; font-size: 15px; }
+/* 03. 核心能力 卡片 (白底轻投影) */
+.atc-card { background-color: #fff; padding: 40px; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 5px 20px rgba(0,0,0,0.02); transition: 0.3s ease; }
+.atc-card:hover { transform: translateY(-5px); border-color: #dcdcdc; box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+.atc-card-num { font-size: 40px; font-family: 'ConthraxSb', sans-serif; color: rgba(0,0,0,0.04); margin-bottom: -20px; }
+.atc-card h3 { font-size: 22px; color: #111; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; font-weight: bold; }
+.atc-card ul li { position: relative; padding-left: 15px; margin-bottom: 12px; color: #555; font-size: 15px; }
 .atc-card ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: var(--accent-color); border-radius: 50%; }
 
-/* 04. 场景解决方案图文卡片 */
-.atc-img-card { position: relative; height: 300px; border-radius: 12px; overflow: hidden; background-color: #111; }
-.atc-img-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; opacity: 0.7; }
-.atc-img-card:hover img { transform: scale(1.05); opacity: 0.4; }
-.atc-img-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); }
-.atc-img-overlay h3 { color: #fff; font-size: 22px; margin-bottom: 10px; }
-.atc-img-overlay p { color: var(--accent-color); font-size: 13px; }
+/* 04. 场景解决方案图文卡片 (图上压暗，字依然白) */
+.atc-img-card { position: relative; height: 300px; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+.atc-img-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.atc-img-card:hover img { transform: scale(1.05); }
+.atc-img-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); }
+.atc-img-overlay h3 { color: #fff; font-size: 22px; margin-bottom: 10px; font-weight: bold; }
+.atc-img-overlay p { color: #82b1ff; font-size: 13px; }
 
-/* 05. 大屏可视化 Showcase (单行小字 + 纯图) */
-.atc-ui-container { display: block; } /* 确保脱离原始 flex 限制 */
-.atc-ui-subtitle { font-size: 16px; color: #888; margin-top: 15px; letter-spacing: 2px; }
-.atc-ui-img-wrapper { max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 0 80px rgba(41, 121, 255, 0.15); border: 1px solid #222; padding: 10px; background-color: #111; }
+/* 05. 大屏可视化 Showcase (白底阴影) */
+.atc-ui-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; /* 两张大图之间的呼吸间距 */
+    align-items: center;
+}
+.atc-ui-subtitle { font-size: 16px; color: #666 !important; margin-top: 15px; letter-spacing: 2px; }
+.atc-ui-img-wrapper { max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08); border: 1px solid #eaeaea; padding: 10px; background-color: #fff; }
 .atc-ui-img-wrapper img { width: 100%; height: auto; border-radius: 8px; display: block; }
 
 /* 06. 技术优势 */
-.atc-tech-section { padding-bottom: 200px;padding-top: 100px; } /* 【新增】增加核心技术能力下方的空间 */
-.atc-tech-card { padding: 30px 0; border-top: 2px solid #222; }
+.atc-tech-section { padding-bottom: 120px; }
+.atc-tech-card { padding: 30px 0; border-top: 2px solid #eaeaea; transition: 0.3s; }
 .atc-tech-card:hover { border-color: var(--accent-color); }
-.atc-tech-card h4 { font-size: 18px; color: #fff; margin-bottom: 15px; }
-.atc-tech-card p { font-size: 14px; color: #888; line-height: 1.8; }
+.atc-tech-card h4 { font-size: 18px; color: #111; margin-bottom: 15px; font-weight: bold; }
+.atc-tech-card p { font-size: 14px; color: #666; line-height: 1.8; }
 
-
-/* 07. 平台价值 Benefits (背景图铺满屏幕去黑边) */
-.atc-benefit-bg { 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    text-align: center; 
-    border-top: 1px solid #222; 
-    border-bottom: 1px solid #222; 
-    
-    /* 【核心修改】强制宽度 100% 突破 1400px 限制，消除左右黑边 */
-    max-width: 100% !important;
-    width: 100%;
-}
+/* 07. 平台价值 Benefits (纵向居中排版) */
 .atc-benefit-list { display: flex; flex-direction: column; gap: 50px; align-items: center; max-width: 800px; margin: 0 auto; }
 .atc-benefit-text { text-align: center; }
 .atc-benefit-text h4 { font-size: 24px; color: var(--accent-color); margin-bottom: 15px; font-weight: 600; letter-spacing: 2px; }
-.atc-benefit-text p { font-size: 16px; color: #ccc; line-height: 1.6; }
+.atc-benefit-text p { font-size: 16px; color: #555; line-height: 1.6; }
 
-/* 08. 部署方式 */
-.atc-deploy-section { padding-top: 100px; } /* 【新增】增加灵活部署上方的空间 */
+/* 08. 部署方式 (白卡片，亮色阴影) */
+.atc-deploy-section { padding-top: 100px; }
 .atc-deployment { text-align: center; margin-top: 0; }
-.atc-deployment h3 { font-size: 24px; color: #fff; margin-bottom: 40px; }
+.atc-deployment h3 { font-size: 24px; color: #111; margin-bottom: 40px; font-weight: bold; }
 .atc-deploy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
-.deploy-card { background: #111; border-top: 3px solid var(--accent-color); padding: 40px; border-radius: 0 0 12px 12px; text-align: left; }
-.deploy-card h4 { font-size: 20px; color: #fff; margin-bottom: 20px; font-weight: bold; }
-.deploy-card ul li { position: relative; padding-left: 15px; margin-bottom: 12px; color: #aaa; font-size: 14px; }
+.deploy-card { background: #fff; border-top: 3px solid var(--accent-color); border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee; padding: 40px; border-radius: 0 0 12px 12px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.deploy-card h4 { font-size: 20px; color: #111; margin-bottom: 20px; font-weight: bold; }
+.deploy-card ul li { position: relative; padding-left: 15px; margin-bottom: 12px; color: #555; font-size: 14px; }
 .deploy-card ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background-color: var(--accent-color); border-radius: 50%; }
 
 /* 09. CTA */
 .atc-cta { text-align: center; padding-bottom: 120px; }
-.atc-cta h2 { font-size: 36px; margin-bottom: 20px; color: #fff; }
-.atc-cta p { font-size: 16px; color: #888; }
-.atc-cta-btns { justify-content: center; margin-top: 40px; } /* CTA按钮的独占间距 */
+.atc-cta h2 { font-size: 36px; margin-bottom: 20px; color: #111; font-weight: bold; }
+.atc-cta p { font-size: 16px; color: #666; }
+.atc-cta-btns { justify-content: center; margin-top: 40px; }
 
 /* ========================================= */
 /* 飞控空管平台 手机端适配                      */
@@ -1714,45 +1713,35 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 
 .twin-hero-content h1 { font-size: 50px; } /* 微调主标题大小防止过长 */
 
-/* 02. Overview 标签与流程图 */
+/* 02. Overview 标签与流程图 (浅色风格) */
 .twin-overview-wrapper { text-align: center; max-width: 1200px; margin: 0 auto; }
-.twin-overview-desc p { font-size: 16px; color: #aaa; margin-bottom: 15px; }
+.twin-overview-desc p { font-size: 16px; color: #666; margin-bottom: 15px; }
 .twin-tags-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 40px; }
-.twin-tags-row span { background: #111; color: var(--accent-color); padding: 8px 25px; border-radius: 30px; font-size: 15px; border: 1px solid #222; }
+.twin-tags-row span { background: #fff; color: var(--accent-color); padding: 8px 25px; border-radius: 30px; font-size: 15px; border: 1px solid #eaeaea; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
 .twin-flowchart { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 40px; flex-wrap: wrap; }
-.flow-item { background: linear-gradient(135deg, #111 0%, #1a1a1a 100%); color: #fff; padding: 15px 25px; border-radius: 8px; font-size: 15px; border: 1px solid #333; font-weight: bold; }
+.flow-item { background: #fff; color: #111; padding: 15px 25px; border-radius: 8px; font-size: 15px; border: 1px solid #eaeaea; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
 .flow-arrow { width: 24px; height: 24px; background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%23888" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>') no-repeat center; }
 
-/* 左文右图通用结构 (GIS & 指挥协同) */
+/* 左文右图通用结构 (GIS & 指挥协同 - 浅色风格) */
 .twin-split-section { display: flex; gap: 60px; max-width: 1400px; margin: 0 auto; align-items: stretch; }
 .twin-split-text { flex: 1; display: flex; flex-direction: column; gap: 30px; }
-.twin-feature-group { background: #111; padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent-color); }
-.twin-feature-group h3 { font-size: 20px; color: #fff; margin-bottom: 12px; }
-.twin-feature-group p { font-size: 14px; color: #888; line-height: 1.6; }
-.twin-split-img { flex: 1.2; position: relative; border-radius: 16px; overflow: hidden; background: #000; border: 1px solid #222; display: flex; flex-direction: column; }
+.twin-feature-group { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #eaeaea; border-left: 4px solid var(--accent-color); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+.twin-feature-group h3 { font-size: 20px; color: #111; margin-bottom: 12px; font-weight: bold; }
+.twin-feature-group p { font-size: 14px; color: #666; line-height: 1.6; }
+.twin-split-img { flex: 1.2; position: relative; border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid #eaeaea; box-shadow: 0 10px 40px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
 .twin-split-img img { width: 100%; height: 100%; object-fit: cover; }
-.twin-img-caption { background: rgba(17, 17, 17, 0.9); padding: 15px; text-align: center; color: var(--accent-color); font-size: 13px; letter-spacing: 1px; }
+.twin-img-caption { background: #f8fafc; padding: 15px; text-align: center; color: #555; font-size: 13px; letter-spacing: 1px; border-top: 1px solid #eaeaea; }
 
 /* 视频墙大图 */
 .twin-video-grid { margin-bottom: 60px; }
-.twin-showcase-img { max-width: 1400px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid #222; position: relative; }
+.twin-showcase-img { max-width: 1400px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid #eaeaea; box-shadow: 0 15px 50px rgba(0,0,0,0.08); position: relative; }
 .twin-showcase-img img { width: 100%; height: auto; display: block; }
 
-/* 优化作业孪生-行业场景卡片的文字排版 */
-.twin-ind-overlay { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%) !important; padding-top: 60px !important; }
-.twin-ind-overlay p { line-height: 1.6 !important; color: #ccc !important; }
+/* 场景下的透明标签调整 (浅色) */
+.ui-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 30px; margin-bottom: 20px; }
+.ui-tags span { background-color: #fff; color: #555; padding: 8px 20px; border-radius: 30px; font-size: 14px; border: 1px solid #eaeaea; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
 
-/* ========================================= */
-/* 作业孪生 手机端适配                      */
-/* ========================================= */
-@media (max-width: 768px) {
-    .twin-hero-content h1 { font-size: 28px !important; }
-    .twin-tags-row span { font-size: 13px; padding: 6px 15px; }
-    .twin-flowchart { flex-direction: column; gap: 10px; }
-    .flow-arrow { transform: rotate(90deg); }
-    .twin-split-section { flex-direction: column; gap: 30px; }
-    .twin-split-img { height: 250px; } /* 防止手机端图片无限拉高 */
-}
+
 
 
 /* ========================================= */
@@ -1762,161 +1751,82 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
 /* 02. 系统概述流程图间距微调 */
 .drill-flowchart { margin-top: 60px; margin-bottom: 20px; }
 
-
-/* 04. 专项行业演练 (纯白背景 + 无框细线分隔)  */
-
-
-/* 【修复黑边】强制让白底突破 1400px 铺满整个屏幕宽度 */
+/* 04. 专项行业演练 (纯白背景 + 无框细线分隔，铺满屏幕防黑边) */
 .drill-light-bg {
     background-color: #ffffff;
     color: #111111;
     max-width: 100% !important; 
     width: 100%;
 }
-
-/* 【修复黑边】重新把内部的标题和内容安全地限制在 1400px 并居中 */
 .drill-light-bg .section-title,
 .drill-light-bg .special-project-list {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
-
-/* 列表间距清零，靠 padding 撑开 */
-.special-project-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0; 
-}
-
-/* 单个场景块：去边框、加下划线、白底黑字 */
-.special-card { 
-    background-color: transparent !important; 
-    border: none !important; 
-    border-radius: 0 !important; 
-    padding: 80px 0; 
-    text-align: center; 
-    border-bottom: 1px solid #eeeeee !important; 
-    transition: none !important; 
-}
+.special-project-list { display: flex; flex-direction: column; gap: 0; }
+.special-card { background-color: transparent !important; border: none !important; border-radius: 0 !important; padding: 80px 0; text-align: center; border-bottom: 1px solid #eeeeee !important; }
 .special-card:first-child { padding-top: 40px; }
 .special-card:last-child { border-bottom: none !important; padding-bottom: 20px; }
+.special-card h3 { font-size: 32px; color: #111 !important; margin-bottom: 20px; font-weight: bold; }
+.special-card p { font-size: 15px; color: #666 !important; max-width: 900px; margin: 0 auto 30px; line-height: 1.8; }
 
-.special-card h3 { 
-    font-size: 32px; 
-    color: #111 !important; /* 标题变黑 */
-    margin-bottom: 20px; 
-    font-weight: bold;
-}
-.special-card p { 
-    font-size: 15px; 
-    color: #666 !important; /* 描述变深灰 */
-    max-width: 900px; 
-    margin: 0 auto 30px; 
-    line-height: 1.8; 
-}
-
-/* 胶囊标签变浅灰色 */
-.special-tags-line { 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 10px; 
-    margin-bottom: 40px; 
-}
-.sp-tag { 
-    font-size: 13px; 
-    padding: 8px 24px; 
-    border-radius: 30px; 
-    background-color: #f5f5f5 !important; 
-    color: #555 !important; 
-    border: none !important; 
-    transition: all 0.3s ease; 
-}
-.sp-tag:hover { 
-    background-color: #e5e5e5 !important; 
-}
+.special-tags-line { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+.sp-tag { font-size: 13px; padding: 8px 24px; border-radius: 30px; background-color: #f5f5f5 !important; color: #555 !important; border: none !important; transition: all 0.3s ease; }
+.sp-tag:hover { background-color: #e5e5e5 !important; }
 
 /* 3图并排保持圆角和缩放效果 */
-.sp-images-3 { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-}
-.sp-img-box { 
-    height: 350px; 
-    background-color: #f5f5f5; 
-    border-radius: 12px; 
-    overflow: hidden; 
-    position: relative; 
-}
-.sp-img-box img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    transition: transform 0.4s ease; 
-}
-.sp-img-box:hover img { 
-    transform: scale(1.05); 
-}
+.sp-images-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.sp-img-box { height: 350px; background-color: #f5f5f5; border-radius: 12px; overflow: hidden; position: relative; }
+.sp-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.sp-img-box:hover img { transform: scale(1.05); }
 
-/* 06. 训练模式 Mode 六宫格 */
-.drill-mode-section { padding-bottom: 200px !important; } /* 【新增】专门增加下方的留白 */
+/* 06. 训练模式 Mode 六宫格 (白底卡片) */
+.drill-mode-section { padding-bottom: 120px !important; }
 .drill-modes-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; max-width: 1400px; margin: 0 auto; }
-.drill-mode-box { background: #111; border: 1px solid #222; border-radius: 12px; padding: 40px 20px; text-align: center; transition: 0.3s; }
-.drill-mode-box:hover { transform: translateY(-5px); border-color: var(--accent-color); }
-.drill-mode-box h4 { color: #fff; font-size: 18px; font-weight: 500; }
+.drill-mode-box { background: #fff; border: 1px solid #eaeaea; box-shadow: 0 5px 15px rgba(0,0,0,0.03); border-radius: 12px; padding: 40px 20px; text-align: center; transition: 0.3s; }
+.drill-mode-box:hover { transform: translateY(-5px); border-color: var(--accent-color); box-shadow: 0 10px 25px rgba(41, 121, 255, 0.15); }
+.drill-mode-box h4 { color: #111; font-size: 18px; font-weight: bold; }
 
-
-/* 07. 核心优势大图背景 + 纵向居中排版 (去除玻璃卡片，改为和飞控页面一样) */
+/* 07. 平台优势大图背景 + 纵向居中排版 (铺满屏幕防黑边，已去除视差滚动) */
 .drill-benefit-bg {
-    /* 图像链接由 HTML 提供 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-   
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-    
-    /* 【核心修改】强制宽度 100% 铺满屏幕，消除左右黑边 */
     max-width: 100% !important;
     width: 100%;
 }
-
-/* 复用飞控空管的纵向纯文字居中排版 */
-.drill-benefit-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 50px; 
-    align-items: center; 
-    max-width: 800px; 
-    margin: 0 auto; 
-}
+.drill-benefit-list { display: flex; flex-direction: column; gap: 50px; align-items: center; max-width: 800px; margin: 0 auto; }
 .drill-benefit-text { text-align: center; }
 .drill-benefit-text h4 { font-size: 24px; color: var(--accent-color); margin-bottom: 15px; font-weight: 600; letter-spacing: 2px; }
 .drill-benefit-text p { font-size: 16px; color: #ccc; line-height: 1.6; }
-.drill-glass-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
-.drill-glass-card h4 { color: #fff; font-size: 20px; margin-bottom: 15px; font-weight: bold; }
-.drill-glass-card p { color: #ddd; font-size: 14px; line-height: 1.6; }
+
 
 /* ========================================= */
-/* 模拟演练教学 手机端完美适配                 */
+/* 飞控相关 3 个页面通用手机端适配              */
 /* ========================================= */
 @media (max-width: 768px) {
-    /* 训练模式 六宫格变 2 列 */
+    /* 作业孪生手机端 */
+    .twin-hero-content h1 { font-size: 28px !important; }
+    .twin-tags-row span { font-size: 13px; padding: 6px 15px; }
+    .twin-flowchart { flex-direction: column; gap: 10px; }
+    .flow-arrow { transform: rotate(90deg); }
+    .twin-split-section { flex-direction: column; gap: 30px; }
+    .twin-split-img { height: 250px; }
+
+    /* 模拟演练手机端：训练模式六宫格变 2 列 */
     .drill-modes-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px; }
     .drill-mode-box { padding: 30px 10px; }
     .drill-mode-box h4 { font-size: 16px; }
     
-    /* 行业演练卡片缩小留白 */
-    .special-card { padding: 30px 15px !important; }
+    /* 专项行业演练：卡片缩小留白 */
+    .special-card { padding: 40px 15px !important; }
     .special-card h3 { font-size: 24px !important; }
     
-    /* 行业演练 3图并排防挤压核心代码 */
+    /* 3图并排防挤压核心代码 */
     .sp-images-3 { 
         grid-template-columns: repeat(3, 1fr) !important; 
         gap: 8px !important; 
@@ -1927,5 +1837,8 @@ img.ft-theory-bg { position: absolute !important; top: 0; left: 0; width: 100%; 
         border-radius: 8px !important;
     }
 
-    
+    /* 大图纵向文字居中手机端适配 */
+    .drill-benefit-list { gap: 30px !important; }
+    .drill-benefit-text h4 { font-size: 20px !important; margin-bottom: 10px !important; }
+    .drill-benefit-text p { font-size: 14px !important; padding: 0 15px; }
 }
