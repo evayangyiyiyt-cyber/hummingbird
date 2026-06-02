@@ -28,7 +28,7 @@
 </head>
 <body>
     <!-- 统一的顶部导航栏 -->
-    <header class="header">
+    <header class="header atc-light-header">
         <div class="logo">
             <img class="logo-img" src="./images/hummingbird-logo1.webp" alt="Logo">
             <span data-i18n="header.logo">蜂鸟互动</span>
@@ -67,13 +67,13 @@
         </div>
     </header>
 
-    <!-- 01. Hero 首屏 -->
-    <div class="atc-hero-bg">
-        <section class="cases-hero atc-hero">
-            <img class="cases-hero-img atc-hero-img" src="./images/flight-drill-hero.jpg" alt="模拟演练教学">
-            <div class="cases-hero-content atc-hero-content twin-hero-content">
-                <h1 data-i18n="drill.hero.title">面向低空行业场景的<br>模拟演练系统</h1>
-                <p data-i18n="drill.hero.subtitle">融合数字仿真、行业任务、飞行训练与教学管理能力，构建覆盖飞行操作、专项作业与应急演练的低空教学体系</p>
+    <!-- 01. Hero 首屏 (独立重写) -->
+    <div class="flight-hero-wrapper">
+        <section class="flight-hero">
+            <img class="flight-hero-img" src="./images/flight-drill-hero.png" alt="模拟演练教学">
+            <div class="flight-hero-content">
+                <h1 data-i18n="drill.hero.title">面向低空行业场景的模拟演练系统</h1>
+                <p data-i18n="drill.hero.subtitle">融合数字仿真、行业任务、飞行训练与教学管理能力，构建覆盖飞行操作、专项作业与应急演练的低空教学体系。</p>
             </div>
         </section>
     </div>
@@ -176,9 +176,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i1_t4">热斑/裂痕检测</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-1-1.webp" alt="光伏运维1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-1-2.webp" alt="光伏运维2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-1-3.webp" alt="光伏运维3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training5-1.webp" alt="光伏运维1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training5-2.webp" alt="光伏运维2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training5-3.webp" alt="光伏运维3"></div>
                     </div>
                 </div>
                 <!-- 2. 安防巡检 -->
@@ -192,9 +192,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i2_t4">突发事件追踪</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-2-1.webp" alt="安防巡检1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-2-2.webp" alt="安防巡检2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-2-3.webp" alt="安防巡检3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training6-1.webp" alt="安防巡检1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training6-2.webp" alt="安防巡检2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training6-3.webp" alt="安防巡检3"></div>
                     </div>
                 </div>
                 <!-- 3. 测绘监测 -->
@@ -208,9 +208,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i3_t4">路径规划实操</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-3-1.webp" alt="测绘监测1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-3-2.webp" alt="测绘监测2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-3-3.webp" alt="测绘监测3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training7-1.webp" alt="测绘监测1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training7-2.webp" alt="测绘监测2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training7-3.webp" alt="测绘监测3"></div>
                     </div>
                 </div>
                 <!-- 4. 应急救援 -->
@@ -224,9 +224,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i4_t4">夜间红外搜救</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-4-1.webp" alt="应急救援1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-4-2.webp" alt="应急救援2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-4-3.webp" alt="应急救援3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training8-1.webp" alt="应急救援1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training8-2.webp" alt="应急救援2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training8-3.webp" alt="应急救援3"></div>
                     </div>
                 </div>
                 <!-- 5. 农林作业 -->
@@ -240,9 +240,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i5_t4">果园长势监测</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-5-1.webp" alt="农林作业1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-5-2.webp" alt="农林作业2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-5-3.webp" alt="农林作业3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training9-1.webp" alt="农林作业1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training9-2.webp" alt="农林作业2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training9-3.webp" alt="农林作业3"></div>
                     </div>
                 </div>
                 <!-- 6. 低空物流 -->
@@ -256,9 +256,9 @@
                         <span class="sp-tag" data-i18n="drill.ind.i6_t4">异常状况接管</span>
                     </div>
                     <div class="sp-images-3">
-                        <div class="sp-img-box"><img src="images/drill-ind-6-1.webp" alt="低空物流1"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-6-2.webp" alt="低空物流2"></div>
-                        <div class="sp-img-box"><img src="images/drill-ind-6-3.webp" alt="低空物流3"></div>
+                        <div class="sp-img-box"><img src="images/flight-training10-1.webp" alt="低空物流1"></div>
+                        <div class="sp-img-box"><img src="images/flight-training10-2.webp" alt="低空物流2"></div>
+                        <div class="sp-img-box"><img src="images/flight-training10-3.webp" alt="低空物流3"></div>
                     </div>
                 </div>
             </div>
@@ -300,25 +300,26 @@
             </div>
         </section>
 
-        <!-- 07. 平台优势 Values (铺满大图背景，保留之前写好的样式) -->
-        <section class="section-padding drill-benefit-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('./images/drill-benefit-bg.webp');">
+        <!-- 07. 平台优势 Values (纯净浅灰背景 + 纵向文字居中排版) -->
+        <section class="section-padding atc-bg-gray">
             <div class="section-title">
-                <h2 data-i18n="drill.value.title" style="color: #fff;">核心演练教学优势</h2>
+                <h2 data-i18n="drill.value.title">核心演练教学优势</h2>
             </div>
-            <div class="drill-benefit-list">
-                <div class="drill-benefit-text">
+            
+            <div class="atc-benefit-list">
+                <div class="atc-benefit-text">
                     <h4 data-i18n="drill.value.v1_t">高真实感仿真</h4>
                     <p data-i18n="drill.value.v1_d">游戏引擎级画质渲染，物理引擎深度还原，贴近最真实的低空作业环境。</p>
                 </div>
-                <div class="drill-benefit-text">
+                <div class="atc-benefit-text">
                     <h4 data-i18n="drill.value.v2_t">行业化训练体系</h4>
                     <p data-i18n="drill.value.v2_d">摒弃泛泛的飞行动作，直接针对光伏、安防、物流等垂直场景开设专线课程。</p>
                 </div>
-                <div class="drill-benefit-text">
+                <div class="atc-benefit-text">
                     <h4 data-i18n="drill.value.v3_t">多人协同演练</h4>
                     <p data-i18n="drill.value.v3_d">支持多名学员在同一个服务器场景内执行分工明确的复杂任务训练。</p>
                 </div>
-                <div class="drill-benefit-text">
+                <div class="atc-benefit-text">
                     <h4 data-i18n="drill.value.v4_t">数据化教学评估</h4>
                     <p data-i18n="drill.value.v4_d">全量记录摇杆输入与飞行轨迹，客观量化生成能力雷达图，提升教学标准化水平。</p>
                 </div>

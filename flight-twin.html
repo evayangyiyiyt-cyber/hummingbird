@@ -28,7 +28,7 @@
 </head>
 <body>
     <!-- 统一的顶部导航栏 -->
-    <header class="header">
+    <header class="header atc-light-header">
         <div class="logo">
             <img class="logo-img" src="./images/hummingbird-logo1.webp" alt="Logo">
             <span data-i18n="header.logo">蜂鸟互动</span>
@@ -67,13 +67,13 @@
         </div>
     </header>
 
-    <!-- 01. Hero 首屏 -->
-    <div class="atc-hero-bg">
-        <section class="cases-hero atc-hero">
-            <img class="cases-hero-img atc-hero-img" src="./images/cases-hero.webp" alt="作业孪生">
-            <div class="cases-hero-content atc-hero-content twin-hero-content">
-                <h1 data-i18n="twin.hero.title">GIS、实时图传与AI驱动的数字化作业能力</h1>
-                <p data-i18n="twin.hero.subtitle">基于GIS空间计算、实时图传、数字孪生与AI识别技术，实现低空作业任务的实时感知、远程协同与智能分析</p>
+    <!-- 01. Hero 首屏 (独立重写) -->
+    <div class="flight-hero-wrapper">
+        <section class="flight-hero">
+            <img class="flight-hero-img" src="./images/flight-twin-hero.png" alt="作业孪生">
+            <div class="flight-hero-content">
+                <h1 data-i18n="twin.hero.title">融合GIS、实时图传与AI分析的<br>低空数字化作业能力</h1>
+                <p data-i18n="twin.hero.subtitle">基于GIS空间计算、实时图传、数字孪生与AI识别技术，实现低空作业任务的实时感知、远程协同与智能分析。</p>
             </div>
         </section>
     </div>
@@ -265,12 +265,11 @@
             </div>
         </section>
 
-        <!-- 07. 协同指挥系统 (修改：全宽大图背景 + 纵向居中文字) -->
-        <section class="section-padding atc-benefit-bg" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('./images/twin-multi-device.webp');">
+        <!-- 07. 协同指挥系统 (纯净浅灰背景 + 纵向文字居中排版) -->
+        <section class="section-padding atc-bg-gray">
             <div class="section-title">
-                <!-- 加上 !important 强制白字，覆盖浅色模式的默认黑字 -->
-                <h2 data-i18n="twin.cmd.title" style="color: #ffffff !important;">多端协同与远程指挥</h2>
-                <p data-i18n="twin.cmd.subtitle" style="color: #aaaaaa !important; font-size: 16px; margin-top: 15px; letter-spacing: 1px;">支持指挥中心、Web端、移动端、大屏系统及远程终端的数据联动。</p>
+                <h2 data-i18n="twin.cmd.title">多端协同与远程指挥</h2>
+                <p data-i18n="twin.cmd.subtitle" style="color: #666; font-size: 16px; margin-top: 15px; letter-spacing: 1px;">支持指挥中心、Web端、移动端、大屏系统及远程终端的数据联动。</p>
             </div>
             
             <div class="atc-benefit-list">
