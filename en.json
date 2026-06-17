@@ -1035,8 +1035,7 @@
       "g3_t": "Spatial Computing",
       "g3_d": "Distance Measurement · Elevation Analysis · Route Analysis · Heatmap Analysis · Risk Zone Analysis",
       "g4_t": "Spatiotemporal Data Fusion",
-      "g4_d": "Video Data · Flight Trajectories · Sensor Data · GIS Coordinates · Real-Time Environmental Data",
-      "caption": "Integrated visualization of urban 3D models, trajectory lines, data pop-ups, operational zones, real-time markers, heatmap layers, and equipment distribution."
+      "g4_d": "Video Data · Flight Trajectories · Sensor Data · GIS Coordinates · Real-Time Environmental Data"
     },
     "video": {
       "title": "Low-Latency Real-Time Video Transmission",
