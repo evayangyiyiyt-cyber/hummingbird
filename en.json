@@ -1035,7 +1035,8 @@
       "g3_t": "Spatial Computing",
       "g3_d": "Distance Measurement · Elevation Analysis · Route Analysis · Heatmap Analysis · Risk Zone Analysis",
       "g4_t": "Spatiotemporal Data Fusion",
-      "g4_d": "Video Data · Flight Trajectories · Sensor Data · GIS Coordinates · Real-Time Environmental Data"
+      "g4_d": "Video Data · Flight Trajectories · Sensor Data · GIS Coordinates · Real-Time Environmental Data",
+      "caption": "3D GIS Mapping·Digital Twin Environments·Spatial Computing·Spatiotemporal Data Fusion"
     },
     "video": {
       "title": "Low-Latency Real-Time Video Transmission",
@@ -1048,7 +1049,7 @@
       "c3_d": "Object Recognition<br>Anomaly Detection<br>Human & Vehicle Identification<br>Risk Alerts",
       "c4_t": "Video Data Management",
       "c4_d": "Playback & Review<br>Timeline Search<br>Mission Archiving<br>Data Annotation",
-      "caption": "Command center video wall featuring multi-stream display, AI detection overlays, map synchronization, alert notifications, and operational status monitoring."
+      "caption": "AI detection overlays, map synchronization, alert notifications, and operational status monitoring."
     },
     "ai": {
       "title": "AI-Driven Intelligent Operational Analytics",
